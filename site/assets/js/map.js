@@ -83,9 +83,10 @@
             async: true,
             polyline_options: {
                 color: stageColors[i],
-                weight: 3.5,
-                opacity: 0.85,
+                weight: 4,
+                opacity: 0.9,
                 lineJoin: "round",
+                className: "gpx-track", // For Method 2 (Shadow)
             },
             marker_options: {
                 startIconUrl: null,
@@ -94,6 +95,17 @@
                 wptIconUrls: { "": null },
             },
         })
+            .on("addline", function (e) {
+                // Method 1: Create White Halo (Outline)
+                const halo = L.polyline(e.line.getLatLngs(), {
+                    color: "#ffffff",
+                    weight: 8,
+                    opacity: 0.8,
+                    lineJoin: "round",
+                    interactive: false,
+                }).addTo(map);
+                halo.bringToBack();
+            })
             .on("loaded", function (e) {
                 const b = e.target.getBounds();
                 bounds.push(b);

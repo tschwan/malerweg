@@ -285,6 +285,11 @@
     height: var(--map-height-hero);
 }
 
+/* GPX Track Enhancements */
+.gpx-track {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.45));
+}
+
 /* --- Quick Links --- */
 .quick-links {
     display: grid;
