@@ -186,7 +186,7 @@
     display: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 832px) {
     .site-nav {
         display: flex;
     }
