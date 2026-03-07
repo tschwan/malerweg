@@ -59,8 +59,7 @@
                 <li><a href="anreise.html">Anreise &amp; Parken</a></li>
                 <li><a href="organisation.html">Tagesablauf</a></li>
                 <li><a href="navigation.html">Empfohlene Apps</a></li>
-                <li><a href="https://www.saechsische-schweiz.de/malerweg/" target="_blank" rel="noopener">Offizielle Webseite</a></li>
-                <li><a href="https://www.saechsische-schweiz.de/gut-zu-wissen/aktuelles" target="_blank" rel="noopener">Nationalpark-Infos</a></li>
+                <li><a href="links.html">Nützliche Links</a></li>
             </ul>
         </div>
         <div class="site-footer__col">
