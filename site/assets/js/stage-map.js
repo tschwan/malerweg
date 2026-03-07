@@ -88,5 +88,34 @@
         })
         .addTo(map);
 
+    const elevationDiv = document.getElementById("elevation-div");
+    if (elevationDiv) {
+        // Initialize elevation profile
+        const elevationControl = L.control.elevation({
+            theme: "lightblue-theme",
+            detached: true,
+            elevationDiv: "#elevation-div",
+            autofitBounds: true,
+            position: "bottomleft",
+            summary: "inline",
+            slope: "disabled",
+            speed: false,
+            acceleration: false,
+            time: "summary",
+            legend: true,
+            followMarker: true,
+            almostOver: true,
+            distanceMarkers: false,
+            polyline: {
+                className: "elevation-polyline-hidden",
+                color: "transparent",
+                opacity: 0,
+                weight: 0,
+            },
+        });
+        elevationControl.addTo(map);
+        elevationControl.load(gpxUrl);
+    }
+
     map.setView([50.955, 14.28], 13);
 })();
