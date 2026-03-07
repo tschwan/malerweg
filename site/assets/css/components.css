@@ -224,6 +224,15 @@
     color: var(--color-text-primary);
 }
 
+.accom-card__detail-value a {
+    color: var(--color-brand-primary);
+    text-decoration: none;
+}
+
+.accom-card__detail-value a:hover {
+    text-decoration: underline;
+}
+
 /* --- Badge --- */
 .badge {
     display: inline-flex;
@@ -591,9 +600,39 @@
 }
 
 .app-card__desc {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
     margin-top: var(--space-1);
+}
+
+.app-card__links {
+    margin-top: var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.app-badge-link {
+    display: block;
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.app-badge-link:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.app-badge-link--apple {
+    height: 40px;
+}
+
+.app-badge-link--google-play {
+    height: 58px;
+}
+
+.app-badge-link img {
+    height: 100%;
+    width: auto;
+    border-radius: 6px;
 }
 
 /* --- Transport Item --- */

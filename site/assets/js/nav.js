@@ -37,4 +37,17 @@
                 link.classList.add("is-active");
             }
         });
+    // --- Load Footer dynamically ---
+    const footer = document.getElementById("main-footer");
+    if (footer) {
+        fetch("footer.html")
+            .then((response) => {
+                if (!response.ok) throw new Error("Could not load footer.");
+                return response.text();
+            })
+            .then((data) => {
+                footer.innerHTML = data;
+            })
+            .catch((err) => console.error(err));
+    }
 })();
