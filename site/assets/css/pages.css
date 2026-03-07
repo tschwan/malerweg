@@ -118,12 +118,6 @@
     gap: var(--space-4);
 }
 
-@media (min-width: 640px) {
-    .apps-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 /* --- Stage-Hero color variants per stage --- */
 .stage-hero--1 {
     background: linear-gradient(135deg, #2d4c3b 0%, #1a2e24 100%);

@@ -594,6 +594,14 @@
     color: var(--color-brand-primary);
 }
 
+.app-card__icon img {
+    width: 2.75rem;
+    height: 2.75rem;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    display: block;
+}
+
 .app-card__name {
     font-weight: var(--font-weight-bold);
     color: var(--color-text-primary);
@@ -626,13 +634,19 @@
 }
 
 .app-badge-link--google-play {
-    height: 58px;
+    height: 40px;
 }
 
 .app-badge-link img {
     height: 100%;
     width: auto;
     border-radius: 6px;
+}
+
+/* Optical adjustment for Google Play badge which has larger internal padding */
+.app-badge-link--google-play img {
+    transform: scale(1.1);
+    transform-origin: left center;
 }
 
 /* --- Transport Item --- */
