@@ -75,6 +75,21 @@
     // Initialize elevation profile
     const elevationDiv = document.getElementById("elevation-div");
     if (elevationDiv) {
+        // Fix for leaflet-elevation bug where closing reopens immediately
+        // due to focus and click events firing toggle in quick succession.
+        if (!L.Control.Elevation.prototype._toggleDebounced) {
+            const originalToggle = L.Control.Elevation.prototype._toggle;
+            L.Control.Elevation.prototype._toggle = function () {
+                if (this._isToggling) return;
+                this._isToggling = true;
+                setTimeout(() => {
+                    this._isToggling = false;
+                }, 100);
+                originalToggle.apply(this, arguments);
+            };
+            L.Control.Elevation.prototype._toggleDebounced = true;
+        }
+
         // Hover marker shown on map when chart is hovered
         const hoverMarker = L.circleMarker([0, 0], {
             radius: 8,
