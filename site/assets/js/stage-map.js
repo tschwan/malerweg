@@ -6,10 +6,8 @@
     "use strict";
     const container = document.getElementById("stage-map");
     if (!container) return;
-
     const gpxUrl = container.dataset.gpx;
     if (!gpxUrl) return;
-
     // Define base layers
     const osm = L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -17,7 +15,6 @@
             attribution: "© OpenStreetMap contributors",
         },
     );
-
     const topo = L.tileLayer(
         "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
         {
@@ -26,7 +23,6 @@
             maxZoom: 17,
         },
     );
-
     const satellite = L.tileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
         {
@@ -34,22 +30,19 @@
                 "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
         },
     );
-
     const map = L.map("stage-map", {
         zoomControl: true,
         scrollWheelZoom: false,
-        layers: [osm], // Default layer
+        layers: [osm],
     });
-
     const baseMaps = {
         "Standard (OSM)": osm,
         Topografie: topo,
         Satellit: satellite,
     };
-
     L.control.layers(baseMaps).addTo(map);
-
     const trackColor = container.dataset.color || "#2d4c3b";
+    // Load GPX track for visual display
     new L.GPX(gpxUrl, {
         async: true,
         polyline_options: {
@@ -57,7 +50,6 @@
             weight: 5,
             opacity: 1,
             lineJoin: "round",
-            className: "gpx-track", // For Method 2 (Shadow)
         },
         marker_options: {
             startIconUrl: null,
@@ -67,7 +59,6 @@
         },
     })
         .on("addline", function (e) {
-            // Method 1: Create White Halo (Outline)
             const halo = L.polyline(e.line.getLatLngs(), {
                 color: "#ffffff",
                 weight: 10,
@@ -79,25 +70,25 @@
         })
         .on("loaded", function (e) {
             map.fitBounds(e.target.getBounds(), { padding: [32, 32] });
-            // Show distance info
-            /*
-            const dist = e.target.get_distance();
-            const infoEl = document.getElementById("stage-map-info");
-            if (infoEl && dist) {
-                infoEl.textContent = `Streckenlänge: ${(dist / 1000).toFixed(1)} km`;
-            }
-            */
         })
         .addTo(map);
-
+    // Initialize elevation profile
     const elevationDiv = document.getElementById("elevation-div");
     if (elevationDiv) {
-        // Initialize elevation profile
+        // Hover marker shown on map when chart is hovered
+        const hoverMarker = L.circleMarker([0, 0], {
+            radius: 8,
+            fillColor: trackColor,
+            fillOpacity: 1,
+            color: "#ffffff",
+            weight: 3,
+            interactive: false,
+        });
         const elevationControl = L.control.elevation({
             theme: "lime-theme",
             detached: true,
             elevationDiv: "#elevation-div",
-            autofitBounds: true,
+            autofitBounds: false,
             position: "bottomleft",
             summary: "inline",
             altitude: true,
@@ -106,20 +97,27 @@
             acceleration: false,
             time: true,
             legend: true,
-            followMarker: true,
-            almostOver: true,
+            followMarker: false,
+            almostOver: false,
             distanceMarkers: false,
             downloadLink: false,
             polyline: {
-                className: "elevation-polyline-hidden",
                 color: "transparent",
-                opacity: 0,
                 weight: 0,
+                opacity: 0,
             },
         });
         elevationControl.addTo(map);
         elevationControl.load(gpxUrl);
+        // Listen to chart mouse events for hover marker
+        elevationControl.on("elechart_hover", function (e) {
+            if (e && e.data && e.data.latlng) {
+                hoverMarker.setLatLng(e.data.latlng).addTo(map);
+            }
+        });
+        elevationControl.on("elechart_leave", function () {
+            hoverMarker.remove();
+        });
     }
-
     map.setView([50.955, 14.28], 13);
 })();
