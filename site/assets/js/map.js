@@ -6,15 +6,47 @@
     "use strict";
     const container = document.getElementById("overview-map");
     if (!container) return;
+
+    // Define base layers
+    const osm = L.tileLayer(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            attribution: "© OpenStreetMap contributors",
+        },
+    );
+
+    const topo = L.tileLayer(
+        "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+        {
+            attribution:
+                '© <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+            maxZoom: 17,
+        },
+    );
+
+    const satellite = L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        {
+            attribution:
+                "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+        },
+    );
+
+    // Initialize map with default layer
     const map = L.map("overview-map", {
         zoomControl: true,
         scrollWheelZoom: false,
+        layers: [osm],
     });
-    L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
-        attribution:
-            '© <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
-        maxZoom: 17,
-    }).addTo(map);
+
+    const baseMaps = {
+        "Standard (OSM)": osm,
+        Topografie: topo,
+        Satellit: satellite,
+    };
+
+    L.control.layers(baseMaps).addTo(map);
+
     // Color per stage
     const stageColors = [
         "#2d7d46",
@@ -40,9 +72,11 @@
         "etappe-5.html",
         "etappe-6.html",
     ];
+
     const gpxBase = container.dataset.gpxBase || "assets/gpx/";
     const bounds = [];
     let loadedCount = 0;
+
     for (let i = 0; i < 6; i++) {
         const gpxUrl = `${gpxBase}etappe-${i + 1}.gpx`;
         new L.GPX(gpxUrl, {
@@ -64,7 +98,6 @@
                 const b = e.target.getBounds();
                 bounds.push(b);
                 loadedCount++;
-                // Fit map after all tracks loaded
                 if (loadedCount === 6) {
                     const combined = bounds.reduce(
                         (acc, cur) => acc.extend(cur),
@@ -81,6 +114,6 @@
             )
             .addTo(map);
     }
-    // Set initial view while tracks load
+
     map.setView([50.955, 14.28], 11);
 })();
