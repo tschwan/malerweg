@@ -80,11 +80,13 @@
         .on("loaded", function (e) {
             map.fitBounds(e.target.getBounds(), { padding: [32, 32] });
             // Show distance info
+            /*
             const dist = e.target.get_distance();
             const infoEl = document.getElementById("stage-map-info");
             if (infoEl && dist) {
                 infoEl.textContent = `Streckenlänge: ${(dist / 1000).toFixed(1)} km`;
             }
+            */
         })
         .addTo(map);
 
@@ -92,20 +94,22 @@
     if (elevationDiv) {
         // Initialize elevation profile
         const elevationControl = L.control.elevation({
-            theme: "lightblue-theme",
+            theme: "lime-theme",
             detached: true,
             elevationDiv: "#elevation-div",
             autofitBounds: true,
             position: "bottomleft",
             summary: "inline",
+            altitude: true,
             slope: "disabled",
             speed: false,
             acceleration: false,
-            time: "summary",
+            time: true,
             legend: true,
             followMarker: true,
             almostOver: true,
             distanceMarkers: false,
+            downloadLink: false,
             polyline: {
                 className: "elevation-polyline-hidden",
                 color: "transparent",

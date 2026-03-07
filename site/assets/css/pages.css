@@ -172,3 +172,20 @@
     color: rgba(255, 255, 255, 0.80);
     max-width: 600px;
 }
+
+/* --- Leaflet Elevation Customizations --- */
+.tottime,
+.avgele,
+.minslope,
+.maxslope,
+.avgslope,
+.download {
+    display: none !important;
+}
+
+.ascent,
+.descent,
+.totasc,
+.totdesc {
+    display: inline !important;
+}
