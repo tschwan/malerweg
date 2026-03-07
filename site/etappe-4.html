@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Etappe 4: Lichtenhain → Reinhardtsdorf – Malerweg 2026</title>
+    <meta name="description" content="Etappe 4 des Malerwegs: Lichtenhain nach Reinhardtsdorf, 24 km, 1200 Höhenmeter, ca. 7:30 Stunden."/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="assets/css/tokens.css"/>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/layout.css"/>
+    <link rel="stylesheet" href="assets/css/components.css"/>
+    <link rel="stylesheet" href="assets/css/pages.css"/>
+</head>
+<body>
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a href="index.html" class="site-header__brand">
+            <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
+            <span class="site-header__brand-name">Malerweg 2026</span>
+        </a>
+        <nav class="site-nav">
+            <a class="site-nav__link" href="etappen.html">Etappen</a>
+            <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+            <a class="site-nav__link" href="organisation.html">Organisation</a>
+            <a class="site-nav__link" href="navigation.html">Navigation</a>
+            <a class="site-nav__link" href="anreise.html">Anreise</a>
+            <a class="site-nav__link" href="downloads.html">Downloads</a>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
+    <nav class="site-nav-mobile" id="nav-mobile">
+        <a class="site-nav__link" href="etappen.html">Etappen</a>
+        <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+        <a class="site-nav__link" href="organisation.html">Organisation</a>
+        <a class="site-nav__link" href="navigation.html">Navigation</a>
+        <a class="site-nav__link" href="anreise.html">Anreise</a>
+        <a class="site-nav__link" href="downloads.html">Downloads</a>
+    </nav>
+</header>
+<main>
+    <div class="stage-hero stage-hero--4">
+        <div class="stage-hero__content">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Start</a><span class="breadcrumb__sep">›</span>
+                    <a href="etappen.html">Etappen</a><span class="breadcrumb__sep">›</span>
+                    <span class="breadcrumb__current">Etappe 4</span>
+                </div>
+                <h1 class="stage-hero__title">Etappe 4: Lichtenhain → Reinhardtsdorf</h1>
+                <p style="color:rgba(255,255,255,0.80);font-size:var(--font-size-lg);">Donnerstag, 07. Mai 2026 · Die längste und anspruchsvollste Etappe</p>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="container">
+            <div class="stage-stats">
+                <div class="stage-stat"><p class="stage-stat__label">Distanz</p><p class="stage-stat__value">24 km</p></div>
+                <div class="stage-stat"><p class="stage-stat__label">Höhenmeter</p><p class="stage-stat__value">1200 hm</p></div>
+                <div class="stage-stat"><p class="stage-stat__label">Gehzeit</p><p class="stage-stat__value">~7:30 Std.</p></div>
+                <div class="stage-stat"><p class="stage-stat__label">Schwierigkeit</p><p class="stage-stat__value">Anspruchsvoll</p></div>
+            </div>
+            <div class="stage-detail-grid">
+                <div>
+                    <h2 style="margin-bottom:var(--space-4);">Karte &amp; GPX-Track</h2>
+                    <div class="map-container" id="stage-map"
+                         data-gpx="assets/gpx/Malerweg_stage_4_Lichtenhain_Reinhardtsdorf.gpx"
+                         data-color="#8e44ad"
+                         style="margin-bottom:var(--space-3);"></div>
+                    <p id="stage-map-info" style="font-size:var(--font-size-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);"></p>
+                    <a href="assets/gpx/Malerweg_stage_4_Lichtenhain_Reinhardtsdorf.gpx" class="btn btn--outline btn--sm" download>
+                        <span class="material-symbols-outlined">download</span> GPX herunterladen
+                    </a>
+                    <h2 style="margin-top:var(--space-10);margin-bottom:var(--space-4);">Beschreibung</h2>
+                    <p style="margin-bottom:var(--space-4);">Die härteste Etappe mit 1200 hm durch die Schrammsteine. Nach der Wanderung Busfahrt zur Unterkunft.</p>
+                    <div class="info-box info-box--warning" style="margin-top:var(--space-4);">
+                        <span class="material-symbols-outlined">warning</span>
+                        <div><strong>Frühzeitig starten!</strong><p style="margin:0;color:inherit;">7:30 h Gehzeit – früh aufbrechen.</p></div>
+                    </div>
+                    <div class="info-box info-box--info" style="margin-top:var(--space-3);">
+                        <span class="material-symbols-outlined">directions_bus</span>
+                        <div><strong>Bus nach Königstein</strong><p style="margin:0;color:inherit;">ab Reinhardtsdorf · ca. 15 Minuten</p></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card" style="margin-bottom:var(--space-6);">
+                        <div class="section-icon-header" style="margin-bottom:var(--space-4);">
+                            <span class="material-symbols-outlined">star</span>
+                            <h3 style="font-size:var(--font-size-xl);">Highlights</h3>
+                        </div>
+                        <ul class="feature-list">
+                            <li class="feature-item"><span class="material-symbols-outlined">landscape</span><span class="feature-item__text">Schrammsteine</span></li>
+                            <li class="feature-item"><span class="material-symbols-outlined">landscape</span><span class="feature-item__text">Zeughaus (Felsformation)</span></li>
+                            <li class="feature-item"><span class="material-symbols-outlined">visibility</span><span class="feature-item__text">Panoramaaussichten</span></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="section-icon-header" style="margin-bottom:var(--space-4);">
+                            <span class="material-symbols-outlined">bed</span>
+                            <h3 style="font-size:var(--font-size-xl);">Unterkunft heute</h3>
+                        </div>
+                        <p style="font-weight:600;color:var(--color-text-primary);margin-bottom:var(--space-2);">Königstein Hostel</p>
+                        <p style="font-size:var(--font-size-sm);">Check-in ab 15:00 · 1. Nacht von 3</p>
+                        <a href="unterkuenfte.html" class="btn btn--outline btn--sm" style="margin-top:var(--space-4);">Alle Unterkünfte</a>
+                    </div>
+                </div>
+            </div>
+            <div class="stage-nav">
+                <a href="etappe-3.html" class="stage-nav__link">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <div><p class="stage-nav__meta">Vorherige Etappe</p><p class="stage-nav__name">Brand-Baude → Lichtenhain</p></div>
+                </a>
+                <a href="etappe-5.html" class="stage-nav__link stage-nav__link--next">
+                    <div><p class="stage-nav__meta">Nächste Etappe</p><p class="stage-nav__name">Reinhardtsdorf → Königstein</p></div>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__grid">
+            <div><div class="site-footer__brand"><span class="material-symbols-outlined site-footer__brand-icon">terrain</span><span class="site-footer__brand-name">Malerweg</span></div><p class="site-footer__desc">Malerweg-Wanderung 2026.</p></div>
+            <div class="site-footer__col"><h5>Etappen</h5><ul><li><a href="etappen.html">Alle Etappen</a></li></ul></div>
+            <div class="site-footer__col"><h5>Downloads</h5><ul><li><a href="downloads.html">GPX Tracks</a></li></ul></div>
+            <div class="site-footer__col site-footer__emergency"><h5>Notfall</h5><ul><li class="site-footer__emergency-item"><span class="material-symbols-outlined">call</span> Bergwacht: 112</li></ul></div>
+        </div>
+        <div class="site-footer__bottom"><p class="site-footer__copy">© 2026 Malerweg Wanderung</p><div class="site-footer__legal"><a href="#">Impressum</a><a href="#">Datenschutz</a></div></div>
+    </div>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/stage-map.js"></script>
+</body>
+</html>

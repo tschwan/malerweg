@@ -1,0 +1,47 @@
+/**
+ * stage-map.js – Leaflet Map for a Single Stage
+ * Reads data-gpx attribute from the map container div.
+ */
+(function () {
+    "use strict";
+    const container = document.getElementById("stage-map");
+    if (!container) return;
+    const gpxUrl = container.dataset.gpx;
+    if (!gpxUrl) return;
+    const map = L.map("stage-map", {
+        zoomControl: true,
+        scrollWheelZoom: false,
+    });
+    L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+        attribution:
+            '© <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+        maxZoom: 17,
+    }).addTo(map);
+    map.setView([50.955, 14.28], 13);
+    const trackColor = container.dataset.color || "#2d4c3b";
+    new L.GPX(gpxUrl, {
+        async: true,
+        polyline_options: {
+            color: trackColor,
+            weight: 4,
+            opacity: 0.9,
+            lineJoin: "round",
+        },
+        marker_options: {
+            startIconUrl: null,
+            endIconUrl: null,
+            shadowUrl: null,
+            wptIconUrls: { "": null },
+        },
+    })
+        .on("loaded", function (e) {
+            map.fitBounds(e.target.getBounds(), { padding: [32, 32] });
+            // Show distance info
+            const dist = e.target.get_distance();
+            const infoEl = document.getElementById("stage-map-info");
+            if (infoEl && dist) {
+                infoEl.textContent = `Streckenlänge: ${(dist / 1000).toFixed(1)} km`;
+            }
+        })
+        .addTo(map);
+})();

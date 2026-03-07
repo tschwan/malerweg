@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Organisation – Malerweg Wanderung 2026</title>
+    <meta name="description" content="Tagesplan, Teilnehmer und Treffpunkte für die Malerweg-Wanderung 2026."/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/tokens.css"/>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/layout.css"/>
+    <link rel="stylesheet" href="assets/css/components.css"/>
+    <link rel="stylesheet" href="assets/css/pages.css"/>
+</head>
+<body>
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a href="index.html" class="site-header__brand">
+            <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
+            <span class="site-header__brand-name">Malerweg 2026</span>
+        </a>
+        <nav class="site-nav">
+            <a class="site-nav__link" href="etappen.html">Etappen</a>
+            <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+            <a class="site-nav__link" href="organisation.html">Organisation</a>
+            <a class="site-nav__link" href="navigation.html">Navigation</a>
+            <a class="site-nav__link" href="anreise.html">Anreise</a>
+            <a class="site-nav__link" href="downloads.html">Downloads</a>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
+    <nav class="site-nav-mobile" id="nav-mobile">
+        <a class="site-nav__link" href="etappen.html">Etappen</a>
+        <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+        <a class="site-nav__link" href="organisation.html">Organisation</a>
+        <a class="site-nav__link" href="navigation.html">Navigation</a>
+        <a class="site-nav__link" href="anreise.html">Anreise</a>
+        <a class="site-nav__link" href="downloads.html">Downloads</a>
+    </nav>
+</header>
+<main>
+    <div class="page-header">
+        <div class="container">
+            <p class="page-header__eyebrow">Malerweg 2026</p>
+            <h1 class="page-header__title">Organisation</h1>
+            <p class="page-header__desc">Tagesplan, Teilnehmerliste und wichtige Treffpunkte im Überblick.</p>
+        </div>
+    </div>
+    <section class="section">
+        <div class="container">
+            <div class="two-col">
+                <!-- TAGEPLAN -->
+                <div>
+                    <div class="section-icon-header">
+                        <span class="material-symbols-outlined">calendar_today</span>
+                        <h2>Tagesplan</h2>
+                    </div>
+                    <div class="info-table__wrapper">
+                        <table class="info-table">
+                            <thead>
+                                <tr><th>Tag</th><th>Datum</th><th>Etappe</th><th>Start</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Mo</td><td>04.05.</td><td><a href="etappe-1.html">Liebethal → Stadt Wehlen</a></td><td>09:00</td></tr>
+                                <tr><td>Di</td><td>05.05.</td><td><a href="etappe-2.html">Stadt Wehlen → Brand-Baude</a></td><td>08:00</td></tr>
+                                <tr><td>Mi</td><td>06.05.</td><td><a href="etappe-3.html">Brand-Baude → Lichtenhain</a></td><td>07:30</td></tr>
+                                <tr><td>Do</td><td>07.05.</td><td><a href="etappe-4.html">Lichtenhain → Reinhardtsdorf</a></td><td>07:00</td></tr>
+                                <tr><td>Fr</td><td>08.05.</td><td><a href="etappe-5.html">Reinhardtsdorf → Königstein</a></td><td>08:00</td></tr>
+                                <tr><td>Sa</td><td>09.05.</td><td><a href="etappe-6.html">Königstein → Pirna</a></td><td>08:30</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- TEILNEHMER -->
+                <div>
+                    <div class="section-icon-header">
+                        <span class="material-symbols-outlined">groups</span>
+                        <h2>Teilnehmer</h2>
+                    </div>
+                    <div class="card" style="margin-bottom:var(--space-6);">
+                        <ul class="participant-list">
+                            <li class="participant-item">
+                                <div class="participant-item__avatar">T1</div>
+                                <span class="participant-item__name">Teilnehmer 1</span>
+                            </li>
+                            <li class="participant-item">
+                                <div class="participant-item__avatar">T2</div>
+                                <span class="participant-item__name">Teilnehmer 2</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- TREFFPUNKTE -->
+                    <div class="section-icon-header">
+                        <span class="material-symbols-outlined">location_on</span>
+                        <h2>Treffpunkte</h2>
+                    </div>
+                    <div class="card">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="material-symbols-outlined">flag</span>
+                                <div>
+                                    <strong style="display:block;color:var(--color-text-primary);">Startpunkt</strong>
+                                    <span class="feature-item__text">Liebethal – Parkplatz Mühle, 04.05. um 09:00</span>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <span class="material-symbols-outlined">tram</span>
+                                <div>
+                                    <strong style="display:block;color:var(--color-text-primary);">Kirnitzschtalbahn</strong>
+                                    <span class="feature-item__text">Lichtenhain nach Bad Schandau, 06.05. abends</span>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <span class="material-symbols-outlined">directions_bus</span>
+                                <div>
+                                    <strong style="display:block;color:var(--color-text-primary);">Bus Königstein</strong>
+                                    <span class="feature-item__text">Reinhardtsdorf → Königstein, 07.05. abends</span>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <span class="material-symbols-outlined">sports_score</span>
+                                <div>
+                                    <strong style="display:block;color:var(--color-text-primary);">Ziel</strong>
+                                    <span class="feature-item__text">Pirna – Marktplatz, 09.05.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__grid">
+            <div><div class="site-footer__brand"><span class="material-symbols-outlined site-footer__brand-icon">terrain</span><span class="site-footer__brand-name">Malerweg</span></div><p class="site-footer__desc">Malerweg-Wanderung 2026.</p></div>
+            <div class="site-footer__col"><h5>Etappen</h5><ul><li><a href="etappen.html">Alle Etappen</a></li></ul></div>
+            <div class="site-footer__col"><h5>Downloads</h5><ul><li><a href="downloads.html">Alle Dateien</a></li></ul></div>
+            <div class="site-footer__col site-footer__emergency"><h5>Notfall</h5><ul><li class="site-footer__emergency-item"><span class="material-symbols-outlined">call</span> Bergwacht: 112</li></ul></div>
+        </div>
+        <div class="site-footer__bottom"><p class="site-footer__copy">© 2026 Malerweg Wanderung</p><div class="site-footer__legal"><a href="#">Impressum</a><a href="#">Datenschutz</a></div></div>
+    </div>
+</footer>
+<script src="assets/js/nav.js"></script>
+</body>
+</html>
