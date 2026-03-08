@@ -92,8 +92,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // --- 5. Accommodation ---
         if (stage.accommodation) {
-            document.getElementById("acc-name").textContent =
-                stage.accommodation.name;
+            const accNameEl = document.getElementById("acc-name");
+            accNameEl.textContent = stage.accommodation.name;
+            if (stage.accommodation.url) {
+                accNameEl.href = stage.accommodation.url;
+                accNameEl.target = "_blank";
+                accNameEl.rel = "noopener noreferrer";
+            } else {
+                accNameEl.removeAttribute("href");
+            }
             document.getElementById("acc-subtext").textContent =
                 stage.accommodation.subtext;
 

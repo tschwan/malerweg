@@ -142,7 +142,8 @@
                 "accommodation": {
                     "name": "Kutscherhaus - Haus Felsenpost",
                     "subtext": "Stadt Wehlen",
-                    "link": "unterkuenfte.html"
+                    "link": "unterkuenfte.html",
+                    "url": "https://www.felsenpost.de"
                 }
             },
             {
@@ -183,7 +184,8 @@
                 "accommodation": {
                     "name": "Brand-Baude - Blockhaus",
                     "subtext": "Frühstück inklusive · Check-in bis 17:00 Uhr",
-                    "link": "unterkuenfte.html"
+                    "link": "unterkuenfte.html",
+                    "url": "https://www.brand-baude.de"
                 }
             },
             {
@@ -224,7 +226,8 @@
                 "accommodation": {
                     "name": "Apparthotel Bad Schandau",
                     "subtext": "Check-in: 14:00-17:30 Uhr · Frühstück inklusive",
-                    "link": "unterkuenfte.html"
+                    "link": "unterkuenfte.html",
+                    "url": "https://www.steiger-hotels.com/hotels/apparthotel-bad-schandau"
                 }
             },
             {
@@ -271,7 +274,8 @@
                 "accommodation": {
                     "name": "Königstein Hostel",
                     "subtext": "Check-in ab 15:00 · 1. Nacht",
-                    "link": "unterkuenfte.html"
+                    "link": "unterkuenfte.html",
+                    "url": "https://www.koenigstein-hostel.de"
                 }
             },
             {
@@ -307,7 +311,8 @@
                 "accommodation": {
                     "name": "Königstein Hostel",
                     "subtext": "2. Nacht · Check-in ab 15:00",
-                    "link": "unterkuenfte.html"
+                    "link": "unterkuenfte.html",
+                    "url": "https://www.koenigstein-hostel.de"
                 }
             },
             {

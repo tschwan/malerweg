@@ -11,11 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081435" />
-    <link rel="stylesheet" href="assets/css/base.css?v=202603081435" />
-    <link rel="stylesheet" href="assets/css/layout.css?v=202603081435" />
-    <link rel="stylesheet" href="assets/css/components.css?v=202603081435" />
-    <link rel="stylesheet" href="assets/css/pages.css?v=202603081435" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081508" />
+    <link rel="stylesheet" href="assets/css/base.css?v=202603081508" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=202603081508" />
+    <link rel="stylesheet" href="assets/css/components.css?v=202603081508" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=202603081508" />
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.css" />
 </head>
 
@@ -123,8 +123,11 @@
                                 <span class="material-symbols-outlined" id="acc-icon">bed</span>
                                 <h3 style="font-size:var(--font-size-xl);" id="acc-title">Unterkunft heute</h3>
                             </div>
-                            <p style="font-weight:600;color:var(--color-text-primary);margin-bottom:var(--space-2);"
-                                id="acc-name">-</p>
+                            <p style="font-weight:600;margin-bottom:var(--space-2);">
+                                <a href="#" id="acc-name" style="color:var(--color-text-primary); text-decoration:none;"
+                                    onmouseover="if(this.hasAttribute('href')) this.style.textDecoration='underline'"
+                                    onmouseout="this.style.textDecoration='none'">-</a>
+                            </p>
                             <p style="font-size:var(--font-size-sm);" id="acc-subtext">-</p>
                             <a href="unterkuenfte.html" id="acc-link" class="btn btn--outline btn--sm"
                                 style="margin-top:var(--space-4);">Alle Unterkünfte</a>
@@ -156,10 +159,10 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
     <script src="https://unpkg.com/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.js"></script>
-    <script src="assets/js/nav.js?v=202603081435"></script>
-    <script src="assets/js/data-provider.js?v=202603081435"></script>
-    <script src="assets/js/app-data-loader.js?v=202603081435"></script>
-    <script src="assets/js/app-etappe-loader.js?v=202603081435"></script>
+    <script src="assets/js/nav.js?v=202603081508"></script>
+    <script src="assets/js/data-provider.js?v=202603081508"></script>
+    <script src="assets/js/app-data-loader.js?v=202603081508"></script>
+    <script src="assets/js/app-etappe-loader.js?v=202603081508"></script>
 </body>
 
 </html>
