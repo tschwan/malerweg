@@ -585,7 +585,7 @@
 /* --- App Link Card --- */
 .app-card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--space-4);
     padding: var(--space-5);
     background-color: var(--color-surface-card);

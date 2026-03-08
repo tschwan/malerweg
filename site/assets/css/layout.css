@@ -264,7 +264,7 @@
 /* --- Stage Hero (smaller, for sub-pages) --- */
 .stage-hero {
     position: relative;
-    height: 280px;
+    height: 200px;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -296,7 +296,7 @@
 
 @media (min-width: 640px) {
     .stage-hero {
-        height: 360px;
+        height: 200px;
     }
 
     .stage-hero__content {
