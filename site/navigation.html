@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Navigation - Malerweg Wanderung 2026</title>
-    <meta name="description" content="GPX-Tracks, empfohlene Wanderapps und Offline-Karten für den Malerweg 2026."/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/tokens.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/base.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/layout.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/components.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/pages.css?v=202603080935"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="meta-title">Navigation - Malerweg 2026</title>
+    <meta id="meta-description" name="description"
+        content="GPX-Tracks, empfohlene Wanderapps und Offline-Karten für den Malerweg 2026." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/base.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/components.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=202603081405" />
 </head>
+
 <body>
-<header class="site-header">
-    <div class="container site-header__inner">
-        <a href="index.html" class="site-header__brand">
-            <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
-            <span class="site-header__brand-name">Malerweg 2026</span>
-        </a>
-        <nav class="site-nav">
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="index.html" class="site-header__brand">
+                <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
+                <span class="site-header__brand-name">Malerweg 2026</span>
+            </a>
+            <nav class="site-nav">
+                <a class="site-nav__link" href="etappen.html">Etappen</a>
+                <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+                <a class="site-nav__link" href="organisation.html">Organisation</a>
+                <a class="site-nav__link" href="navigation.html">Navigation</a>
+                <a class="site-nav__link" href="anreise.html">Anreise</a>
+                <a class="site-nav__link" href="links.html">Links</a>
+                <a class="site-nav__link" href="downloads.html">Downloads</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile"
+                aria-label="Menü öffnen">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <nav class="site-nav-mobile" id="nav-mobile">
             <a class="site-nav__link" href="etappen.html">Etappen</a>
             <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
             <a class="site-nav__link" href="organisation.html">Organisation</a>
@@ -29,169 +48,57 @@
             <a class="site-nav__link" href="links.html">Links</a>
             <a class="site-nav__link" href="downloads.html">Downloads</a>
         </nav>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-    </div>
-    <nav class="site-nav-mobile" id="nav-mobile">
-        <a class="site-nav__link" href="etappen.html">Etappen</a>
-        <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
-        <a class="site-nav__link" href="organisation.html">Organisation</a>
-        <a class="site-nav__link" href="navigation.html">Navigation</a>
-        <a class="site-nav__link" href="anreise.html">Anreise</a>
-        <a class="site-nav__link" href="links.html">Links</a>
-        <a class="site-nav__link" href="downloads.html">Downloads</a>
-    </nav>
-</header>
-<main>
-    <div class="page-header">
-        <div class="container">
-            <p class="page-header__eyebrow">Malerweg 2026</p>
-            <h1 class="page-header__title">Navigation &amp; GPS</h1>
-            <p class="page-header__desc">GPX-Tracks für alle 6 Etappen, empfohlene Apps und Tipps für die Navigation unterwegs.</p>
+    </header>
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <p class="page-header__eyebrow">Malerweg 2026</p>
+                <h1 class="page-header__title">Navigation &amp; GPS</h1>
+                <p class="page-header__desc">GPX-Tracks für alle 6 Etappen, empfohlene Apps und Tipps für die Navigation
+                    unterwegs.</p>
+            </div>
         </div>
-    </div>
-    <section class="section">
-        <div class="container">
-            <div class="two-col">
-                <div>
-                    <div class="section-icon-header">
-                        <span class="material-symbols-outlined">near_me</span>
-                        <h2>GPX Downloads</h2>
-                    </div>
-                    <p style="margin-bottom:var(--space-6);">Lade die GPX-Tracks auf dein Handy und importiere sie in deine bevorzugte Navigationsapp. Ohne Internetverbindung nutzbar, wenn du die Tracks offline speicherst.</p>
-                    <div class="download-list">
-                        <div class="download-item">
-                            <span class="material-symbols-outlined download-item__icon">route</span>
-                            <div class="download-item__body">
-                                <p class="download-item__name">Etappe 1: Liebethal → Stadt Wehlen</p>
-                                <p class="download-item__meta">GPX · 12 km · 200 hm</p>
-                            </div>
-                            <a href="assets/gpx/etappe-1.gpx" class="btn btn--primary btn--sm" download>
-                                <span class="material-symbols-outlined">download</span>
-                            </a>
+        <section class="section">
+            <div class="container">
+                <div class="two-col">
+                    <div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">near_me</span>
+                            <h2>GPX Downloads</h2>
                         </div>
-                        <div class="download-item">
-                            <span class="material-symbols-outlined download-item__icon">route</span>
-                            <div class="download-item__body">
-                                <p class="download-item__name">Etappe 2: Stadt Wehlen → Brand-Baude</p>
-                                <p class="download-item__meta">GPX · 16 km · 760 hm</p>
-                            </div>
-                            <a href="assets/gpx/etappe-2.gpx" class="btn btn--primary btn--sm" download>
-                                <span class="material-symbols-outlined">download</span>
-                            </a>
-                        </div>
-                        <div class="download-item">
-                            <span class="material-symbols-outlined download-item__icon">route</span>
-                            <div class="download-item__body">
-                                <p class="download-item__name">Etappe 3: Brand-Baude → Lichtenhain</p>
-                                <p class="download-item__meta">GPX · 22 km · 850 hm</p>
-                            </div>
-                            <a href="assets/gpx/etappe-3.gpx" class="btn btn--primary btn--sm" download>
-                                <span class="material-symbols-outlined">download</span>
-                            </a>
-                        </div>
-                        <div class="download-item">
-                            <span class="material-symbols-outlined download-item__icon">route</span>
-                            <div class="download-item__body">
-                                <p class="download-item__name">Etappe 4: Lichtenhain → Reinhardtsdorf</p>
-                                <p class="download-item__meta">GPX · 24 km · 1200 hm</p>
-                            </div>
-                            <a href="assets/gpx/etappe-4.gpx" class="btn btn--primary btn--sm" download>
-                                <span class="material-symbols-outlined">download</span>
-                            </a>
-                        </div>
-                        <div class="download-item">
-                            <span class="material-symbols-outlined download-item__icon">route</span>
-                            <div class="download-item__body">
-                                <p class="download-item__name">Etappe 5: Reinhardtsdorf → Königstein</p>
-                                <p class="download-item__meta">GPX · 18 km · 740 hm</p>
-                            </div>
-                            <a href="assets/gpx/etappe-5.gpx" class="btn btn--primary btn--sm" download>
-                                <span class="material-symbols-outlined">download</span>
-                            </a>
-                        </div>
-                        <div class="download-item">
-                            <span class="material-symbols-outlined download-item__icon">route</span>
-                            <div class="download-item__body">
-                                <p class="download-item__name">Etappe 6: Königstein → Pirna</p>
-                                <p class="download-item__meta">GPX · 19 km · 600 hm</p>
-                            </div>
-                            <a href="assets/gpx/etappe-6.gpx" class="btn btn--primary btn--sm" download>
-                                <span class="material-symbols-outlined">download</span>
-                            </a>
+                        <p style="margin-bottom:var(--space-6);">Lade die GPX-Tracks auf dein Handy und importiere sie
+                            in deine bevorzugte Navigationsapp. Ohne Internetverbindung nutzbar, wenn du die Tracks
+                            offline speicherst.</p>
+                        <div class="download-list" id="gpx-list-container">
+                            <!-- JS populated GPX downloads -->
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div class="section-icon-header">
-                        <span class="material-symbols-outlined">smartphone</span>
-                        <h2>Empfohlene Apps</h2>
-                    </div>
-                    <div class="apps-grid" style="margin-bottom:var(--space-8);">
-                        <div class="app-card">
-                            <div class="app-card__icon"><img src="assets/images/komoot-icon.png" alt="Komoot Icon"></div>
-                            <div>
-                                <p class="app-card__name">Komoot</p>
-                                <p class="app-card__desc">App für Wanderrouten, GPX-Import, Offline-Karten für Sächsische Schweiz</p>
-                                <div class="app-card__links">
-                                    <a href="https://apps.apple.com/app/komoot-bike-hike-maps/id447374873" target="_blank" rel="noopener" class="app-badge-link app-badge-link--apple">
-                                        <img src="assets/images/app-store-badge.svg" alt="Download on the App Store">
-                                    </a>
-                                    <a href="https://play.google.com/store/apps/details?id=de.komoot.android" target="_blank" rel="noopener" class="app-badge-link app-badge-link--google-play">
-                                        <img src="assets/images/google-play-badge.svg" alt="Get it on Google Play">
-                                    </a>
-                                </div>
-                            </div>
+                    <div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">smartphone</span>
+                            <h2>Empfohlene Apps</h2>
                         </div>
-                        <div class="app-card">
-                            <div class="app-card__icon"><img src="assets/images/outdooractive-icon.png" alt="Outdooractive Icon"></div>
-                            <div>
-                                <p class="app-card__name">Outdooractive</p>
-                                <p class="app-card__desc">Detaillierte Wanderkarten, GPX-Import und Routenplanung</p>
-                                <div class="app-card__links">
-                                    <a href="https://apps.apple.com/app/outdooractive-hike-ride/id530144002" target="_blank" rel="noopener" class="app-badge-link app-badge-link--apple">
-                                        <img src="assets/images/app-store-badge.svg" alt="Download on the App Store">
-                                    </a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.outdooractive.Outdooractive" target="_blank" rel="noopener" class="app-badge-link app-badge-link--google-play">
-                                        <img src="assets/images/google-play-badge.svg" alt="Get it on Google Play">
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="apps-grid" style="margin-bottom:var(--space-8);" id="apps-grid-container">
+                            <!-- JS populated apps -->
                         </div>
-                    </div>
-                    <div class="section-icon-header">
-                        <span class="material-symbols-outlined">tips_and_updates</span>
-                        <h2>Tipps unterwegs</h2>
-                    </div>
-                    <div class="card">
-                        <ul class="feature-list">
-                            <li class="feature-item">
-                                <span class="material-symbols-outlined">download_for_offline</span>
-                                <span class="feature-item__text">GPX-Tracks <strong>vor der Tour</strong> offline speichern - kein Mobilfunk in den Tälern!</span>
-                            </li>
-                            <li class="feature-item">
-                                <span class="material-symbols-outlined">offline_bolt</span>
-                                <span class="feature-item__text">Offlinekarten für Sächsische Schweiz in der App herunterladen</span>
-                            </li>
-                            <li class="feature-item">
-                                <span class="material-symbols-outlined">battery_charging_full</span>
-                                <span class="feature-item__text">Powerbank mitnehmen - GPS-Nutzung entleert den Akku schnell</span>
-                            </li>
-                            <li class="feature-item">
-                                <span class="material-symbols-outlined">screen_lock_portrait</span>
-                                <span class="feature-item__text">Display-Helligkeit reduzieren und Hintergrundapps schließen</span>
-                            </li>
-                        </ul>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">tips_and_updates</span>
+                            <h2>Tipps unterwegs</h2>
+                        </div>
+                        <div class="card">
+                            <ul class="feature-list" id="tips-list-container">
+                                <!-- JS populated tips -->
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</main>
-<footer class="site-footer" id="main-footer"></footer>
-<script src="assets/js/nav.js?v=202603080935"></script>
+        </section>
+    </main>
+    <footer class="site-footer" id="main-footer"></footer>
+    <script src="assets/js/nav.js?v=202603081405"></script>
+    <script src="assets/js/data-provider.js?v=202603081405"></script>
+    <script src="assets/js/app-navigation-loader.js?v=202603081405"></script>
 </body>
+
 </html>
-
-

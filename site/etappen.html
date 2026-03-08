@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Etappen - Malerweg Wanderung 2026</title>
-    <meta name="description" content="Alle 6 Etappen unserer Malerweg-Wanderung 2026 im Überblick: Karte der Gesamtroute, Basisdaten und Links zu den Detailseiten."/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-    <link rel="stylesheet" href="assets/css/tokens.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/base.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/layout.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/components.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/pages.css?v=202603080935"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="meta-title">Etappen - Malerweg 2026</title>
+    <meta id="meta-description" name="description"
+        content="Alle 6 Etappen unserer Malerweg-Wanderung 2026 im Überblick: Karte der Gesamtroute, Basisdaten und Links zu den Detailseiten." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/base.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/components.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=202603081405" />
 </head>
+
 <body>
-<header class="site-header">
-    <div class="container site-header__inner">
-        <a href="index.html" class="site-header__brand">
-            <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
-            <span class="site-header__brand-name">Malerweg 2026</span>
-        </a>
-        <nav class="site-nav" aria-label="Hauptnavigation">
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="index.html" class="site-header__brand">
+                <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
+                <span class="site-header__brand-name">Malerweg 2026</span>
+            </a>
+            <nav class="site-nav" aria-label="Hauptnavigation">
+                <a class="site-nav__link" href="etappen.html">Etappen</a>
+                <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+                <a class="site-nav__link" href="organisation.html">Organisation</a>
+                <a class="site-nav__link" href="navigation.html">Navigation</a>
+                <a class="site-nav__link" href="anreise.html">Anreise</a>
+                <a class="site-nav__link" href="links.html">Links</a>
+                <a class="site-nav__link" href="downloads.html">Downloads</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile"
+                aria-label="Menü öffnen">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <nav class="site-nav-mobile" id="nav-mobile" aria-label="Mobile Navigation">
             <a class="site-nav__link" href="etappen.html">Etappen</a>
             <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
             <a class="site-nav__link" href="organisation.html">Organisation</a>
@@ -30,129 +49,51 @@
             <a class="site-nav__link" href="links.html">Links</a>
             <a class="site-nav__link" href="downloads.html">Downloads</a>
         </nav>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-    </div>
-    <nav class="site-nav-mobile" id="nav-mobile" aria-label="Mobile Navigation">
-        <a class="site-nav__link" href="etappen.html">Etappen</a>
-        <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
-        <a class="site-nav__link" href="organisation.html">Organisation</a>
-        <a class="site-nav__link" href="navigation.html">Navigation</a>
-        <a class="site-nav__link" href="anreise.html">Anreise</a>
-        <a class="site-nav__link" href="links.html">Links</a>
-        <a class="site-nav__link" href="downloads.html">Downloads</a>
-    </nav>
-</header>
-<main>
-    <div class="page-header">
-        <div class="container">
-            <p class="page-header__eyebrow">Malerweg 2026</p>
-            <h1 class="page-header__title">Etappen</h1>
-            <p class="page-header__desc">6 Etappen, 110 km, 4300 Höhenmeter - von Liebethal nach Pirna durch den Nationalpark Sächsische Schweiz.</p>
+    </header>
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <p class="page-header__eyebrow">Malerweg 2026</p>
+                <h1 class="page-header__title">Etappen</h1>
+                <p class="page-header__desc">6 Etappen, 110 km, 4300 Höhenmeter - von Liebethal nach Pirna durch den
+                    Nationalpark Sächsische Schweiz.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- GESAMTKARTE -->
-    <section class="section section--shaded">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Gesamtroute</h2>
-                <p class="section__lead">Alle 6 Etappen in der Übersichtskarte. Jede Etappe ist farblich markiert - klicke auf eine Strecke für Details.</p>
+        <!-- GESAMTKARTE -->
+        <section class="section section--shaded">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Gesamtroute</h2>
+                    <p class="section__lead">Alle 6 Etappen in der Übersichtskarte. Jede Etappe ist farblich markiert -
+                        klicke auf eine Strecke für Details.</p>
+                </div>
+                <div class="map-container" id="overview-map" data-gpx-base="assets/gpx/"
+                    style="width:100%; height:480px;"></div>
             </div>
-            <div class="map-container" id="overview-map" data-gpx-base="assets/gpx/" style="width:100%; height:480px;"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ETAPPENLISTE -->
-    <section class="section">
-        <div class="container--narrow">
-            <div class="section__header">
-                <h2 class="section__title">Alle Etappen</h2>
-                <p class="section__lead">Klicke auf eine Etappe für die vollständige Beschreibung, Karte und GPX-Download.</p>
+        <!-- ETAPPENLISTE -->
+        <section class="section">
+            <div class="container--narrow">
+                <div class="section__header">
+                    <h2 class="section__title">Alle Etappen</h2>
+                    <p class="section__lead">Klicke auf eine Etappe für die vollständige Beschreibung, Karte und
+                        GPX-Download.</p>
+                </div>
+                <div class="stage-grid" id="stage-grid-container">
+                    <!-- JS populated -->
+                </div>
             </div>
-            <div class="stage-grid">
-                <a class="stage-card" href="etappe-1.html">
-                    <div class="stage-card__number">1</div>
-                    <div class="stage-card__body">
-                        <p class="stage-card__title">Liebethal → Stadt Wehlen</p>
-                        <div class="stage-card__meta">
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">route</span>12 km</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">landscape</span>200 hm</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">schedule</span>3:00 h</span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined stage-card__arrow">chevron_right</span>
-                </a>
-                <a class="stage-card" href="etappe-2.html">
-                    <div class="stage-card__number" style="background:#3b6ea0;">2</div>
-                    <div class="stage-card__body">
-                        <p class="stage-card__title">Stadt Wehlen → Brand-Baude</p>
-                        <div class="stage-card__meta">
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">route</span>16 km</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">landscape</span>760 hm</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">schedule</span>5:00 h</span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined stage-card__arrow">chevron_right</span>
-                </a>
-                <a class="stage-card" href="etappe-3.html">
-                    <div class="stage-card__number" style="background:#c0392b;">3</div>
-                    <div class="stage-card__body">
-                        <p class="stage-card__title">Brand-Baude → Lichtenhain</p>
-                        <div class="stage-card__meta">
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">route</span>22 km</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">landscape</span>850 hm</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">schedule</span>6:30 h</span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined stage-card__arrow">chevron_right</span>
-                </a>
-                <a class="stage-card" href="etappe-4.html">
-                    <div class="stage-card__number" style="background:#8e44ad;">4</div>
-                    <div class="stage-card__body">
-                        <p class="stage-card__title">Lichtenhain → Reinhardtsdorf</p>
-                        <div class="stage-card__meta">
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">route</span>24 km</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">landscape</span>1200 hm</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">schedule</span>7:30 h</span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined stage-card__arrow">chevron_right</span>
-                </a>
-                <a class="stage-card" href="etappe-5.html">
-                    <div class="stage-card__number" style="background:#e67e22;">5</div>
-                    <div class="stage-card__body">
-                        <p class="stage-card__title">Reinhardtsdorf → Königstein</p>
-                        <div class="stage-card__meta">
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">route</span>18 km</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">landscape</span>740 hm</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">schedule</span>5:30 h</span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined stage-card__arrow">chevron_right</span>
-                </a>
-                <a class="stage-card" href="etappe-6.html">
-                    <div class="stage-card__number" style="background:#16a085;">6</div>
-                    <div class="stage-card__body">
-                        <p class="stage-card__title">Königstein → Pirna</p>
-                        <div class="stage-card__meta">
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">route</span>19 km</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">landscape</span>600 hm</span>
-                            <span class="stage-card__stat"><span class="material-symbols-outlined">schedule</span>5:30 h</span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined stage-card__arrow">chevron_right</span>
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
-<footer class="site-footer" id="main-footer"></footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
-<script src="assets/js/nav.js?v=202603080935"></script>
-<script src="assets/js/map.js?v=202603080935"></script>
+        </section>
+    </main>
+    <footer class="site-footer" id="main-footer"></footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+    <script src="assets/js/nav.js?v=202603081405"></script>
+    <script src="assets/js/data-provider.js?v=202603081405"></script>
+    <script src="assets/js/app-etappen-loader.js?v=202603081405"></script>
+    <script src="assets/js/map.js?v=202603081405"></script>
 </body>
-</html>
 
+</html>

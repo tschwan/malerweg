@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Unterkünfte - Malerweg Wanderung 2026</title>
-    <meta name="description" content="Alle Unterkünfte unserer Malerweg-Wanderung 2026: Felsenpost Stadt Wehlen, Brand-Baude, Apparthotel Bad Schandau, Königstein Hostel."/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/tokens.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/base.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/layout.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/components.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/pages.css?v=202603080935"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="meta-title">Unterkünfte - Malerweg 2026</title>
+    <meta id="meta-description" name="description"
+        content="Alle Unterkünfte unserer Malerweg-Wanderung 2026: Felsenpost Stadt Wehlen, Brand-Baude, Apparthotel Bad Schandau, Königstein Hostel." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/base.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/components.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=202603081405" />
 </head>
+
 <body>
-<header class="site-header">
-    <div class="container site-header__inner">
-        <a href="index.html" class="site-header__brand">
-            <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
-            <span class="site-header__brand-name">Malerweg 2026</span>
-        </a>
-        <nav class="site-nav">
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="index.html" class="site-header__brand">
+                <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
+                <span class="site-header__brand-name">Malerweg 2026</span>
+            </a>
+            <nav class="site-nav">
+                <a class="site-nav__link" href="etappen.html">Etappen</a>
+                <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+                <a class="site-nav__link" href="organisation.html">Organisation</a>
+                <a class="site-nav__link" href="navigation.html">Navigation</a>
+                <a class="site-nav__link" href="anreise.html">Anreise</a>
+                <a class="site-nav__link" href="links.html">Links</a>
+                <a class="site-nav__link" href="downloads.html">Downloads</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile"
+                aria-label="Menü öffnen">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <nav class="site-nav-mobile" id="nav-mobile">
             <a class="site-nav__link" href="etappen.html">Etappen</a>
             <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
             <a class="site-nav__link" href="organisation.html">Organisation</a>
@@ -29,269 +48,49 @@
             <a class="site-nav__link" href="links.html">Links</a>
             <a class="site-nav__link" href="downloads.html">Downloads</a>
         </nav>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-    </div>
-    <nav class="site-nav-mobile" id="nav-mobile">
-        <a class="site-nav__link" href="etappen.html">Etappen</a>
-        <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
-        <a class="site-nav__link" href="organisation.html">Organisation</a>
-        <a class="site-nav__link" href="navigation.html">Navigation</a>
-        <a class="site-nav__link" href="anreise.html">Anreise</a>
-        <a class="site-nav__link" href="links.html">Links</a>
-        <a class="site-nav__link" href="downloads.html">Downloads</a>
-    </nav>
-</header>
-<main>
-    <div class="page-header">
-        <div class="container">
-            <p class="page-header__eyebrow">Malerweg 2026</p>
-            <h1 class="page-header__title">Unterkünfte</h1>
-            <p class="page-header__desc">Alle 4 Unterkünfte unserer Wanderung - Buchungsstatus, Check-in Zeiten und wichtige Infos auf einen Blick.</p>
-        </div>
-    </div>
-    <section class="section">
-        <div class="container">
-            <div class="accommodation-grid">
-                <!-- Nacht 1: Stadt Wehlen -->
-                <div class="accom-card">
-                    <div class="accom-card__header">
-                        <div>
-                            <p class="accom-card__date">Mo, 04. Mai 2026</p>
-                            <p class="accom-card__name">Kutscherhaus</p>
-                        </div>
-                        <span class="badge badge--white">Bezahlt</span>
-                    </div>
-                    <div class="accom-card__body">
-                        <div class="accom-card__details">
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Typ</span>
-                                <span class="accom-card__detail-value">Ferienwohnung</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Ort</span>
-                                <span class="accom-card__detail-value">Stadt Wehlen</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Webseite</span>
-                                <span class="accom-card__detail-value"><a href="https://www.felsenpost.de" target="_blank" rel="noopener">felsenpost.de</a></span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Preis</span>
-                                <span class="accom-card__detail-value">153 €</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Frühstück</span>
-                                <span class="accom-card__detail-value">Nein</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Check-in</span>
-                                <span class="accom-card__detail-value">Ab 14:00 Uhr</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Storno</span>
-                                <span class="accom-card__detail-value">Bis 4 Wochen vorher</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Nacht 2: Brand-Baude -->
-                <div class="accom-card">
-                    <div class="accom-card__header">
-                        <div>
-                            <p class="accom-card__date">Di, 05. Mai 2026</p>
-                            <p class="accom-card__name">Brand-Baude</p>
-                        </div>
-                        <span class="badge badge--white">Vor Ort</span>
-                    </div>
-                    <div class="accom-card__body">
-                        <div class="accom-card__details">
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Typ</span>
-                                <span class="accom-card__detail-value">Blockhaus</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Ort</span>
-                                <span class="accom-card__detail-value">Brand (Hinterhermsdorf)</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Webseite</span>
-                                <span class="accom-card__detail-value"><a href="https://www.brand-baude.de" target="_blank" rel="noopener">brand-baude.de</a></span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Preis</span>
-                                <span class="accom-card__detail-value">84 €</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Frühstück</span>
-                                <span class="accom-card__detail-value">Inklusive</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Check-in</span>
-                                <span class="accom-card__detail-value">Bis 17:00 Uhr</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Storno</span>
-                                <span class="accom-card__detail-value">Bis 14 Tage vorher</span>
-                            </div>
-                        </div>
-                        <div class="info-box info-box--warning mt-4">
-                            <span class="material-symbols-outlined">warning</span>
-                            <span>Hüttenschlafsack erforderlich</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Nacht 3: Bad Schandau -->
-                <div class="accom-card">
-                    <div class="accom-card__header">
-                        <div>
-                            <p class="accom-card__date">Mi, 06. Mai 2026</p>
-                            <p class="accom-card__name">Apparthotel Bad Schandau</p>
-                        </div>
-                        <span class="badge badge--white">Bezahlt</span>
-                    </div>
-                    <div class="accom-card__body">
-                        <div class="accom-card__details">
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Typ</span>
-                                <span class="accom-card__detail-value">Maisonette mit 2 SZ</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Ort</span>
-                                <span class="accom-card__detail-value">Bad Schandau</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Webseite</span>
-                                <span class="accom-card__detail-value"><a href="https://www.steiger-hotels.com/hotels/apparthotel-bad-schandau" target="_blank" rel="noopener">steiger-hotels.com</a></span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Preis</span>
-                                <span class="accom-card__detail-value">145 €</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Frühstück</span>
-                                <span class="accom-card__detail-value">Inklusive</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Check-in</span>
-                                <span class="accom-card__detail-value">14:00-17:30 Uhr</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Storno</span>
-                                <span class="accom-card__detail-value">Nicht möglich</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Nächte 4-6: Königstein -->
-                <div class="accom-card">
-                    <div class="accom-card__header">
-                        <div>
-                            <p class="accom-card__date">Do - Fr, 07. - 08. Mai 2026</p>
-                            <p class="accom-card__name">Königstein Hostel</p>
-                        </div>
-                        <span class="badge badge--white">Angezahlt</span>
-                    </div>
-                    <div class="accom-card__body">
-                        <div class="accom-card__details">
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Typ</span>
-                                <span class="accom-card__detail-value">Doppelzimmer</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Ort</span>
-                                <span class="accom-card__detail-value">Königstein</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Webseite</span>
-                                <span class="accom-card__detail-value"><a href="https://www.koenigstein-hostel.de" target="_blank" rel="noopener">koenigstein-hostel.de</a></span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Gesamtpreis</span>
-                                <span class="accom-card__detail-value">180 € (2 Nächte)</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Frühstück</span>
-                                <span class="accom-card__detail-value">Nein</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Check-in</span>
-                                <span class="accom-card__detail-value">Ab 15:00 Uhr</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Storno</span>
-                                <span class="accom-card__detail-value">Bis 14 Tage vorher</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Nacht 7: Noch offen -->
-                <div class="accom-card">
-                    <div class="accom-card__header">
-                        <div>
-                            <p class="accom-card__date">Sa, 09. Mai 2026</p>
-                            <p class="accom-card__name">Mal schauen</p>
-                        </div>
-                        <span class="badge badge--pending">Offen</span>
-                    </div>
-                    <div class="accom-card__body">
-                        <div class="accom-card__details">
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Typ</span>
-                                <span class="accom-card__detail-value">Suite</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Ort</span>
-                                <span class="accom-card__detail-value">Pirna oder Umgebung</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Webseite</span>
-                                <span class="accom-card__detail-value"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">Never gonna</a></span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Preis</span>
-                                <span class="accom-card__detail-value">Günstig</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Frühstück</span>
-                                <span class="accom-card__detail-value">Wäre cool</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Check-in</span>
-                                <span class="accom-card__detail-value">Rechtzeitig</span>
-                            </div>
-                            <div class="accom-card__detail-item">
-                                <span class="accom-card__detail-label">Storno</span>
-                                <span class="accom-card__detail-value">Nicht möglich</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- KOSTENÜBERSICHT -->
-            <div style="margin-top:var(--space-12);">
-                <h2 style="margin-bottom:var(--space-6);">Kostenübersicht</h2>
-                <div class="info-table__wrapper">
-                    <table class="info-table">
-                        <thead>
-                            <tr><th>Unterkunft</th><th>Datum</th><th>Preis</th><th>Status</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Kutscherhaus Felsenpost</td><td>04.05.</td><td>153 €</td><td><span class="badge badge--paid">Bezahlt</span></td></tr>
-                            <tr><td>Brand-Baude Blockhaus</td><td>05.05.</td><td>84 €</td><td><span class="badge badge--pending">Vor Ort</span></td></tr>
-                            <tr><td>Apparthotel Bad Schandau</td><td>06.05.</td><td>145 €</td><td><span class="badge badge--paid">Bezahlt</span></td></tr>
-                            <tr><td>Königstein Hostel (2 Nächte)</td><td>07.-09.05.</td><td>180 €</td><td><span class="badge badge--pending">Anzahlung</span></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p style="margin-top:var(--space-4);font-weight:600;font-size:var(--font-size-lg);">Gesamt: 562 € · davon bezahlt: 316 €</p>
+    </header>
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <p class="page-header__eyebrow">Malerweg 2026</p>
+                <h1 class="page-header__title">Unterkünfte</h1>
+                <p class="page-header__desc">Alle Unterkünfte unserer Wanderung - Buchungsstatus, Check-in Zeiten und
+                    wichtige Infos auf einen Blick.</p>
             </div>
         </div>
-    </section>
-</main>
-<footer class="site-footer" id="main-footer"></footer>
-<script src="assets/js/nav.js?v=202603080935"></script>
+        <section class="section">
+            <div class="container">
+                <div class="accommodation-grid" id="accommodations-list-container">
+                    <!-- JS populated accommodations -->
+                </div>
+                <!-- KOSTENÜBERSICHT -->
+                <div style="margin-top:var(--space-12);">
+                    <h2 style="margin-bottom:var(--space-6);">Kostenübersicht</h2>
+                    <div class="info-table__wrapper">
+                        <table class="info-table">
+                            <thead>
+                                <tr>
+                                    <th>Unterkunft</th>
+                                    <th>Datum</th>
+                                    <th>Preis</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="costs-list-container">
+                                <!-- JS populated accommodation costs -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="margin-top:var(--space-4);font-weight:600;font-size:var(--font-size-lg);"
+                        id="costs-total-container"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" id="main-footer"></footer>
+    <script src="assets/js/nav.js?v=202603081405"></script>
+    <script src="assets/js/data-provider.js?v=202603081405"></script>
+    <script src="assets/js/app-unterkuenfte-loader.js?v=202603081405"></script>
 </body>
-</html>
 
+</html>

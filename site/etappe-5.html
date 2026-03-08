@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etappe 5: Reinhardtsdorf → Königstein - Malerweg 2026</title>
-    <meta name="description" content="Etappe 5 des Malerwegs: Reinhardtsdorf nach Königstein, 18 km, 740 Höhenmeter, ca. 5:30 Stunden. Tafelberge der Sächsischen Schweiz."/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-    <link rel="stylesheet" href="assets/css/tokens.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/base.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/layout.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/components.css?v=202603080935"/>
-    <link rel="stylesheet" href="assets/css/pages.css?v=202603080935"/>
+    <meta name="description"
+        content="Etappe 5 des Malerwegs: Reinhardtsdorf nach Königstein, 18 km, 740 Höhenmeter, ca. 5:30 Stunden. Tafelberge der Sächsischen Schweiz." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/base.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/components.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=202603081405" />
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.css" />
 </head>
+
 <body>
-<header class="site-header">
-    <div class="container site-header__inner">
-        <a href="index.html" class="site-header__brand">
-            <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
-            <span class="site-header__brand-name">Malerweg 2026</span>
-        </a>
-        <nav class="site-nav">
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="index.html" class="site-header__brand">
+                <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
+                <span class="site-header__brand-name">Malerweg 2026</span>
+            </a>
+            <nav class="site-nav">
+                <a class="site-nav__link" href="etappen.html">Etappen</a>
+                <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+                <a class="site-nav__link" href="organisation.html">Organisation</a>
+                <a class="site-nav__link" href="navigation.html">Navigation</a>
+                <a class="site-nav__link" href="anreise.html">Anreise</a>
+                <a class="site-nav__link" href="links.html">Links</a>
+                <a class="site-nav__link" href="downloads.html">Downloads</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile"
+                aria-label="Menü öffnen">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <nav class="site-nav-mobile" id="nav-mobile">
             <a class="site-nav__link" href="etappen.html">Etappen</a>
             <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
             <a class="site-nav__link" href="organisation.html">Organisation</a>
@@ -31,100 +50,111 @@
             <a class="site-nav__link" href="links.html">Links</a>
             <a class="site-nav__link" href="downloads.html">Downloads</a>
         </nav>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-    </div>
-    <nav class="site-nav-mobile" id="nav-mobile">
-        <a class="site-nav__link" href="etappen.html">Etappen</a>
-        <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
-        <a class="site-nav__link" href="organisation.html">Organisation</a>
-        <a class="site-nav__link" href="navigation.html">Navigation</a>
-        <a class="site-nav__link" href="anreise.html">Anreise</a>
-        <a class="site-nav__link" href="links.html">Links</a>
-        <a class="site-nav__link" href="downloads.html">Downloads</a>
-    </nav>
-</header>
-<main>
-    <div class="stage-hero stage-hero--5">
-        <div class="stage-hero__content">
+    </header>
+    <main>
+        <div class="stage-hero stage-hero--5">
+            <div class="stage-hero__content">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="index.html">Start</a><span class="breadcrumb__sep">›</span>
+                        <a href="etappen.html">Etappen</a><span class="breadcrumb__sep">›</span>
+                        <span class="breadcrumb__current">Etappe 5</span>
+                    </div>
+                    <h1 class="stage-hero__title">Etappe 5: Reinhardtsdorf → Königstein</h1>
+                    <p style="color:rgba(255,255,255,0.80);font-size:var(--font-size-lg);">Freitag, 08. Mai 2026 · Durch
+                        die Tafelberge zur Festung Königstein</p>
+                </div>
+            </div>
+        </div>
+        <section class="section">
             <div class="container">
-                <div class="breadcrumb">
-                    <a href="index.html">Start</a><span class="breadcrumb__sep">›</span>
-                    <a href="etappen.html">Etappen</a><span class="breadcrumb__sep">›</span>
-                    <span class="breadcrumb__current">Etappe 5</span>
+                <div class="stage-stats">
+                    <div class="stage-stat">
+                        <p class="stage-stat__label">Distanz</p>
+                        <p class="stage-stat__value">18 km</p>
+                    </div>
+                    <div class="stage-stat">
+                        <p class="stage-stat__label">Höhenmeter</p>
+                        <p class="stage-stat__value">740 hm</p>
+                    </div>
+                    <div class="stage-stat">
+                        <p class="stage-stat__label">Gehzeit</p>
+                        <p class="stage-stat__value">5:30 h</p>
+                    </div>
+                    <div class="stage-stat">
+                        <p class="stage-stat__label">Schwierigkeit</p>
+                        <p class="stage-stat__value">Mittel</p>
+                    </div>
                 </div>
-                <h1 class="stage-hero__title">Etappe 5: Reinhardtsdorf → Königstein</h1>
-                <p style="color:rgba(255,255,255,0.80);font-size:var(--font-size-lg);">Freitag, 08. Mai 2026 · Durch die Tafelberge zur Festung Königstein</p>
-            </div>
-        </div>
-    </div>
-    <section class="section">
-        <div class="container">
-            <div class="stage-stats">
-                <div class="stage-stat"><p class="stage-stat__label">Distanz</p><p class="stage-stat__value">18 km</p></div>
-                <div class="stage-stat"><p class="stage-stat__label">Höhenmeter</p><p class="stage-stat__value">740 hm</p></div>
-                <div class="stage-stat"><p class="stage-stat__label">Gehzeit</p><p class="stage-stat__value">5:30 h</p></div>
-                <div class="stage-stat"><p class="stage-stat__label">Schwierigkeit</p><p class="stage-stat__value">Mittel</p></div>
-            </div>
-            <div class="stage-detail-grid">
-                <div>
-                    <h2 style="margin-bottom:var(--space-4);">Karte &amp; GPX-Track</h2>
-                    <div class="map-container" id="stage-map"
-                         data-gpx="assets/gpx/etappe-5.gpx"
-                         data-color="#e67e22"
-                         style="margin-bottom:var(--space-3);"></div>
-                    <p id="stage-map-info" style="font-size:var(--font-size-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);"></p>
-                    <div id="elevation-div" style="margin-bottom:var(--space-4);"></div>
-                    <a href="assets/gpx/etappe-5.gpx" class="btn btn--outline btn--sm" download>
-                        <span class="material-symbols-outlined">download</span> GPX herunterladen
+                <div class="stage-detail-grid">
+                    <div>
+                        <h2 style="margin-bottom:var(--space-4);">Karte &amp; GPX-Track</h2>
+                        <div class="map-container" id="stage-map" data-gpx="assets/gpx/etappe-5.gpx"
+                            data-color="#e67e22" style="margin-bottom:var(--space-3);"></div>
+                        <p id="stage-map-info"
+                            style="font-size:var(--font-size-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">
+                        </p>
+                        <div id="elevation-div" style="margin-bottom:var(--space-4);"></div>
+                        <a href="assets/gpx/etappe-5.gpx" class="btn btn--outline btn--sm" download>
+                            <span class="material-symbols-outlined">download</span> GPX herunterladen
+                        </a>
+                        <h2 style="margin-top:var(--space-10);margin-bottom:var(--space-4);">Beschreibung</h2>
+                        <p>Diese Etappe führt durch die charakteristischen Tafelberge der Sächsischen Schweiz. Ziel ist
+                            das malerische Königstein direkt an der Elbe, wo wir auch übernachten.</p>
+                    </div>
+                    <div>
+                        <div class="card" style="margin-bottom:var(--space-6);">
+                            <div class="section-icon-header" style="margin-bottom:var(--space-4);">
+                                <span class="material-symbols-outlined">star</span>
+                                <h3 style="font-size:var(--font-size-xl);">Highlights</h3>
+                            </div>
+                            <ul class="feature-list">
+                                <li class="feature-item"><span class="material-symbols-outlined">landscape</span><span
+                                        class="feature-item__text">Tafelberge der Sächsischen Schweiz</span></li>
+                                <li class="feature-item"><span class="material-symbols-outlined">visibility</span><span
+                                        class="feature-item__text">Mehrere Aussichtspunkte</span></li>
+                                <li class="feature-item"><span class="material-symbols-outlined">castle</span><span
+                                        class="feature-item__text">Festung Königstein</span></li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <div class="section-icon-header" style="margin-bottom:var(--space-4);">
+                                <span class="material-symbols-outlined">bed</span>
+                                <h3 style="font-size:var(--font-size-xl);">Unterkunft heute</h3>
+                            </div>
+                            <p style="font-weight:600;color:var(--color-text-primary);margin-bottom:var(--space-2);">
+                                Königstein Hostel</p>
+                            <p style="font-size:var(--font-size-sm);">2. Nacht · Check-in ab 15:00</p>
+                            <a href="unterkuenfte.html" class="btn btn--outline btn--sm"
+                                style="margin-top:var(--space-4);">Alle Unterkünfte</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage-nav">
+                    <a href="etappe-4.html" class="stage-nav__link">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        <div>
+                            <p class="stage-nav__meta">Vorherige Etappe</p>
+                            <p class="stage-nav__name">Lichtenhain → Reinhardtsdorf</p>
+                        </div>
                     </a>
-                    <h2 style="margin-top:var(--space-10);margin-bottom:var(--space-4);">Beschreibung</h2>
-                    <p>Diese Etappe führt durch die charakteristischen Tafelberge der Sächsischen Schweiz mit mehreren Aussichtspunkten. Ziel ist das malerische Königstein direkt an der Elbe, wo wir auch übernachten.</p>
-                </div>
-                <div>
-                    <div class="card" style="margin-bottom:var(--space-6);">
-                        <div class="section-icon-header" style="margin-bottom:var(--space-4);">
-                            <span class="material-symbols-outlined">star</span>
-                            <h3 style="font-size:var(--font-size-xl);">Highlights</h3>
+                    <a href="etappe-6.html" class="stage-nav__link stage-nav__link--next">
+                        <div>
+                            <p class="stage-nav__meta">Nächste Etappe</p>
+                            <p class="stage-nav__name">Königstein → Pirna</p>
                         </div>
-                        <ul class="feature-list">
-                            <li class="feature-item"><span class="material-symbols-outlined">landscape</span><span class="feature-item__text">Tafelberge der Sächsischen Schweiz</span></li>
-                            <li class="feature-item"><span class="material-symbols-outlined">visibility</span><span class="feature-item__text">Mehrere Aussichtspunkte</span></li>
-                            <li class="feature-item"><span class="material-symbols-outlined">castle</span><span class="feature-item__text">Festung Königstein</span></li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <div class="section-icon-header" style="margin-bottom:var(--space-4);">
-                            <span class="material-symbols-outlined">bed</span>
-                            <h3 style="font-size:var(--font-size-xl);">Unterkunft heute</h3>
-                        </div>
-                        <p style="font-weight:600;color:var(--color-text-primary);margin-bottom:var(--space-2);">Königstein Hostel</p>
-                        <p style="font-size:var(--font-size-sm);">2. Nacht · Check-in ab 15:00</p>
-                        <a href="unterkuenfte.html" class="btn btn--outline btn--sm" style="margin-top:var(--space-4);">Alle Unterkünfte</a>
-                    </div>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
             </div>
-            <div class="stage-nav">
-                <a href="etappe-4.html" class="stage-nav__link">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                    <div><p class="stage-nav__meta">Vorherige Etappe</p><p class="stage-nav__name">Lichtenhain → Reinhardtsdorf</p></div>
-                </a>
-                <a href="etappe-6.html" class="stage-nav__link stage-nav__link--next">
-                    <div><p class="stage-nav__meta">Nächste Etappe</p><p class="stage-nav__name">Königstein → Pirna</p></div>
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
-<footer class="site-footer" id="main-footer"></footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
-<script src="https://unpkg.com/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.js"></script>
-<script src="assets/js/nav.js?v=202603080935"></script>
-<script src="assets/js/stage-map.js?v=202603080935"></script>
+        </section>
+    </main>
+    <footer class="site-footer" id="main-footer"></footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+    <script src="https://unpkg.com/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.js"></script>
+    <script src="assets/js/nav.js?v=202603081405"></script>
+    <script src="assets/js/stage-map.js?v=202603081405"></script>
 </body>
+
 </html>
-
-

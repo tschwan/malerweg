@@ -6,10 +6,11 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
-        <title>Malerweg Wanderung 2026 - Sächsische Schweiz</title>
+        <title id="meta-title">Malerweg Wanderung 2026</title>
         <meta
+            id="meta-description"
             name="description"
-            content="Informationsseite für unsere Malerweg-Wanderung 2026 in der Sächsischen Schweiz. 6 Etappen, 110 km, 4300 Höhenmeter."
+            content="Malerweg Wanderung"
         />
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
@@ -25,23 +26,23 @@
         />
         <link
             rel="stylesheet"
-            href="assets/css/tokens.css?v=202603080935"
+            href="assets/css/tokens.css?v=202603081405"
         />
         <link
             rel="stylesheet"
-            href="assets/css/base.css?v=202603080935"
+            href="assets/css/base.css?v=202603081405"
         />
         <link
             rel="stylesheet"
-            href="assets/css/layout.css?v=202603080935"
+            href="assets/css/layout.css?v=202603081405"
         />
         <link
             rel="stylesheet"
-            href="assets/css/components.css?v=202603080935"
+            href="assets/css/components.css?v=202603081405"
         />
         <link
             rel="stylesheet"
-            href="assets/css/pages.css?v=202603080935"
+            href="assets/css/pages.css?v=202603081405"
         />
     </head>
     <body>
@@ -152,9 +153,9 @@
                 ></div>
                 <div class="page-hero__overlay"></div>
                 <div class="page-hero__content">
-                    <h1 class="page-hero__title">Malerweg Wanderung</h1>
-                    <p class="page-hero__subtitle">
-                        04. - 09. Mai 2026 · Sächsische Schweiz
+                    <h1 class="page-hero__title" id="hero-title">-</h1>
+                    <p class="page-hero__subtitle" id="hero-subtitle">
+                        -
                     </p>
                     <div class="page-hero__actions">
                         <a
@@ -181,19 +182,19 @@
                     <div class="stats-bar__inner">
                         <div class="stats-bar__item">
                             <p class="stats-bar__label">Distanz</p>
-                            <p class="stats-bar__value">110 km</p>
+                            <p class="stats-bar__value" id="stat-distance">-</p>
                         </div>
                         <div class="stats-bar__item">
                             <p class="stats-bar__label">Etappen</p>
-                            <p class="stats-bar__value">6</p>
+                            <p class="stats-bar__value" id="stat-stages">-</p>
                         </div>
                         <div class="stats-bar__item">
                             <p class="stats-bar__label">Höhenmeter</p>
-                            <p class="stats-bar__value">4300 m</p>
+                            <p class="stats-bar__value" id="stat-elevation">-</p>
                         </div>
                         <div class="stats-bar__item">
                             <p class="stats-bar__label">Dauer</p>
-                            <p class="stats-bar__value">6 Tage</p>
+                            <p class="stats-bar__value" id="stat-duration">-</p>
                         </div>
                     </div>
                 </div>
@@ -202,12 +203,9 @@
             <section class="section">
                 <div class="container">
                     <div class="intro-section">
-                        <h2>Unterwegs auf dem Malerweg</h2>
-                        <p>
-                            Zwei Typen, sechs Tage, ein Plan: einmal quer durch die Sächsische Schweiz.<br>
-                            Der Malerweg führt durch die Felsenlandschaft und tiefen Täler des Nationalparks Sächsische Schweiz.
-                            Eine Gegend, die schon Caspar David Friedrich und viele andere Maler inspiriert hat.
-                            Wir wandern vom 4. bis 9. Mai 2026 von Liebethal bis nach Pirna (ohne Pinsel).
+                        <h2 id="intro-title">...</h2>
+                        <p id="intro-content">
+                            ...
                         </p>
                     </div>
                 </div>
@@ -272,8 +270,9 @@
                                                     --color-text-primary
                                                 );
                                             "
+                                            id="org-date-range"
                                         >
-                                            04. - 09. Mai 2026
+                                            -
                                         </p>
                                     </div>
                                 </div>
@@ -285,23 +284,8 @@
                                 >
                                     Teilnehmer
                                 </h5>
-                                <ul class="participant-list">
-                                    <li class="participant-item">
-                                        <div class="participant-item__avatar">
-                                            WZ
-                                        </div>
-                                        <span class="participant-item__name"
-                                            >Wolfgang Zimmermann</span
-                                        >
-                                    </li>
-                                    <li class="participant-item">
-                                        <div class="participant-item__avatar">
-                                            TS
-                                        </div>
-                                        <span class="participant-item__name"
-                                            >Thomas Schwan</span
-                                        >
-                                    </li>
+                                <ul class="participant-list" id="participant-list-container">
+                                    <!-- JS populated -->
                                 </ul>
                                 <a
                                     href="organisation.html"
@@ -398,9 +382,8 @@
                 <div class="container--narrow">
                     <div class="section__header">
                         <h2 class="section__title">Tourplan</h2>
-                        <p class="section__lead">
-                            Übersicht aller 6 Etappen mit Distanz, Höhenmetern
-                            und voraussichtlicher Gehzeit.
+                        <p class="section__lead" id="tourplan-lead">
+                            -
                         </p>
                     </div>
                     <div class="info-table__wrapper">
@@ -415,79 +398,8 @@
                                     <th>Gehzeit</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Mo</td>
-                                    <td>04.05</td>
-                                    <td>
-                                        <a href="etappe-1.html"
-                                            >Liebethal → Stadt Wehlen</a
-                                        >
-                                    </td>
-                                    <td>12 km</td>
-                                    <td>200 hm</td>
-                                    <td>3:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Di</td>
-                                    <td>05.05</td>
-                                    <td>
-                                        <a href="etappe-2.html"
-                                            >Stadt Wehlen → Brand-Baude</a
-                                        >
-                                    </td>
-                                    <td>16 km</td>
-                                    <td>760 hm</td>
-                                    <td>5:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Mi</td>
-                                    <td>06.05</td>
-                                    <td>
-                                        <a href="etappe-3.html"
-                                            >Brand-Baude → Lichtenhain</a
-                                        >
-                                    </td>
-                                    <td>22 km</td>
-                                    <td>850 hm</td>
-                                    <td>6:30</td>
-                                </tr>
-                                <tr>
-                                    <td>Do</td>
-                                    <td>07.05</td>
-                                    <td>
-                                        <a href="etappe-4.html"
-                                            >Lichtenhain → Reinhardtsdorf</a
-                                        >
-                                    </td>
-                                    <td>24 km</td>
-                                    <td>1200 hm</td>
-                                    <td>7:30</td>
-                                </tr>
-                                <tr>
-                                    <td>Fr</td>
-                                    <td>08.05</td>
-                                    <td>
-                                        <a href="etappe-5.html"
-                                            >Reinhardtsdorf → Königstein</a
-                                        >
-                                    </td>
-                                    <td>18 km</td>
-                                    <td>740 hm</td>
-                                    <td>5:30</td>
-                                </tr>
-                                <tr>
-                                    <td>Sa</td>
-                                    <td>09.05</td>
-                                    <td>
-                                        <a href="etappe-6.html"
-                                            >Königstein → Pirna</a
-                                        >
-                                    </td>
-                                    <td>19 km</td>
-                                    <td>600 hm</td>
-                                    <td>5:30</td>
-                                </tr>
+                            <tbody id="tourplan-body">
+                                <!-- JS populated -->
                             </tbody>
                         </table>
                     </div>
@@ -504,42 +416,15 @@
                                 >
                                 <h2>Die Route im Überblick</h2>
                             </div>
-                            <p style="margin-bottom: var(--space-6)">
-                                Der Weg beginnt in Liebethal und führt über 6
-                                Etappen durch den Nationalpark Sächsische
-                                Schweiz bis nach Pirna. Highlights: Bastei,
-                                Schrammsteine, Kirnitzschtal, Kuhstall.
+                            <p style="margin-bottom: var(--space-6)" id="overview-desc">
+                                -
                             </p>
                             <ul
                                 class="feature-list"
                                 style="margin-bottom: var(--space-6)"
+                                id="overview-features"
                             >
-                                <li class="feature-item">
-                                    <span class="material-symbols-outlined"
-                                        >check_circle</span
-                                    >
-                                    <span class="feature-item__text"
-                                        >Start: Liebethal - Ziel: Pirna</span
-                                    >
-                                </li>
-                                <li class="feature-item">
-                                    <span class="material-symbols-outlined"
-                                        >check_circle</span
-                                    >
-                                    <span class="feature-item__text"
-                                        >Zahlreiche Aussichtspunkte &amp;
-                                        Tafelberge</span
-                                    >
-                                </li>
-                                <li class="feature-item">
-                                    <span class="material-symbols-outlined"
-                                        >check_circle</span
-                                    >
-                                    <span class="feature-item__text"
-                                        >GPX-Tracks für alle Etappen
-                                        verfügbar</span
-                                    >
-                                </li>
+                                <!-- JS populated -->
                             </ul>
                             <a
                                 href="etappen.html"
@@ -565,7 +450,9 @@
         <footer class="site-footer" id="main-footer"></footer>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
-        <script src="assets/js/nav.js?v=202603080935"></script>
-        <script src="assets/js/map.js?v=202603080935"></script>
+        <script src="assets/js/nav.js?v=202603081405"></script>
+        <script src="assets/js/data-provider.js?v=202603081405"></script>
+        <script src="assets/js/app-data-loader.js?v=202603081405"></script>
+        <script src="assets/js/map.js?v=202603081405"></script>
     </body>
 </html>
