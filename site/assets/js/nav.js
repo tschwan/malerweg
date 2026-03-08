@@ -1,5 +1,5 @@
 /**
- * nav.js – Mobile Navigation Toggle & Active Link Highlighting
+ * nav.js - Mobile Navigation Toggle & Active Link Highlighting
  */
 (function () {
     "use strict";
@@ -85,7 +85,7 @@
     </div>
     <div class="site-footer__bottom">
         <p class="site-footer__copy">
-            © 2026 Stagely - Your hike perfectly staged
+            Powered by Stagely - Your hike perfectly staged
         </p>
         <div class="site-footer__legal">
             <a href="#">Impressum</a>

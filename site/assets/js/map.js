@@ -1,5 +1,5 @@
 /**
- * map.js – Leaflet Overview Map (all 6 stages)
+ * map.js - Leaflet Overview Map (all 6 stages)
  * Used on index.html and etappen.html
  */
 (function () {

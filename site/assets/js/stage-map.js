@@ -1,5 +1,5 @@
 /**
- * stage-map.js – Leaflet Map for a Single Stage
+ * stage-map.js - Leaflet Map for a Single Stage
  * Reads data-gpx attribute from the map container div.
  */
 (function () {

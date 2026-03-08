@@ -1,8 +1,8 @@
-# Malerweg Webseite – Implementierungsplan
+# Malerweg Webseite - Implementierungsplan
 
 ## Kontext
 
-Statische Informationswebseite für die Malerweg-Wanderung 2026 (04.05.–09.05.2026, Liebethal → Pirna, 6 Etappen, ~110 km). Kein Framework, kein Backend, kein Build-Tool. Vanilla HTML + CSS + JavaScript. Hosting via GitHub Pages oder einfachem Webserver.
+Statische Informationswebseite für die Malerweg-Wanderung 2026 (04.05.-09.05.2026, Liebethal → Pirna, 6 Etappen, ~110 km). Kein Framework, kein Backend, kein Build-Tool. Vanilla HTML + CSS + JavaScript. Hosting via GitHub Pages oder einfachem Webserver.
 
 ---
 
@@ -142,7 +142,7 @@ Alle anderen Inhalte (Tabellen, Karten, Listen) sind statisches HTML. Kein Daten
 
 ## 5. CSS-Struktur
 
-### `tokens.css` – Design-Tokens
+### `tokens.css` - Design-Tokens
 
 ```css
 :root {
@@ -201,7 +201,7 @@ Alle anderen Inhalte (Tabellen, Karten, Listen) sind statisches HTML. Kein Daten
 ### `base.css`
 
 - CSS-Reset (box-sizing, margins)
-- Typografie: `Inter` von Google Fonts (300–800)
+- Typografie: `Inter` von Google Fonts (300-800)
 - `body`: Hintergrund, Farbe, Schrift
 - Links, Headings, Listen-Reset
 
@@ -266,7 +266,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 ```
 
-**Alternativ für schönere Karten:** OpenTopoMap (`https://{s}.tile.opentopomap.org/...`) – besonders geeignet für Wanderwege wegen Höhenlinien.
+**Alternativ für schönere Karten:** OpenTopoMap (`https://{s}.tile.opentopomap.org/...`) - besonders geeignet für Wanderwege wegen Höhenlinien.
 
 **GPX-Integration:**
 
@@ -329,7 +329,7 @@ Implementiert via CSS Media Queries (kein Framework):
 
 ### Option B: Einfacher Webserver
 
-Jeder statische Webserver (Apache, Nginx, Caddy) kann das `site/`-Verzeichnis direkt ausliefern. Keine serverseitige Konfiguration notwendig – reine Dateiauslieferung.
+Jeder statische Webserver (Apache, Nginx, Caddy) kann das `site/`-Verzeichnis direkt ausliefern. Keine serverseitige Konfiguration notwendig - reine Dateiauslieferung.
 
 ### Lokale Entwicklung
 
@@ -357,7 +357,7 @@ npx serve site
 | Navigation-Abschnitt                                 | `navigation.html`               |
 | `docs/Seitenstruktur.md`                             | Strukturvorlage für alle Seiten |
 
-Die Inhalte werden **manuell** (Copy & Paste + HTML-Markup) überführt. Kein Markdown-Parser, kein Static-Site-Generator – das ist bewusst einfach gehalten.
+Die Inhalte werden **manuell** (Copy & Paste + HTML-Markup) überführt. Kein Markdown-Parser, kein Static-Site-Generator - das ist bewusst einfach gehalten.
 
 ---
 
@@ -381,7 +381,7 @@ Das Mockup (`mockup/code.html`) definiert folgende Designsprache:
 - **Primärfarbe:** `#2d4c3b` (Dunkelwald-Grün)
 - **Akzentfarbe:** `#3e624d` (Mittelgrün)
 - **Hintergrund:** `#fcfaf7` (Warmes Off-White)
-- **Schrift:** Inter (Google Fonts, Weights 300–900)
+- **Schrift:** Inter (Google Fonts, Weights 300-900)
 - **Icons:** Google Material Symbols Outlined
 - **Stil:** Minimalistisch, viel Weißraum, subtile Borders, Glassmorphism-Header
 - **Hero:** Vollbild-Foto mit halbtransparentem Overlay und Stats-Bar am unteren Rand
