@@ -4,19 +4,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etappe 4: Lichtenhain → Reinhardtsdorf - Malerweg 2026</title>
-    <meta name="description"
-        content="Etappe 4 des Malerwegs: Lichtenhain nach Reinhardtsdorf, 24 km, 1200 Höhenmeter, ca. 7:30 Stunden." />
+    <title id="meta-title">Etappe - Malerweg 2026</title>
+    <meta id="meta-description" name="description" content="Malerweg Etappe" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081405" />
-    <link rel="stylesheet" href="assets/css/base.css?v=202603081405" />
-    <link rel="stylesheet" href="assets/css/layout.css?v=202603081405" />
-    <link rel="stylesheet" href="assets/css/components.css?v=202603081405" />
-    <link rel="stylesheet" href="assets/css/pages.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081435" />
+    <link rel="stylesheet" href="assets/css/base.css?v=202603081435" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=202603081435" />
+    <link rel="stylesheet" href="assets/css/components.css?v=202603081435" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=202603081435" />
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.css" />
 </head>
 
@@ -27,7 +26,7 @@
                 <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
                 <span class="site-header__brand-name">Malerweg 2026</span>
             </a>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Hauptnavigation">
                 <a class="site-nav__link" href="etappen.html">Etappen</a>
                 <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
                 <a class="site-nav__link" href="organisation.html">Organisation</a>
@@ -52,17 +51,18 @@
         </nav>
     </header>
     <main>
-        <div class="stage-hero stage-hero--4">
+        <div class="stage-hero" id="stage-hero">
             <div class="stage-hero__content">
                 <div class="container">
                     <div class="breadcrumb">
-                        <a href="index.html">Start</a><span class="breadcrumb__sep">›</span>
-                        <a href="etappen.html">Etappen</a><span class="breadcrumb__sep">›</span>
-                        <span class="breadcrumb__current">Etappe 4</span>
+                        <a href="index.html">Start</a>
+                        <span class="breadcrumb__sep">›</span>
+                        <a href="etappen.html">Etappen</a>
+                        <span class="breadcrumb__sep">›</span>
+                        <span class="breadcrumb__current" id="breadcrumb-current">-</span>
                     </div>
-                    <h1 class="stage-hero__title">Etappe 4: Lichtenhain → Reinhardtsdorf</h1>
-                    <p style="color:rgba(255,255,255,0.80);font-size:var(--font-size-lg);">Donnerstag, 07. Mai 2026 ·
-                        Die längste und anspruchsvollste Etappe</p>
+                    <h1 class="stage-hero__title" id="stage-title">-</h1>
+                    <p style="color:rgba(255,255,255,0.80);font-size:var(--font-size-lg);" id="stage-date">-</p>
                 </div>
             </div>
         </div>
@@ -71,89 +71,80 @@
                 <div class="stage-stats">
                     <div class="stage-stat">
                         <p class="stage-stat__label">Distanz</p>
-                        <p class="stage-stat__value">24 km</p>
+                        <p class="stage-stat__value" id="stat-distance">-</p>
                     </div>
                     <div class="stage-stat">
                         <p class="stage-stat__label">Höhenmeter</p>
-                        <p class="stage-stat__value">1200 hm</p>
+                        <p class="stage-stat__value" id="stat-elevation">-</p>
                     </div>
                     <div class="stage-stat">
                         <p class="stage-stat__label">Gehzeit</p>
-                        <p class="stage-stat__value">7:30 h</p>
+                        <p class="stage-stat__value" id="stat-duration">-</p>
                     </div>
                     <div class="stage-stat">
                         <p class="stage-stat__label">Schwierigkeit</p>
-                        <p class="stage-stat__value">Anspruchsvoll</p>
+                        <p class="stage-stat__value" id="stat-difficulty">-</p>
                     </div>
                 </div>
                 <div class="stage-detail-grid">
                     <div>
+                        <!-- KARTE -->
                         <h2 style="margin-bottom:var(--space-4);">Karte &amp; GPX-Track</h2>
-                        <div class="map-container" id="stage-map" data-gpx="assets/gpx/etappe-4.gpx"
-                            data-color="#8e44ad" style="margin-bottom:var(--space-3);"></div>
+                        <div class="map-container" id="stage-map" style="margin-bottom:var(--space-3);"></div>
                         <p id="stage-map-info"
                             style="font-size:var(--font-size-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">
                         </p>
                         <div id="elevation-div" style="margin-bottom:var(--space-4);"></div>
-                        <a href="assets/gpx/etappe-4.gpx" class="btn btn--outline btn--sm" download>
-                            <span class="material-symbols-outlined">download</span> GPX herunterladen
+                        <a href="#" id="gpx-download-btn" class="btn btn--outline btn--sm" download>
+                            <span class="material-symbols-outlined">download</span> <span id="gpx-download-text">GPX
+                                herunterladen</span>
                         </a>
+                        <!-- BESCHREIBUNG -->
                         <h2 style="margin-top:var(--space-10);margin-bottom:var(--space-4);">Beschreibung</h2>
-                        <p style="margin-bottom:var(--space-4);">Die härteste Etappe mit 1200 hm durch die
-                            Schrammsteine. Nach der Wanderung Busfahrt zur Unterkunft.</p>
-                        <div class="info-box info-box--warning" style="margin-top:var(--space-4);">
-                            <span class="material-symbols-outlined">warning</span>
-                            <div><strong>Frühzeitig starten!</strong>
-                                <p style="margin:0;color:inherit;">7:30 h Gehzeit - früh aufbrechen.</p>
-                            </div>
-                        </div>
-                        <div class="info-box info-box--info" style="margin-top:var(--space-3);">
-                            <span class="material-symbols-outlined">directions_bus</span>
-                            <div><strong>Bus nach Königstein</strong>
-                                <p style="margin:0;color:inherit;">ab Reinhardtsdorf · ca. 15 Minuten</p>
-                            </div>
+                        <p id="stage-description">-</p>
+                        <div id="infobox-container">
+                            <!-- JS populated -->
                         </div>
                     </div>
                     <div>
+                        <!-- HIGHLIGHTS -->
                         <div class="card" style="margin-bottom:var(--space-6);">
                             <div class="section-icon-header" style="margin-bottom:var(--space-4);">
                                 <span class="material-symbols-outlined">star</span>
                                 <h3 style="font-size:var(--font-size-xl);">Highlights</h3>
                             </div>
-                            <ul class="feature-list">
-                                <li class="feature-item"><span class="material-symbols-outlined">landscape</span><span
-                                        class="feature-item__text">Schrammsteine</span></li>
-                                <li class="feature-item"><span class="material-symbols-outlined">landscape</span><span
-                                        class="feature-item__text">Zeughaus (Felsformation)</span></li>
-                                <li class="feature-item"><span class="material-symbols-outlined">visibility</span><span
-                                        class="feature-item__text">Panoramaaussichten</span></li>
+                            <ul class="feature-list" id="highlights-list">
+                                <!-- JS populated -->
                             </ul>
                         </div>
+                        <!-- UNTERKUNFT -->
                         <div class="card">
                             <div class="section-icon-header" style="margin-bottom:var(--space-4);">
-                                <span class="material-symbols-outlined">bed</span>
-                                <h3 style="font-size:var(--font-size-xl);">Unterkunft heute</h3>
+                                <span class="material-symbols-outlined" id="acc-icon">bed</span>
+                                <h3 style="font-size:var(--font-size-xl);" id="acc-title">Unterkunft heute</h3>
                             </div>
-                            <p style="font-weight:600;color:var(--color-text-primary);margin-bottom:var(--space-2);">
-                                Königstein Hostel</p>
-                            <p style="font-size:var(--font-size-sm);">Check-in ab 15:00 · 1. Nacht</p>
-                            <a href="unterkuenfte.html" class="btn btn--outline btn--sm"
+                            <p style="font-weight:600;color:var(--color-text-primary);margin-bottom:var(--space-2);"
+                                id="acc-name">-</p>
+                            <p style="font-size:var(--font-size-sm);" id="acc-subtext">-</p>
+                            <a href="unterkuenfte.html" id="acc-link" class="btn btn--outline btn--sm"
                                 style="margin-top:var(--space-4);">Alle Unterkünfte</a>
                         </div>
                     </div>
                 </div>
+                <!-- STAGE NAV -->
                 <div class="stage-nav">
-                    <a href="etappe-3.html" class="stage-nav__link">
+                    <a href="#" class="stage-nav__link" id="nav-prev" style="display: none; visibility: hidden;">
                         <span class="material-symbols-outlined">arrow_back</span>
                         <div>
                             <p class="stage-nav__meta">Vorherige Etappe</p>
-                            <p class="stage-nav__name">Brand-Baude → Lichtenhain</p>
+                            <p class="stage-nav__name" id="nav-prev-name">-</p>
                         </div>
                     </a>
-                    <a href="etappe-5.html" class="stage-nav__link stage-nav__link--next">
+                    <a href="#" class="stage-nav__link stage-nav__link--next" id="nav-next"
+                        style="display: none; visibility: hidden;">
                         <div>
-                            <p class="stage-nav__meta">Nächste Etappe</p>
-                            <p class="stage-nav__name">Reinhardtsdorf → Königstein</p>
+                            <p class="stage-nav__meta" id="nav-next-meta">Nächste Etappe</p>
+                            <p class="stage-nav__name" id="nav-next-name">-</p>
                         </div>
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
@@ -165,8 +156,10 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
     <script src="https://unpkg.com/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.js"></script>
-    <script src="assets/js/nav.js?v=202603081405"></script>
-    <script src="assets/js/stage-map.js?v=202603081405"></script>
+    <script src="assets/js/nav.js?v=202603081435"></script>
+    <script src="assets/js/data-provider.js?v=202603081435"></script>
+    <script src="assets/js/app-data-loader.js?v=202603081435"></script>
+    <script src="assets/js/app-etappe-loader.js?v=202603081435"></script>
 </body>
 
 </html>

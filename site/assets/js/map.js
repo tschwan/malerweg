@@ -65,12 +65,12 @@
         "Etappe 6: Königstein → Pirna",
     ];
     const stageLinks = [
-        "etappe-1.html",
-        "etappe-2.html",
-        "etappe-3.html",
-        "etappe-4.html",
-        "etappe-5.html",
-        "etappe-6.html",
+        "etappe.html?id=1",
+        "etappe.html?id=2",
+        "etappe.html?id=3",
+        "etappe.html?id=4",
+        "etappe.html?id=5",
+        "etappe.html?id=6",
     ];
 
     const gpxBase = container.dataset.gpxBase || "assets/gpx/";
