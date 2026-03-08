@@ -59,6 +59,11 @@ class HikeDataProvider {
         return this.data.intro;
     }
 
+    getWeather() {
+        this._ensureDataLoaded();
+        return this.data.weather;
+    }
+
     getOrganization() {
         this._ensureDataLoaded();
         return this.data.organization;

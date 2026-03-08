@@ -18,6 +18,11 @@
         "title": "Unterwegs auf dem Malerweg",
         "content": "Zwei Typen, sechs Tage, ein Plan: einmal quer durch die Sächsische Schweiz.<br>Der Malerweg führt durch die Felsenlandschaft und tiefen Täler des Nationalparks Sächsische Schweiz. Eine Gegend, die schon Caspar David Friedrich und viele andere Maler inspiriert hat. Wir wandern vom 4. bis 9. Mai 2026 von Liebethal bis nach Pirna (ohne Pinsel)."
     },
+    "weather": {
+        "location": "Bad Schandau",
+        "latitude": 50.9224,
+        "longitude": 14.153
+    },
     "organization": {
         "dateRange": "04. - 09. Mai 2026",
         "participants": [

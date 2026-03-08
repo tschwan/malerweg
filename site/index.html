@@ -1,229 +1,120 @@
 <!doctype html>
 <html lang="de">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
-        <title id="meta-title">Malerweg Wanderung 2026</title>
-        <meta
-            id="meta-description"
-            name="description"
-            content="Malerweg Wanderung"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        />
-        <link
-            rel="stylesheet"
-            href="assets/css/tokens.css?v=202603081405"
-        />
-        <link
-            rel="stylesheet"
-            href="assets/css/base.css?v=202603081405"
-        />
-        <link
-            rel="stylesheet"
-            href="assets/css/layout.css?v=202603081405"
-        />
-        <link
-            rel="stylesheet"
-            href="assets/css/components.css?v=202603081405"
-        />
-        <link
-            rel="stylesheet"
-            href="assets/css/pages.css?v=202603081405"
-        />
-    </head>
-    <body>
-        <header class="site-header">
-            <div class="container site-header__inner">
-                <a
-                    href="index.html"
-                    class="site-header__brand"
-                >
-                    <span
-                        class="material-symbols-outlined site-header__brand-icon"
-                        >terrain</span
-                    >
-                    <span class="site-header__brand-name">Malerweg 2026</span>
-                </a>
-                <nav
-                    class="site-nav"
-                    aria-label="Hauptnavigation"
-                >
-                    <a
-                        class="site-nav__link"
-                        href="etappen.html"
-                        >Etappen</a
-                    >
-                    <a
-                        class="site-nav__link"
-                        href="unterkuenfte.html"
-                        >Unterkünfte</a
-                    >
-                    <a
-                        class="site-nav__link"
-                        href="organisation.html"
-                        >Organisation</a
-                    >
-                    <a
-                        class="site-nav__link"
-                        href="navigation.html"
-                        >Navigation</a
-                    >
-                    <a
-                        class="site-nav__link"
-                        href="anreise.html"
-                        >Anreise</a
-                    >
-                    <a class="site-nav__link" href="links.html">Links</a>
-                    <a
-                        class="site-nav__link"
-                        href="downloads.html"
-                        >Downloads</a
-                    >
-                </nav>
-                <button
-                    class="nav-toggle"
-                    id="nav-toggle"
-                    aria-expanded="false"
-                    aria-controls="nav-mobile"
-                    aria-label="Menü öffnen"
-                >
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-            </div>
-            <nav
-                class="site-nav-mobile"
-                id="nav-mobile"
-                aria-label="Mobile Navigation"
-            >
-                <a
-                    class="site-nav__link"
-                    href="etappen.html"
-                    >Etappen</a
-                >
-                <a
-                    class="site-nav__link"
-                    href="unterkuenfte.html"
-                    >Unterkünfte</a
-                >
-                <a
-                    class="site-nav__link"
-                    href="organisation.html"
-                    >Organisation</a
-                >
-                <a
-                    class="site-nav__link"
-                    href="navigation.html"
-                    >Navigation</a
-                >
-                <a
-                    class="site-nav__link"
-                    href="anreise.html"
-                    >Anreise</a
-                >
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="meta-title">Malerweg Wanderung 2026</title>
+    <meta id="meta-description" name="description" content="Malerweg Wanderung" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/base.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/components.css?v=202603081405" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=202603081405" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a href="index.html" class="site-header__brand">
+                <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
+                <span class="site-header__brand-name">Malerweg 2026</span>
+            </a>
+            <nav class="site-nav" aria-label="Hauptnavigation">
+                <a class="site-nav__link" href="etappen.html">Etappen</a>
+                <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+                <a class="site-nav__link" href="organisation.html">Organisation</a>
+                <a class="site-nav__link" href="navigation.html">Navigation</a>
+                <a class="site-nav__link" href="anreise.html">Anreise</a>
                 <a class="site-nav__link" href="links.html">Links</a>
-                <a
-                    class="site-nav__link"
-                    href="downloads.html"
-                    >Downloads</a
-                >
+                <a class="site-nav__link" href="downloads.html">Downloads</a>
             </nav>
-        </header>
-        <main>
-            <!-- HERO -->
-            <section class="page-hero">
-                <div
-                    class="page-hero__bg"
-                    style="
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile"
+                aria-label="Menü öffnen">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <nav class="site-nav-mobile" id="nav-mobile" aria-label="Mobile Navigation">
+            <a class="site-nav__link" href="etappen.html">Etappen</a>
+            <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+            <a class="site-nav__link" href="organisation.html">Organisation</a>
+            <a class="site-nav__link" href="navigation.html">Navigation</a>
+            <a class="site-nav__link" href="anreise.html">Anreise</a>
+            <a class="site-nav__link" href="links.html">Links</a>
+            <a class="site-nav__link" href="downloads.html">Downloads</a>
+        </nav>
+    </header>
+    <main>
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="page-hero__bg" style="
                         background-image: url(&quot;assets/images/hero.jpg&quot;);
-                    "
-                ></div>
-                <div class="page-hero__overlay"></div>
-                <div class="page-hero__content">
-                    <h1 class="page-hero__title" id="hero-title">-</h1>
-                    <p class="page-hero__subtitle" id="hero-subtitle">
-                        -
+                    "></div>
+            <div class="page-hero__overlay"></div>
+            <div class="page-hero__content">
+                <h1 class="page-hero__title" id="hero-title">-</h1>
+                <p class="page-hero__subtitle" id="hero-subtitle">
+                    -
+                </p>
+                <div class="page-hero__actions">
+                    <a href="etappen.html" class="btn btn--primary">
+                        <span class="material-symbols-outlined">list_alt</span>
+                        Alle Etappen
+                    </a>
+                    <a href="downloads.html" class="btn btn--ghost">
+                        <span class="material-symbols-outlined">download</span>
+                        GPX Downloads
+                    </a>
+                </div>
+            </div>
+            <div class="stats-bar">
+                <div class="stats-bar__inner">
+                    <div class="stats-bar__item">
+                        <p class="stats-bar__label">Distanz</p>
+                        <p class="stats-bar__value" id="stat-distance">-</p>
+                    </div>
+                    <div class="stats-bar__item">
+                        <p class="stats-bar__label">Etappen</p>
+                        <p class="stats-bar__value" id="stat-stages">-</p>
+                    </div>
+                    <div class="stats-bar__item">
+                        <p class="stats-bar__label">Höhenmeter</p>
+                        <p class="stats-bar__value" id="stat-elevation">-</p>
+                    </div>
+                    <div class="stats-bar__item">
+                        <p class="stats-bar__label">Dauer</p>
+                        <p class="stats-bar__value" id="stat-duration">-</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- INTRO -->
+        <section class="section">
+            <div class="container">
+                <div class="intro-section">
+                    <h2 id="intro-title">...</h2>
+                    <p id="intro-content">
+                        ...
                     </p>
-                    <div class="page-hero__actions">
-                        <a
-                            href="etappen.html"
-                            class="btn btn--primary"
-                        >
-                            <span class="material-symbols-outlined"
-                                >list_alt</span
-                            >
-                            Alle Etappen
-                        </a>
-                        <a
-                            href="downloads.html"
-                            class="btn btn--ghost"
-                        >
-                            <span class="material-symbols-outlined"
-                                >download</span
-                            >
-                            GPX Downloads
-                        </a>
-                    </div>
                 </div>
-                <div class="stats-bar">
-                    <div class="stats-bar__inner">
-                        <div class="stats-bar__item">
-                            <p class="stats-bar__label">Distanz</p>
-                            <p class="stats-bar__value" id="stat-distance">-</p>
+            </div>
+        </section>
+        <!-- ORG & QUICK LINKS -->
+        <section class="section section--shaded">
+            <div class="container">
+                <div class="org-quicklinks">
+                    <div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">groups</span>
+                            <h3>Gruppe &amp; Organisation</h3>
                         </div>
-                        <div class="stats-bar__item">
-                            <p class="stats-bar__label">Etappen</p>
-                            <p class="stats-bar__value" id="stat-stages">-</p>
-                        </div>
-                        <div class="stats-bar__item">
-                            <p class="stats-bar__label">Höhenmeter</p>
-                            <p class="stats-bar__value" id="stat-elevation">-</p>
-                        </div>
-                        <div class="stats-bar__item">
-                            <p class="stats-bar__label">Dauer</p>
-                            <p class="stats-bar__value" id="stat-duration">-</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- INTRO -->
-            <section class="section">
-                <div class="container">
-                    <div class="intro-section">
-                        <h2 id="intro-title">...</h2>
-                        <p id="intro-content">
-                            ...
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <!-- ORG & QUICK LINKS -->
-            <section class="section section--shaded">
-                <div class="container">
-                    <div class="org-quicklinks">
-                        <div>
-                            <div class="section-icon-header">
-                                <span class="material-symbols-outlined"
-                                    >groups</span
-                                >
-                                <h3>Gruppe &amp; Organisation</h3>
-                            </div>
-                            <div class="card">
-                                <div
-                                    style="
+                        <div class="card">
+                            <div style="
                                         display: flex;
                                         align-items: center;
                                         gap: var(--space-4);
@@ -231,25 +122,19 @@
                                         padding-bottom: var(--space-5);
                                         border-bottom: 1px solid
                                             var(--color-border-subtle);
-                                    "
-                                >
-                                    <div
-                                        style="
+                                    ">
+                                <div style="
                                             background: var(
                                                 --color-brand-primary
                                             );
                                             color: #fff;
                                             padding: var(--space-3);
                                             border-radius: var(--radius-lg);
-                                        "
-                                    >
-                                        <span class="material-symbols-outlined"
-                                            >event</span
-                                        >
-                                    </div>
-                                    <div>
-                                        <p
-                                            style="
+                                        ">
+                                    <span class="material-symbols-outlined">event</span>
+                                </div>
+                                <div>
+                                    <p style="
                                                 font-size: var(--font-size-xs);
                                                 font-weight: 700;
                                                 text-transform: uppercase;
@@ -258,201 +143,167 @@
                                                 );
                                                 color: var(--color-text-muted);
                                                 margin-bottom: 4px;
-                                            "
-                                        >
-                                            Geplante Tour
-                                        </p>
-                                        <p
-                                            style="
+                                            ">
+                                        Geplante Tour
+                                    </p>
+                                    <p style="
                                                 font-size: var(--font-size-xl);
                                                 font-weight: 700;
                                                 color: var(
                                                     --color-text-primary
                                                 );
-                                            "
-                                            id="org-date-range"
-                                        >
-                                            -
-                                        </p>
-                                    </div>
+                                            " id="org-date-range">
+                                        -
+                                    </p>
                                 </div>
-                                <h5
-                                    style="
+                            </div>
+                            <h5 style="
                                         margin-bottom: var(--space-4);
                                         color: var(--color-text-muted);
-                                    "
-                                >
-                                    Teilnehmer
-                                </h5>
-                                <ul class="participant-list" id="participant-list-container">
-                                    <!-- JS populated -->
-                                </ul>
-                                <a
-                                    href="organisation.html"
-                                    class="btn btn--outline btn--sm"
-                                    style="margin-top: var(--space-5)"
-                                >
-                                    Alle Details → Organisation
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="section-icon-header">
-                                <span class="material-symbols-outlined"
-                                    >link</span
-                                >
-                                <h3>Schnellzugriff</h3>
-                            </div>
-                            <div class="quick-links">
-                                <a
-                                    class="quick-link"
-                                    href="etappen.html"
-                                >
-                                    <span
-                                        class="material-symbols-outlined quick-link__icon"
-                                        >list_alt</span
-                                    >
-                                    <div>
-                                        <p class="quick-link__title">
-                                            Etappen-Übersicht
-                                        </p>
-                                        <p class="quick-link__desc">
-                                            Alle 6 Abschnitte im Detail
-                                        </p>
-                                    </div>
-                                </a>
-                                <a
-                                    class="quick-link"
-                                    href="unterkuenfte.html"
-                                >
-                                    <span
-                                        class="material-symbols-outlined quick-link__icon"
-                                        >bed</span
-                                    >
-                                    <div>
-                                        <p class="quick-link__title">
-                                            Unterkünfte
-                                        </p>
-                                        <p class="quick-link__desc">
-                                            Hotels &amp; Hütten der Tour
-                                        </p>
-                                    </div>
-                                </a>
-                                <a
-                                    class="quick-link"
-                                    href="navigation.html"
-                                >
-                                    <span
-                                        class="material-symbols-outlined quick-link__icon"
-                                        >near_me</span
-                                    >
-                                    <div>
-                                        <p class="quick-link__title">
-                                            Navigation &amp; GPS
-                                        </p>
-                                        <p class="quick-link__desc">
-                                            GPX Tracks zum Download
-                                        </p>
-                                    </div>
-                                </a>
-                                <a
-                                    class="quick-link"
-                                    href="downloads.html"
-                                >
-                                    <span
-                                        class="material-symbols-outlined quick-link__icon"
-                                        >download</span
-                                    >
-                                    <div>
-                                        <p class="quick-link__title">
-                                            Downloads
-                                        </p>
-                                        <p class="quick-link__desc">
-                                            Alle Dateien zentral
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- TOURPLAN -->
-            <section class="section">
-                <div class="container--narrow">
-                    <div class="section__header">
-                        <h2 class="section__title">Tourplan</h2>
-                        <p class="section__lead" id="tourplan-lead">
-                            -
-                        </p>
-                    </div>
-                    <div class="info-table__wrapper">
-                        <table class="info-table">
-                            <thead>
-                                <tr>
-                                    <th>Tag</th>
-                                    <th>Datum</th>
-                                    <th>Strecke</th>
-                                    <th>km</th>
-                                    <th>hm</th>
-                                    <th>Gehzeit</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tourplan-body">
-                                <!-- JS populated -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-            <!-- ÜBERSICHTSKARTE -->
-            <section class="section section--shaded">
-                <div class="container">
-                    <div class="two-col two-col--wide-right">
-                        <div>
-                            <div class="section-icon-header">
-                                <span class="material-symbols-outlined"
-                                    >map</span
-                                >
-                                <h2>Die Route im Überblick</h2>
-                            </div>
-                            <p style="margin-bottom: var(--space-6)" id="overview-desc">
-                                -
-                            </p>
-                            <ul
-                                class="feature-list"
-                                style="margin-bottom: var(--space-6)"
-                                id="overview-features"
-                            >
+                                    ">
+                                Teilnehmer
+                            </h5>
+                            <ul class="participant-list" id="participant-list-container">
                                 <!-- JS populated -->
                             </ul>
-                            <a
-                                href="etappen.html"
-                                class="btn btn--primary"
-                            >
-                                <span class="material-symbols-outlined"
-                                    >route</span
-                                >
-                                Alle Etappen ansehen
+                            <a href="organisation.html" class="btn btn--outline btn--sm"
+                                style="margin-top: var(--space-5)">
+                                Alle Details → Organisation
                             </a>
                         </div>
-                        <div>
-                            <div
-                                class="map-container"
-                                id="overview-map"
-                                data-gpx-base="assets/gpx/"
-                            ></div>
+                    </div>
+                    <div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">link</span>
+                            <h3>Schnellzugriff</h3>
+                        </div>
+                        <div class="quick-links">
+                            <a class="quick-link" href="etappen.html">
+                                <span class="material-symbols-outlined quick-link__icon">list_alt</span>
+                                <div>
+                                    <p class="quick-link__title">
+                                        Etappen-Übersicht
+                                    </p>
+                                    <p class="quick-link__desc">
+                                        Alle 6 Abschnitte im Detail
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="quick-link" href="unterkuenfte.html">
+                                <span class="material-symbols-outlined quick-link__icon">bed</span>
+                                <div>
+                                    <p class="quick-link__title">
+                                        Unterkünfte
+                                    </p>
+                                    <p class="quick-link__desc">
+                                        Hotels &amp; Hütten der Tour
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="quick-link" href="navigation.html">
+                                <span class="material-symbols-outlined quick-link__icon">near_me</span>
+                                <div>
+                                    <p class="quick-link__title">
+                                        Navigation &amp; GPS
+                                    </p>
+                                    <p class="quick-link__desc">
+                                        GPX Tracks zum Download
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="quick-link" href="downloads.html">
+                                <span class="material-symbols-outlined quick-link__icon">download</span>
+                                <div>
+                                    <p class="quick-link__title">
+                                        Downloads
+                                    </p>
+                                    <p class="quick-link__desc">
+                                        Alle Dateien zentral
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-        <footer class="site-footer" id="main-footer"></footer>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
-        <script src="assets/js/nav.js?v=202603081405"></script>
-        <script src="assets/js/data-provider.js?v=202603081405"></script>
-        <script src="assets/js/app-data-loader.js?v=202603081405"></script>
-        <script src="assets/js/map.js?v=202603081405"></script>
-    </body>
+            </div>
+        </section>
+        <!-- TOURPLAN -->
+        <section class="section">
+            <div class="container--narrow">
+                <div class="section__header">
+                    <h2 class="section__title">Tourplan</h2>
+                    <p class="section__lead" id="tourplan-lead">
+                        -
+                    </p>
+                </div>
+                <div class="info-table__wrapper">
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Datum</th>
+                                <th>Strecke</th>
+                                <th>km</th>
+                                <th>hm</th>
+                                <th>Gehzeit</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tourplan-body">
+                            <!-- JS populated -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- ÜBERSICHTSKARTE -->
+        <section class="section section--shaded">
+            <div class="container">
+                <div class="two-col two-col--wide-right">
+                    <div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">map</span>
+                            <h2>Die Route im Überblick</h2>
+                        </div>
+                        <p style="margin-bottom: var(--space-6)" id="overview-desc">
+                            -
+                        </p>
+                        <ul class="feature-list" style="margin-bottom: var(--space-6)" id="overview-features">
+                            <!-- JS populated -->
+                        </ul>
+                        <a href="etappen.html" class="btn btn--primary">
+                            <span class="material-symbols-outlined">route</span>
+                            Alle Etappen ansehen
+                        </a>
+                    </div>
+                    <div>
+                        <div class="map-container" id="overview-map" data-gpx-base="assets/gpx/"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- WETTER WIDGET -->
+        <section class="section" id="weather-section">
+            <div class="container">
+                <div class="section-icon-header" style="margin-bottom: var(--space-4);">
+                    <span class="material-symbols-outlined">partly_cloudy_day</span>
+                    <h3>Wetter in Bad Schandau</h3>
+                </div>
+                <div class="weather-grid" id="weather-container"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
+                    <!-- JS populated -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="site-footer" id="main-footer"></footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+    <script src="assets/js/nav.js?v=202603081405"></script>
+    <script src="assets/js/data-provider.js?v=202603081405"></script>
+    <script src="assets/js/app-data-loader.js?v=202603081405"></script>
+    <script src="assets/js/app-weather.js?v=202603081405"></script>
+    <script src="assets/js/map.js?v=202603081405"></script>
+</body>
+
 </html>
