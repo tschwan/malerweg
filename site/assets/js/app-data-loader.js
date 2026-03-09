@@ -28,6 +28,55 @@ document.addEventListener("DOMContentLoaded", async () => {
             Helpers.setText("stat-stages", hero.stats.stages);
             Helpers.setText("stat-elevation", hero.stats.elevation);
             Helpers.setText("stat-duration", hero.stats.duration);
+
+            // 2.1 Hero Countdown
+            const tourPlan = dataProvider.getTourPlan();
+            if (tourPlan && tourPlan.stages && tourPlan.stages.length > 0) {
+                const firstStage = tourPlan.stages[0];
+                const lastStage = tourPlan.stages[tourPlan.stages.length - 1];
+
+                // Parse Start Date (First Stage)
+                const [startDay, startMonth] = firstStage.date
+                    .split(".")
+                    .map(Number);
+                const [startHour, startMinute] = firstStage.startTime
+                    .split(":")
+                    .map(Number);
+                const startDate = new Date(
+                    2026,
+                    startMonth - 1,
+                    startDay,
+                    startHour,
+                    startMinute,
+                );
+
+                // Parse End Date (Last Stage + 1 Day)
+                const [endDay, endMonth] = lastStage.date
+                    .split(".")
+                    .map(Number);
+                const [endHour, endMinute] = lastStage.startTime
+                    .split(":")
+                    .map(Number);
+                const endDate = new Date(
+                    2026,
+                    endMonth - 1,
+                    endDay,
+                    endHour,
+                    endMinute,
+                );
+                endDate.setDate(endDate.getDate() + 1); // 1 Tag nach der letzten Etappe
+
+                if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
+                    const countdownPlaceholder = document.getElementById(
+                        "hero-countdown-placeholder",
+                    );
+                    if (countdownPlaceholder) {
+                        countdownPlaceholder.innerHTML =
+                            HeroCountdown.render("hero-countdown");
+                        HeroCountdown.init(startDate, endDate);
+                    }
+                }
+            }
         }
 
         // 3. Intro Section
