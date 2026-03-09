@@ -14,7 +14,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (!container || !section) return;
 
-        const { latitude, longitude } = weatherData;
+        const { latitude, longitude, location } = weatherData;
+        const locationEl = document.getElementById("weather-location");
+        if (locationEl) {
+            locationEl.textContent = location || "Bad Schandau";
+        }
 
         // Fetch from Open-Meteo
         const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Europe%2FBerlin&forecast_days=3`;

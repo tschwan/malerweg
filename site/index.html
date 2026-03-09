@@ -282,11 +282,11 @@
             </div>
         </section>
         <!-- WETTER WIDGET -->
-        <section class="section" id="weather-section">
+        <section class="section" id="weather-section" style="display: none;">
             <div class="container">
                 <div class="section-icon-header" style="margin-bottom: var(--space-4);">
                     <span class="material-symbols-outlined">partly_cloudy_day</span>
-                    <h3>Wetter in Bad Schandau</h3>
+                    <h3 id="weather-title">Wetter in <span id="weather-location">...</span></h3>
                 </div>
                 <div class="weather-grid" id="weather-container"
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
@@ -299,8 +299,8 @@
     <footer class="site-footer" id="main-footer"></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
-    <script src="assets/js/nav.js?v=202603081508"></script>
     <script src="assets/js/data-provider.js?v=202603081508"></script>
+    <script src="assets/js/nav.js?v=202603081508"></script>
     <script src="assets/js/app-data-loader.js?v=202603081508"></script>
     <script src="assets/js/app-weather.js?v=202603081508"></script>
     <script src="assets/js/map.js?v=202603081508"></script>

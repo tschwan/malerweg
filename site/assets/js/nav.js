@@ -1,7 +1,7 @@
 /**
  * nav.js - Mobile Navigation Toggle & Active Link Highlighting
  */
-(function () {
+(async function () {
     "use strict";
     // --- Mobile nav toggle ---
     const toggle = document.getElementById("nav-toggle");
@@ -40,6 +40,20 @@
     // --- Inject Footer ---
     const footerContainer = document.getElementById("main-footer");
     if (footerContainer) {
+        // Try to get data for footer (cached promise in dataProvider)
+        let emergency = { rescue: "112", police: "110" };
+        try {
+            if (window.dataProvider) {
+                await dataProvider.init();
+                const meta = dataProvider.getMeta();
+                if (meta && meta.emergency) {
+                    emergency = meta.emergency;
+                }
+            }
+        } catch (e) {
+            console.warn("Footer: Could not load emergency data from JSON.");
+        }
+
         footerContainer.innerHTML = `
 <div class="container">
     <div class="site-footer__grid">
@@ -74,11 +88,11 @@
             <ul>
                 <li class="site-footer__emergency-item">
                     <span class="material-symbols-outlined">call</span>
-                    Rettungsdienst: 112
+                    Rettungsdienst: ${emergency.rescue}
                 </li>
                 <li class="site-footer__emergency-item">
                     <span class="material-symbols-outlined">local_hospital</span>
-                    Polizei: 110
+                    Polizei: ${emergency.police}
                 </li>
             </ul>
         </div>

@@ -106,4 +106,4 @@ class HikeDataProvider {
 }
 
 // Global instance (can also be instantiated per page if needed)
-const dataProvider = new HikeDataProvider();
+window.dataProvider = new HikeDataProvider();
