@@ -5,11 +5,11 @@
         </metadata>
         <wpt lat="50.957348" lon="14.034309">
             <ele>0</ele>
-            <name>Etappe 2 Start: Stadt Wehlen</name>
+            <name>Stadt Wehlen</name>
         </wpt>
         <wpt lat="50.956269" lon="14.126825">
             <ele>0</ele>
-            <name>Etappe 2 Ziel: Brand-Baude</name>
+            <name>Brand-Baude</name>
         </wpt>
         <trk>
             <name>Malerweg_stage_2_Stadt_Wehlen_Brand-Baude.gpx</name>

@@ -5,11 +5,11 @@
         </metadata>
         <wpt lat="50.929041" lon="14.242534">
             <ele>0</ele>
-            <name>Etappe 4 Start: Lichtenhain</name>
+            <name>Lichtenhain</name>
         </wpt>
         <wpt lat="50.8951" lon="14.188379">
             <ele>0</ele>
-            <name>Etappe 4 Ziel: Reinhardtsdorf</name>
+            <name>Reinhardtsdorf</name>
         </wpt>
         <trk>
             <name>Malerweg_stage_4_Lichtenhain_Reinhardtsdorf.gpx</name>

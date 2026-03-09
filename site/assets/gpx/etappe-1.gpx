@@ -5,11 +5,11 @@
         </metadata>
         <wpt lat="50.996259" lon="13.957067">
             <ele>0</ele>
-            <name>Etappe 1 Start: Liebethal</name>
+            <name>Liebethal</name>
         </wpt>
         <wpt lat="50.957348" lon="14.034309">
             <ele>0</ele>
-            <name>Etappe 1 Ziel: Stadt Wehlen</name>
+            <name>Stadt Wehlen</name>
         </wpt>
         <trk>
             <name>Malerweg_stage_1_Liebethal_Stadt_Wehlen.gpx</name>

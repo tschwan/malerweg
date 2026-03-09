@@ -5,11 +5,11 @@
         </metadata>
         <wpt lat="50.956269" lon="14.126825">
             <ele>0</ele>
-            <name>Etappe 3 Start: Brand-Baude</name>
+            <name>Brand-Baude</name>
         </wpt>
         <wpt lat="50.929041" lon="14.242534">
             <ele>0</ele>
-            <name>Etappe 3 Ziel: Lichtenhain</name>
+            <name>Lichtenhain</name>
         </wpt>
         <trk>
             <name>Malerweg_stage_3_Brand-Baude_Lichtenhain.gpx</name>

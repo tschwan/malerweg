@@ -5,11 +5,11 @@
         </metadata>
         <wpt lat="50.918575" lon="14.072704">
             <ele>0</ele>
-            <name>Etappe 6 Start: Königstein</name>
+            <name>Königstein</name>
         </wpt>
         <wpt lat="50.9622" lon="13.9428">
             <ele>0</ele>
-            <name>Etappe 6 Ziel: Pirna</name>
+            <name>Pirna</name>
         </wpt>
         <trk>
             <name>Malerweg_stage_6_Königstein_Pirna.gpx</name>

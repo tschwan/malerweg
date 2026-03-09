@@ -5,11 +5,11 @@
         </metadata>
         <wpt lat="50.8951" lon="14.188379">
             <ele>0</ele>
-            <name>Etappe 5 Start: Reinhardtsdorf</name>
+            <name>Reinhardtsdorf</name>
         </wpt>
         <wpt lat="50.918575" lon="14.072704">
             <ele>0</ele>
-            <name>Etappe 5 Ziel: Königstein</name>
+            <name>Königstein</name>
         </wpt>
         <trk>
             <name>Malerweg_stage_5_Reinhardtsdorf_Königstein.gpx</name>
