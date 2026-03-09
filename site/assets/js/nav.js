@@ -96,24 +96,28 @@
                         <span class="site-footer__brand-name">Malerweg</span>
                     </div>
                     <p class="site-footer__desc">
-                        Unser persönlicher Begleiter für die
-                        Malerweg-Wanderung 2026 in der Sächsischen Schweiz.
+                        Dein persönlicher Begleiter für die
+                        Malerweg-Wanderung in der Sächsischen Schweiz.
+                    </p>
+                    <p class="site-footer__desc">
+                        <br>
+                        Powered by Stagely - Your hike perfectly staged
                     </p>
                 </div>
                 <div class="site-footer__col">
                     <h5>Informationen</h5>
                     <ul>
-                        <li><a href="anreise.html">Anreise &amp; Parken</a></li>
                         <li><a href="organisation.html">Tagesablauf</a></li>
                         <li><a href="navigation.html">Empfohlene Apps</a></li>
+                        <li><a href="anreise.html">Anreise &amp; Parken</a></li>
                         <li><a href="links.html">Nützliche Links</a></li>
                     </ul>
                 </div>
                 <div class="site-footer__col">
-                    <h5>Downloads</h5>
+                    <h5>Sonstiges</h5>
                     <ul>
-                        <li><a href="downloads.html">GPX Tracks</a></li>
-                        <li><a href="downloads.html">Zeitplan</a></li>
+                        <a href="#">Impressum</a>
+                        <a href="#">Datenschutz</a>
                     </ul>
                 </div>
                 <div class="site-footer__col site-footer__emergency">
@@ -130,15 +134,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="site-footer__bottom">
-                <p class="site-footer__copy">
-                    Powered by Stagely - Your hike perfectly staged
-                </p>
-                <div class="site-footer__legal">
-                    <a href="#">Impressum</a>
-                    <a href="#">Datenschutz</a>
-                </div>
-            </div>
+
         </div>`;
     }
 })();

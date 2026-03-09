@@ -541,15 +541,7 @@
         ]
     },
     "downloads": {
-        "lead": "Zentrale Sammlung aller Dateien: GPX-Tracks für alle 6 Etappen und weitere Dokumente.",
-        "documents": [
-            {
-                "icon": "calendar_month",
-                "title": "Zeitplan (PDF)",
-                "desc": "Tagesplan mit Startzeiten und Treffpunkten",
-                "status": "Folgt"
-            }
-        ]
+        "lead": "Zentrale Sammlung aller Dateien: GPX-Tracks für alle 6 Etappen und weitere Dokumente."
     },
     "navigation": {
         "apps": [

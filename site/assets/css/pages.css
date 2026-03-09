@@ -26,7 +26,7 @@
 
 @media (min-width: 1024px) {
     .org-quicklinks {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 

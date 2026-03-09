@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="assets/css/tokens.css?v=202603081508" />
-    <link rel="stylesheet" href="assets/css/base.css?v=202603081508" />
-    <link rel="stylesheet" href="assets/css/layout.css?v=202603081508" />
-    <link rel="stylesheet" href="assets/css/components.css?v=202603081508" />
-    <link rel="stylesheet" href="assets/css/pages.css?v=202603081508" />
-    <link rel="stylesheet" href="assets/css/countdown.module.css?v=202603081508" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=202603091648" />
+    <link rel="stylesheet" href="assets/css/base.css?v=202603091648" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=202603091648" />
+    <link rel="stylesheet" href="assets/css/components.css?v=202603091648" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=202603091648" />
+    <link rel="stylesheet" href="assets/css/countdown.module.css?v=202603091648" />
 </head>
 
 <body>
@@ -84,70 +84,6 @@
                 <div class="org-quicklinks">
                     <div>
                         <div class="section-icon-header">
-                            <span class="material-symbols-outlined">groups</span>
-                            <h3>Gruppe &amp; Organisation</h3>
-                        </div>
-                        <div class="card">
-                            <div style="
-                                        display: flex;
-                                        align-items: center;
-                                        gap: var(--space-4);
-                                        margin-bottom: var(--space-6);
-                                        padding-bottom: var(--space-5);
-                                        border-bottom: 1px solid
-                                            var(--color-border-subtle);
-                                    ">
-                                <div style="
-                                            background: var(
-                                                --color-brand-primary
-                                            );
-                                            color: #fff;
-                                            padding: var(--space-3);
-                                            border-radius: var(--radius-lg);
-                                        ">
-                                    <span class="material-symbols-outlined">event</span>
-                                </div>
-                                <div>
-                                    <p style="
-                                                font-size: var(--font-size-xs);
-                                                font-weight: 700;
-                                                text-transform: uppercase;
-                                                letter-spacing: var(
-                                                    --tracking-widest
-                                                );
-                                                color: var(--color-text-muted);
-                                                margin-bottom: 4px;
-                                            ">
-                                        Geplante Tour
-                                    </p>
-                                    <p style="
-                                                font-size: var(--font-size-xl);
-                                                font-weight: 700;
-                                                color: var(
-                                                    --color-text-primary
-                                                );
-                                            " id="org-date-range">
-                                        -
-                                    </p>
-                                </div>
-                            </div>
-                            <h5 style="
-                                        margin-bottom: var(--space-4);
-                                        color: var(--color-text-muted);
-                                    ">
-                                Teilnehmer
-                            </h5>
-                            <ul class="participant-list" id="participant-list-container">
-                                <!-- JS populated -->
-                            </ul>
-                            <a href="organisation.html" class="btn btn--outline btn--sm"
-                                style="margin-top: var(--space-5)">
-                                Alle Details → Organisation
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="section-icon-header">
                             <span class="material-symbols-outlined">link</span>
                             <h3>Schnellzugriff</h3>
                         </div>
@@ -174,6 +110,18 @@
                                     </p>
                                 </div>
                             </a>
+                            <a class="quick-link" href="organisation.html">
+                                <span class="material-symbols-outlined quick-link__icon">groups</span>
+                                <div>
+                                    <p class="quick-link__title">
+                                        Organisation
+                                    </p>
+                                    <p class="quick-link__desc">
+                                        Tagesplan &amp; Teilnehmer
+                                    </p>
+                                </div>
+                            </a>
+
                             <a class="quick-link" href="navigation.html">
                                 <span class="material-symbols-outlined quick-link__icon">near_me</span>
                                 <div>
@@ -252,12 +200,12 @@
     <footer class="site-footer" id="main-footer"></footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
-    <script src="assets/js/data-provider.js?v=202603081508"></script>
-    <script src="assets/js/components/hero-countdown.js?v=202603081508"></script>
-    <script src="assets/js/nav.js?v=202603081508"></script>
-    <script src="assets/js/app-data-loader.js?v=202603081508"></script>
-    <script src="assets/js/app-weather.js?v=202603081508"></script>
-    <script src="assets/js/map.js?v=202603081508"></script>
+    <script src="assets/js/data-provider.js?v=202603091648"></script>
+    <script src="assets/js/components/hero-countdown.js?v=202603091648"></script>
+    <script src="assets/js/nav.js?v=202603091648"></script>
+    <script src="assets/js/app-data-loader.js?v=202603091648"></script>
+    <script src="assets/js/app-weather.js?v=202603091648"></script>
+    <script src="assets/js/map.js?v=202603091648"></script>
 </body>
 
 </html>

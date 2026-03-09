@@ -409,9 +409,15 @@
     gap: var(--space-4);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 512px) {
     .quick-links {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 832px) {
+    .quick-links {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 

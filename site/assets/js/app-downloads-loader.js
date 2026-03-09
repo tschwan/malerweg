@@ -35,42 +35,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 });
             }
         }
-
-        // 3. Other Documents
-        const downloadsData = dataProvider.getDownloads();
-        if (downloadsData && downloadsData.documents) {
-            const docsContainer = document.getElementById(
-                "document-list-container",
-            );
-            if (docsContainer) {
-                docsContainer.innerHTML = "";
-                downloadsData.documents.forEach((doc) => {
-                    const item = document.createElement("div");
-                    item.className = "download-item";
-                    // Check if it has a file to download or if it is just a status indicator
-                    let actionHtml = "";
-                    if (doc.status === "Folgt") {
-                        actionHtml = `<span class="btn btn--outline btn--sm" style="cursor:default;opacity:.5;">${doc.status}</span>`;
-                    } else if (doc.file) {
-                        actionHtml = `
-                            <a href="${doc.file}" class="btn btn--primary btn--sm" download>
-                                <span class="material-symbols-outlined">download</span> ${doc.actionLabel || "Download"}
-                            </a>
-                        `;
-                    }
-
-                    item.innerHTML = `
-                        <span class="material-symbols-outlined download-item__icon">${doc.icon}</span>
-                        <div class="download-item__body">
-                            <p class="download-item__name">${doc.title}</p>
-                            <p class="download-item__meta">${doc.desc}</p>
-                        </div>
-                        ${actionHtml}
-                    `;
-                    docsContainer.appendChild(item);
-                });
-            }
-        }
     } catch (error) {
         console.error("Failed to initialize app data:", error);
     }

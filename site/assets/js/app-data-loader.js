@@ -87,26 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         // 4. Organization (Quick Links Sidebar)
-        const org = dataProvider.getOrganization();
-        if (org) {
-            Helpers.setText("org-date-range", org.dateRange);
-
-            const participantList = document.getElementById(
-                "participant-list-container",
-            );
-            if (participantList && org.participants) {
-                participantList.innerHTML = "";
-                org.participants.forEach((p) => {
-                    const li = document.createElement("li");
-                    li.className = "participant-item";
-                    li.innerHTML = `
-                        <div class="participant-item__avatar">${p.initials}</div>
-                        <span class="participant-item__name">${p.name}</span>
-                    `;
-                    participantList.appendChild(li);
-                });
-            }
-        }
+        // Removed
 
         // 5. Etappen Liste (Grid)
         const tourPlan = dataProvider.getTourPlan();
