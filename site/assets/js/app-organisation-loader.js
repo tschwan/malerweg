@@ -12,23 +12,34 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.title = `Organisation - ${meta.title}`;
         }
 
-        // 2. Schedule (using tourPlan as source of truth)
+        // 2. Schedule Timeline (using tourPlan as source of truth)
         const tourPlan = dataProvider.getTourPlan();
         if (tourPlan && tourPlan.stages) {
-            const scheduleContainer = document.getElementById(
-                "schedule-list-container",
-            );
-            if (scheduleContainer) {
-                scheduleContainer.innerHTML = "";
+            const timelineContainer =
+                document.getElementById("schedule-timeline");
+            if (timelineContainer) {
+                timelineContainer.innerHTML = "";
                 tourPlan.stages.forEach((stage) => {
-                    const tr = document.createElement("tr");
-                    tr.innerHTML = `
-                        <td>${stage.day}</td>
-                        <td>${stage.date}</td>
-                        <td><a href="${stage.link}">${stage.route}</a></td>
-                        <td>${stage.startTime}</td>
+                    const item = document.createElement("div");
+                    item.className = "timeline__item";
+                    item.innerHTML = `
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <p class="timeline__day">${stage.day}, ${stage.date}.</p>
+                            <h3 class="timeline__title"><a href="${stage.link}">${stage.route}</a></h3>
+                            <div class="timeline__meta">
+                                <span class="timeline__meta-item">
+                                    <span class="material-symbols-outlined">schedule</span>
+                                    ${stage.startTime} Uhr
+                                </span>
+                                <span class="timeline__meta-item">
+                                    <span class="material-symbols-outlined">arrow_range</span>
+                                    ${stage.distance}
+                                </span>
+                            </div>
+                        </div>
                     `;
-                    scheduleContainer.appendChild(tr);
+                    timelineContainer.appendChild(item);
                 });
             }
         }
