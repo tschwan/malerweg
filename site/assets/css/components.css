@@ -124,8 +124,17 @@
 }
 
 .stage-card__body {
-    flex: 1;
     min-width: 0;
+}
+
+.stage-card__date {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-brand-primary);
+    margin-bottom: var(--space-1);
+    display: block;
 }
 
 .stage-card__title {

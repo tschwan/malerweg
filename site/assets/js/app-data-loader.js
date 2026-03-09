@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     a.innerHTML = `
                         <div class="stage-card__number"${colorStyle}>${stage.id}</div>
                         <div class="stage-card__body">
+                            <span class="stage-card__date">${stage.day}, ${stage.date}.</span>
                             <p class="stage-card__title">${stage.route}</p>
                             <div class="stage-card__meta">
                                 <span class="stage-card__stat"><span class="material-symbols-outlined">route</span>${stage.distance}</span>
