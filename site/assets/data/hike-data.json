@@ -35,50 +35,6 @@
                 "name": "Thomas Schwan"
             }
         ],
-        "schedule": [
-            {
-                "day": "Mo",
-                "date": "04.05.",
-                "route": "Liebethal → Stadt Wehlen",
-                "link": "etappe-1.html",
-                "start": "13:00"
-            },
-            {
-                "day": "Di",
-                "date": "05.05.",
-                "route": "Stadt Wehlen → Brand-Baude",
-                "link": "etappe-2.html",
-                "start": "08:00"
-            },
-            {
-                "day": "Mi",
-                "date": "06.05.",
-                "route": "Brand-Baude → Lichtenhain",
-                "link": "etappe-3.html",
-                "start": "07:30"
-            },
-            {
-                "day": "Do",
-                "date": "07.05.",
-                "route": "Lichtenhain → Reinhardtsdorf",
-                "link": "etappe-4.html",
-                "start": "07:00"
-            },
-            {
-                "day": "Fr",
-                "date": "08.05.",
-                "route": "Reinhardtsdorf → Königstein",
-                "link": "etappe-5.html",
-                "start": "08:00"
-            },
-            {
-                "day": "Sa",
-                "date": "09.05.",
-                "route": "Königstein → Pirna",
-                "link": "etappe-6.html",
-                "start": "08:30"
-            }
-        ],
         "meetingPoints": [
             {
                 "icon": "flag",
@@ -113,6 +69,7 @@
                 "title": "Etappe 1: Liebethal → Stadt Wehlen",
                 "dateSubtitle": "Montag, 04. Mai 2026 · Einlauf-Etappe durch das Liebethaler Tal",
                 "link": "etappe.html?id=1",
+                "startTime": "13:00",
                 "distance": "12 km",
                 "elevation": "200 hm",
                 "duration": "3:00",
@@ -120,7 +77,7 @@
                 "color": null,
                 "gpx": "etappe-1.gpx",
                 "description": "Die erste Etappe führt durch das romantische Liebethaler Tal entlang der Wesenitz. Der Weg ist relativ kurz und eignet sich gut zum Einlaufen. Eine ideale Einstimmung auf die kommenden Tage.",
-                "infoBox": null,
+                "infoBoxes": [],
                 "highlights": [
                     {
                         "icon": "landscape",
@@ -154,6 +111,7 @@
                 "title": "Etappe 2: Stadt Wehlen → Brand-Baude",
                 "dateSubtitle": "Dienstag, 05. Mai 2026 · Zur Bastei und weiter auf die Brand-Höhe",
                 "link": "etappe.html?id=2",
+                "startTime": "08:00",
                 "distance": "16 km",
                 "elevation": "760 hm",
                 "duration": "5:00",
@@ -161,12 +119,14 @@
                 "color": "#3b6ea0",
                 "gpx": "etappe-2.gpx",
                 "description": "Die zweite Etappe ist das Highlight der Tour: Sie führt über die weltberühmte Basteibrücke, entlang des Amselsees und durch das idyllische Amseltal bis hinauf zur Brand-Baude.",
-                "infoBox": {
-                    "type": "info",
-                    "icon": "restaurant",
-                    "title": "Mittagspause: Gasthaus Polenztal",
-                    "text": "Nach ca. 10 km · Öffnung ab 11:00 Uhr"
-                },
+                "infoBoxes": [
+                    {
+                        "type": "info",
+                        "icon": "restaurant",
+                        "title": "Mittagspause: Gasthaus Polenztal",
+                        "text": "Nach ca. 10 km · Öffnung ab 11:00 Uhr"
+                    }
+                ],
                 "highlights": [
                     {
                         "icon": "landscape",
@@ -196,6 +156,7 @@
                 "title": "Etappe 3: Brand-Baude → Lichtenhain",
                 "dateSubtitle": "Mittwoch, 06. Mai 2026 · Kirnitzschtal + Fahrt mit der Kirnitzschtalbahn",
                 "link": "etappe.html?id=3",
+                "startTime": "07:30",
                 "distance": "22 km",
                 "elevation": "850 hm",
                 "duration": "6:30",
@@ -203,12 +164,14 @@
                 "color": "#c0392b",
                 "gpx": "etappe-3.gpx",
                 "description": "Eine lange Etappe durch das wildromantische Kirnitzschtal. Nach der Wanderung wartet ein besonderes Highlight: die historische Kirnitzschtalbahn bringt uns von Lichtenhain nach Bad Schandau.",
-                "infoBox": {
-                    "type": "info",
-                    "icon": "tram",
-                    "title": "Kirnitzschtalbahn nach Bad Schandau",
-                    "text": "Fahrt ab Lichtenhain · Fahrzeit ca. 15 Minuten"
-                },
+                "infoBoxes": [
+                    {
+                        "type": "info",
+                        "icon": "tram",
+                        "title": "Kirnitzschtalbahn nach Bad Schandau",
+                        "text": "Fahrt ab Lichtenhain · Fahrzeit ca. 15 Minuten"
+                    }
+                ],
                 "highlights": [
                     {
                         "icon": "forest",
@@ -238,6 +201,7 @@
                 "title": "Etappe 4: Lichtenhain → Reinhardtsdorf",
                 "dateSubtitle": "Donnerstag, 07. Mai 2026 · Die längste und anspruchsvollste Etappe",
                 "link": "etappe.html?id=4",
+                "startTime": "07:00",
                 "distance": "24 km",
                 "elevation": "1200 hm",
                 "duration": "7:30",
@@ -245,18 +209,20 @@
                 "color": "#8e44ad",
                 "gpx": "etappe-4.gpx",
                 "description": "Die härteste Etappe mit 1200 hm durch die Schrammsteine. Nach der Wanderung Busfahrt zur Unterkunft.",
-                "infoBox": {
-                    "type": "warning",
-                    "icon": "warning",
-                    "title": "Frühzeitig starten!",
-                    "text": "7:30 h Gehzeit - früh aufbrechen."
-                },
-                "infoBox2": {
-                    "type": "info",
-                    "icon": "directions_bus",
-                    "title": "Bus nach Königstein",
-                    "text": "ab Reinhardtsdorf · ca. 15 Minuten"
-                },
+                "infoBoxes": [
+                    {
+                        "type": "warning",
+                        "icon": "warning",
+                        "title": "Frühzeitig starten!",
+                        "text": "7:30 h Gehzeit - früh aufbrechen."
+                    },
+                    {
+                        "type": "info",
+                        "icon": "directions_bus",
+                        "title": "Bus nach Königstein",
+                        "text": "ab Reinhardtsdorf · ca. 15 Minuten"
+                    }
+                ],
                 "highlights": [
                     {
                         "icon": "landscape",
@@ -286,6 +252,7 @@
                 "title": "Etappe 5: Reinhardtsdorf → Königstein",
                 "dateSubtitle": "Freitag, 08. Mai 2026 · Durch die Tafelberge zur Festung Königstein",
                 "link": "etappe.html?id=5",
+                "startTime": "08:00",
                 "distance": "18 km",
                 "elevation": "740 hm",
                 "duration": "5:30",
@@ -293,7 +260,7 @@
                 "color": "#e67e22",
                 "gpx": "etappe-5.gpx",
                 "description": "Diese Etappe führt durch die charakteristischen Tafelberge der Sächsischen Schweiz. Ziel ist das malerische Königstein direkt an der Elbe, wo wir auch übernachten.",
-                "infoBox": null,
+                "infoBoxes": [],
                 "highlights": [
                     {
                         "icon": "landscape",
@@ -323,6 +290,7 @@
                 "title": "Etappe 6: Königstein → Pirna",
                 "dateSubtitle": "Samstag, 09. Mai 2026 · Die Abschlussetappe - zurück nach Pirna",
                 "link": "etappe.html?id=6",
+                "startTime": "08:30",
                 "distance": "19 km",
                 "elevation": "600 hm",
                 "duration": "5:30",
@@ -330,12 +298,14 @@
                 "color": "#16a085",
                 "gpx": "etappe-6.gpx",
                 "description": "Die letzte Etappe führt von Königstein zurück nach Pirna und schließt damit unsere 6-tägige Wanderung auf dem Malerweg ab. Ein würdiger Abschluss durch die eindrucksvolle Landschaft der Sächsischen Schweiz.",
-                "infoBox": {
-                    "type": "info",
-                    "icon": "celebration",
-                    "title": "Abschluss der Tour!",
-                    "text": "Nach 6 Tagen und 110 km: Ankunft in Pirna und Abschlussfeier."
-                },
+                "infoBoxes": [
+                    {
+                        "type": "info",
+                        "icon": "celebration",
+                        "title": "Abschluss der Tour!",
+                        "text": "Nach 6 Tagen und 110 km: Ankunft in Pirna und Abschlussfeier."
+                    }
+                ],
                 "highlights": [
                     {
                         "icon": "castle",

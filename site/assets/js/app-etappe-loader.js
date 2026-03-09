@@ -46,33 +46,21 @@ document.addEventListener("DOMContentLoaded", async () => {
             stage.description;
 
         const infoboxContainer = document.getElementById("infobox-container");
-        let infoboxHtml = "";
-
-        if (stage.infoBox) {
-            infoboxHtml += `
-                <div class="info-box info-box--${stage.infoBox.type}" style="margin-top:var(--space-4);">
-                    <span class="material-symbols-outlined">${stage.infoBox.icon}</span>
+        if (infoboxContainer && stage.infoBoxes) {
+            infoboxContainer.innerHTML = stage.infoBoxes
+                .map(
+                    (box, index) => `
+                <div class="info-box info-box--${box.type}" style="margin-top:var(--space-${index === 0 ? "4" : "3"});">
+                    <span class="material-symbols-outlined">${box.icon}</span>
                     <div>
-                        <strong>${stage.infoBox.title}</strong>
-                        <p style="margin:0;color:inherit;">${stage.infoBox.text}</p>
+                        <strong>${box.title}</strong>
+                        <p style="margin:0;color:inherit;">${box.text}</p>
                     </div>
                 </div>
-            `;
+            `,
+                )
+                .join("");
         }
-
-        if (stage.infoBox2) {
-            infoboxHtml += `
-                <div class="info-box info-box--${stage.infoBox2.type}" style="margin-top:var(--space-3);">
-                    <span class="material-symbols-outlined">${stage.infoBox2.icon}</span>
-                    <div>
-                        <strong>${stage.infoBox2.title}</strong>
-                        <p style="margin:0;color:inherit;">${stage.infoBox2.text}</p>
-                    </div>
-                </div>
-            `;
-        }
-
-        infoboxContainer.innerHTML = infoboxHtml;
 
         // --- 4. Highlights ---
         const highlightsList = document.getElementById("highlights-list");

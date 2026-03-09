@@ -12,27 +12,30 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.title = `Organisation - ${meta.title}`;
         }
 
-        // 2. Organization Data
-        const orgData = dataProvider.getOrganization();
-        if (orgData) {
-            // Schedule Table
+        // 2. Schedule (using tourPlan as source of truth)
+        const tourPlan = dataProvider.getTourPlan();
+        if (tourPlan && tourPlan.stages) {
             const scheduleContainer = document.getElementById(
                 "schedule-list-container",
             );
-            if (scheduleContainer && orgData.schedule) {
+            if (scheduleContainer) {
                 scheduleContainer.innerHTML = "";
-                orgData.schedule.forEach((item) => {
+                tourPlan.stages.forEach((stage) => {
                     const tr = document.createElement("tr");
                     tr.innerHTML = `
-                        <td>${item.day}</td>
-                        <td>${item.date}</td>
-                        <td><a href="${item.link}">${item.route}</a></td>
-                        <td>${item.start}</td>
+                        <td>${stage.day}</td>
+                        <td>${stage.date}</td>
+                        <td><a href="${stage.link}">${stage.route}</a></td>
+                        <td>${stage.startTime}</td>
                     `;
                     scheduleContainer.appendChild(tr);
                 });
             }
+        }
 
+        // 3. Organization Data (Participants & Meeting Points)
+        const orgData = dataProvider.getOrganization();
+        if (orgData) {
             // Participants
             const participantsContainer = document.getElementById(
                 "participants-list-container",
