@@ -305,11 +305,6 @@
     },
     "overviewMap": {
         "description": "Der Weg beginnt in Liebethal und führt über 6 Etappen durch den Nationalpark Sächsische Schweiz. Highlights: Bastei, Schrammsteine, Kirnitzschtal, Kuhstall.",
-        "features": [
-            "Start: Liebethal - Ziel: Pirna",
-            "Zahlreiche Aussichtspunkte & Tafelberge",
-            "GPX-Tracks für alle Etappen verfügbar"
-        ],
         "gpxBaseUrl": "assets/gpx/"
     },
     "accommodations": {

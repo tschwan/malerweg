@@ -147,21 +147,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const overviewMap = dataProvider.getOverviewMap();
         if (overviewMap) {
             Helpers.setText("overview-desc", overviewMap.description);
-            const featureList = document.getElementById("overview-features");
-
-            if (featureList && overviewMap.features) {
-                featureList.innerHTML = "";
-                overviewMap.features.forEach((feature) => {
-                    const li = document.createElement("li");
-                    li.className = "feature-item";
-                    li.innerHTML = `
-                        <span class="material-symbols-outlined">check_circle</span>
-                        <span class="feature-item__text">${feature}</span>
-                    `;
-                    featureList.appendChild(li);
-                });
-            }
-
             const mapContainer = document.getElementById("overview-map");
             if (mapContainer && overviewMap.gpxBaseUrl) {
                 mapContainer.dataset.gpxBase = overviewMap.gpxBaseUrl;
