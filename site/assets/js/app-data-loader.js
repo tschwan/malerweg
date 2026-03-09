@@ -145,20 +145,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         const todayPlaceholder = document.getElementById(
             "today-widget-placeholder",
         );
+        const accommodations = dataProvider.getAccommodations();
         if (todayPlaceholder && stages.length > 0) {
             const today = new Date();
             // today.setFullYear(2026, 4, 6); // Mock date for testing: 6. May 2026
             today.setHours(0, 0, 0, 0);
-
             const parseSimpleDate = (dateStr) => {
                 const [d, m] = dateStr.split(".").map(Number);
                 return new Date(2026, m - 1, d);
             };
-
+            const getAccInfo = (accId) => {
+                if (!accId || !accommodations || !accommodations.list)
+                    return null;
+                return accommodations.list.find((a) => a.id === accId);
+            };
             const startDate = parseSimpleDate(stages[0].date);
             const endDate = parseSimpleDate(stages[stages.length - 1].date);
             endDate.setHours(23, 59, 59, 999);
-
             let widgetHTML = "";
             if (today < startDate) {
                 const diffTime = startDate - today;
@@ -166,6 +169,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     diffTime / (1000 * 60 * 60 * 24),
                 );
                 const firstStage = stages[0];
+                const acc = getAccInfo(firstStage.accommodationId);
                 widgetHTML = `
                     <div class="today-card">
                         <span class="today-card__eyebrow">Countdown: Noch ${daysUntilStart} Tag${daysUntilStart === 1 ? "" : "e"} bis zum Start</span>
@@ -178,13 +182,23 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     <span class="today-card__stat-value">${firstStage.distance}</span>
                                 </div>
                                 <div class="today-card__stat">
-                                    <span class="today-card__stat-label">Höhenmeter</span>
-                                    <span class="today-card__stat-value">${firstStage.elevation}</span>
-                                </div>
-                                <div class="today-card__stat">
                                     <span class="today-card__stat-label">Start</span>
                                     <span class="today-card__stat-value">${firstStage.startTime} Uhr</span>
                                 </div>
+                                ${
+                                    acc
+                                        ? `
+                                <div class="today-card__stat">
+                                    <span class="today-card__stat-label">Unterkunft</span>
+                                    <span class="today-card__stat-value">${acc.name}</span>
+                                </div>
+                                <div class="today-card__stat">
+                                    <span class="today-card__stat-label">Check-In</span>
+                                    <span class="today-card__stat-value">${acc.details.checkIn}</span>
+                                </div>
+                                `
+                                        : ""
+                                }
                             </div>
                             <a href="${firstStage.link}" class="today-card__action">Infos zur 1. Etappe</a>
                         </div>
@@ -195,6 +209,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         parseSimpleDate(s.date).getTime() === today.getTime(),
                 );
                 if (activeStage) {
+                    const acc = getAccInfo(activeStage.accommodationId);
                     widgetHTML = `
                         <div class="today-card">
                             <span class="today-card__eyebrow">Heute: Etappe ${activeStage.id}</span>
@@ -210,10 +225,20 @@ document.addEventListener("DOMContentLoaded", async () => {
                                         <span class="today-card__stat-label">Höhenmeter</span>
                                         <span class="today-card__stat-value">${activeStage.elevation}</span>
                                     </div>
+                                    ${
+                                        acc
+                                            ? `
                                     <div class="today-card__stat">
-                                        <span class="today-card__stat-label">Gehzeit</span>
-                                        <span class="today-card__stat-value">${activeStage.duration} h</span>
+                                        <span class="today-card__stat-label">Unterkunft</span>
+                                        <span class="today-card__stat-value">${acc.name}</span>
                                     </div>
+                                    <div class="today-card__stat">
+                                        <span class="today-card__stat-label">Check-In</span>
+                                        <span class="today-card__stat-value">${acc.details.checkIn}</span>
+                                    </div>
+                                    `
+                                            : ""
+                                    }
                                 </div>
                                 <a href="${activeStage.link}" class="today-card__action">Details anzeigen</a>
                             </div>
