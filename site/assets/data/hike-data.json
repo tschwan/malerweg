@@ -331,7 +331,9 @@
                     "price": "153 €",
                     "breakfast": "Nein",
                     "checkIn": "Ab 14:00 Uhr",
-                    "cancellation": "Bis 4 Wochen vorher"
+                    "cancellation": "Bis 4 Wochen vorher",
+                    "address": "Pirnaer Straße 101, 01829 Stadt Wehlen",
+                    "phone": "+49 351 31207707"
                 },
                 "warning": null
             },
@@ -351,7 +353,9 @@
                     "price": "84 €",
                     "breakfast": "Inklusive",
                     "checkIn": "Bis 17:00 Uhr",
-                    "cancellation": "Bis 14 Tage vorher"
+                    "cancellation": "Bis 14 Tage vorher",
+                    "address": "Brandstraße 27, 01848 Hohnstein",
+                    "phone": "+49 35975 84425"
                 },
                 "warning": "Hüttenschlafsack erforderlich"
             },
@@ -371,7 +375,9 @@
                     "price": "145 €",
                     "breakfast": "Inklusive",
                     "checkIn": "14:00-17:30 Uhr",
-                    "cancellation": "Nicht möglich"
+                    "cancellation": "Nicht möglich",
+                    "address": "Elbstraße 6, 01814 Bad Schandau",
+                    "phone": "+49 35971 9010"
                 },
                 "warning": null
             },
@@ -391,7 +397,9 @@
                     "price": "180 € (2 Nächte)",
                     "breakfast": "Nein",
                     "checkIn": "Ab 15:00 Uhr",
-                    "cancellation": "Bis 14 Tage vorher"
+                    "cancellation": "Bis 14 Tage vorher",
+                    "address": "Pirnaer Straße 19, 01824 Königstein",
+                    "phone": "+49 151 65110515"
                 },
                 "warning": null
             },
@@ -411,7 +419,9 @@
                     "price": "Günstig",
                     "breakfast": "Wäre cool",
                     "checkIn": "Rechtzeitig",
-                    "cancellation": "Nicht möglich"
+                    "cancellation": "Nicht möglich",
+                    "address": "Marktplatz, 01796 Pirna (TBD)",
+                    "phone": "+49 3501 555-MAHLZEIT"
                 },
                 "customIcon": "flag",
                 "warning": null

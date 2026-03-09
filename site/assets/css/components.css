@@ -226,7 +226,7 @@
 
 .accom-card__detail-value a {
     color: var(--color-brand-primary);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .accom-card__detail-value a:hover {
@@ -492,10 +492,11 @@
 .info-table a {
     color: var(--color-brand-primary);
     font-weight: var(--font-weight-medium);
+    text-decoration: underline;
 }
 
 .info-table a:hover {
-    text-decoration: underline;
+    color: var(--color-brand-hover);
 }
 
 .info-table__wrapper {

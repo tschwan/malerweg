@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <td>${item.name}</td>
                         <td>${shortDate}</td>
                         <td>${item.details.price}</td>
+                        <td>${item.details.cancellation}</td>
                         <td><span class="badge ${badgeClass}">${item.status}</span></td>
                     `;
                     costsContainer.appendChild(tr);

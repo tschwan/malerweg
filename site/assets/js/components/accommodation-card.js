@@ -56,6 +56,16 @@ const AccommodationCard = {
                             </span>
                         </div>
                         <div class="accom-card__detail-item">
+                            <span class="accom-card__detail-label">Adresse</span>
+                            <span class="accom-card__detail-value">${accommodation.details.address}</span>
+                        </div>
+                        <div class="accom-card__detail-item">
+                            <span class="accom-card__detail-label">Telefon</span>
+                            <span class="accom-card__detail-value">
+                                <a href="tel:${accommodation.details.phone.replace(/\s/g, "")}">${accommodation.details.phone}</a>
+                            </span>
+                        </div>
+                        <div class="accom-card__detail-item">
                             <span class="accom-card__detail-label">Preis</span>
                             <span class="accom-card__detail-value">${accommodation.details.price}</span>
                         </div>
@@ -66,10 +76,6 @@ const AccommodationCard = {
                         <div class="accom-card__detail-item">
                             <span class="accom-card__detail-label">Check-in</span>
                             <span class="accom-card__detail-value">${accommodation.details.checkIn}</span>
-                        </div>
-                        <div class="accom-card__detail-item">
-                            <span class="accom-card__detail-label">Storno</span>
-                            <span class="accom-card__detail-value">${accommodation.details.cancellation}</span>
                         </div>
                     </div>
                     ${warningHtml}
