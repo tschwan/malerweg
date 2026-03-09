@@ -144,12 +144,10 @@
     margin-bottom: var(--space-2);
 }
 
-.stage-card__meta-item {
+.stage-card__meta {
     display: flex;
-    align-items: center;
-    gap: var(--space-1);
-    font-size: var(--font-size-xs);
-    color: var(--color-text-secondary);
+    flex-wrap: wrap;
+    gap: var(--space-4);
 }
 
 /* --- Today Card Widget --- */

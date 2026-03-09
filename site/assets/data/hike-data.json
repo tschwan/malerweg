@@ -1,6 +1,6 @@
 {
     "meta": {
-        "title": "Malerweg Wanderung 2026 - Sächsische Schweiz",
+        "title": "Malerweg 2026 - Sächsische Schweiz",
         "description": "Informationsseite für unsere Malerweg-Wanderung 2026 in der Sächsischen Schweiz. 6 Etappen, 110 km, 4300 Höhenmeter.",
         "emergency": {
             "rescue": "112",
@@ -9,7 +9,7 @@
     },
     "hero": {
         "backgroundImage": "assets/images/hero.jpg",
-        "title": "Malerweg Wanderung",
+        "title": "Malerweg",
         "subtitle": "04. - 09. Mai 2026 · Sächsische Schweiz",
         "stats": {
             "distance": "110 km",
