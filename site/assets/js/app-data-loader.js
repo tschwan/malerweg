@@ -110,21 +110,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // 5. Etappen Liste (Grid)
         const tourPlan = dataProvider.getTourPlan();
+        const stages = tourPlan ? tourPlan.stages || [] : [];
         if (tourPlan) {
             Helpers.setText("tourplan-lead", tourPlan.lead);
-
             const stageGrid = document.getElementById("stage-grid-container");
-            if (stageGrid && tourPlan.stages) {
+            if (stageGrid && stages) {
                 stageGrid.innerHTML = "";
-                tourPlan.stages.forEach((stage) => {
+                stages.forEach((stage) => {
                     const a = document.createElement("a");
                     a.className = "stage-card";
                     a.href = stage.link;
-
                     const colorStyle = stage.color
                         ? ` style="background:${stage.color};"`
                         : "";
-
                     a.innerHTML = `
                         <div class="stage-card__number"${colorStyle}>${stage.id}</div>
                         <div class="stage-card__body">
@@ -143,7 +141,89 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         }
 
-        // 6. Overview Map Section
+        // 6. Today Widget
+        const todayPlaceholder = document.getElementById(
+            "today-widget-placeholder",
+        );
+        if (todayPlaceholder && stages.length > 0) {
+            const today = new Date();
+            // today.setFullYear(2026, 4, 6); // Mock date for testing: 6. May 2026
+            today.setHours(0, 0, 0, 0);
+
+            const parseSimpleDate = (dateStr) => {
+                const [d, m] = dateStr.split(".").map(Number);
+                return new Date(2026, m - 1, d);
+            };
+
+            const startDate = parseSimpleDate(stages[0].date);
+            const endDate = parseSimpleDate(stages[stages.length - 1].date);
+            endDate.setHours(23, 59, 59, 999);
+
+            let widgetHTML = "";
+            if (today < startDate) {
+                const diffTime = startDate - today;
+                const daysUntilStart = Math.ceil(
+                    diffTime / (1000 * 60 * 60 * 24),
+                );
+                const firstStage = stages[0];
+                widgetHTML = `
+                    <div class="today-card">
+                        <span class="today-card__eyebrow">Countdown: Noch ${daysUntilStart} Tag${daysUntilStart === 1 ? "" : "e"} bis zum Start</span>
+                        <h2 class="today-card__title">Start-Etappe: ${firstStage.route}</h2>
+                        <p class="today-card__desc">${firstStage.description}</p>
+                        <div class="today-card__footer">
+                            <div class="today-card__stats">
+                                <div class="today-card__stat">
+                                    <span class="today-card__stat-label">Distanz</span>
+                                    <span class="today-card__stat-value">${firstStage.distance}</span>
+                                </div>
+                                <div class="today-card__stat">
+                                    <span class="today-card__stat-label">Höhenmeter</span>
+                                    <span class="today-card__stat-value">${firstStage.elevation}</span>
+                                </div>
+                                <div class="today-card__stat">
+                                    <span class="today-card__stat-label">Start</span>
+                                    <span class="today-card__stat-value">${firstStage.startTime} Uhr</span>
+                                </div>
+                            </div>
+                            <a href="${firstStage.link}" class="today-card__action">Infos zur 1. Etappe</a>
+                        </div>
+                    </div>`;
+            } else if (today <= endDate) {
+                const activeStage = stages.find(
+                    (s) =>
+                        parseSimpleDate(s.date).getTime() === today.getTime(),
+                );
+                if (activeStage) {
+                    widgetHTML = `
+                        <div class="today-card">
+                            <span class="today-card__eyebrow">Heute: Etappe ${activeStage.id}</span>
+                            <h2 class="today-card__title">${activeStage.route}</h2>
+                            <p class="today-card__desc">${activeStage.description}</p>
+                            <div class="today-card__footer">
+                                <div class="today-card__stats">
+                                    <div class="today-card__stat">
+                                        <span class="today-card__stat-label">Distanz</span>
+                                        <span class="today-card__stat-value">${activeStage.distance}</span>
+                                    </div>
+                                    <div class="today-card__stat">
+                                        <span class="today-card__stat-label">Höhenmeter</span>
+                                        <span class="today-card__stat-value">${activeStage.elevation}</span>
+                                    </div>
+                                    <div class="today-card__stat">
+                                        <span class="today-card__stat-label">Gehzeit</span>
+                                        <span class="today-card__stat-value">${activeStage.duration} h</span>
+                                    </div>
+                                </div>
+                                <a href="${activeStage.link}" class="today-card__action">Details anzeigen</a>
+                            </div>
+                        </div>`;
+                }
+            }
+            todayPlaceholder.innerHTML = widgetHTML;
+        }
+
+        // 7. Overview Map Section
         const overviewMap = dataProvider.getOverviewMap();
         if (overviewMap) {
             Helpers.setText("overview-desc", overviewMap.description);
