@@ -27,7 +27,7 @@
                 <span class="site-header__brand-name">Malerweg 2026</span>
             </a>
             <nav class="site-nav" aria-label="Hauptnavigation">
-                <a class="site-nav__link" href="etappen.html">Etappen</a>
+                <a class="site-nav__link" href="index.html#etappen">Etappen</a>
                 <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
                 <a class="site-nav__link" href="organisation.html">Organisation</a>
                 <a class="site-nav__link" href="navigation.html">Navigation</a>
@@ -41,7 +41,7 @@
             </button>
         </div>
         <nav class="site-nav-mobile" id="nav-mobile" aria-label="Mobile Navigation">
-            <a class="site-nav__link" href="etappen.html">Etappen</a>
+            <a class="site-nav__link" href="index.html#etappen">Etappen</a>
             <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
             <a class="site-nav__link" href="organisation.html">Organisation</a>
             <a class="site-nav__link" href="navigation.html">Navigation</a>
@@ -64,7 +64,7 @@
                 </p>
                 <div id="hero-countdown-placeholder"></div>
                 <div class="page-hero__actions">
-                    <a href="etappen.html" class="btn btn--primary">
+                    <a href="#etappen" class="btn btn--primary">
                         <span class="material-symbols-outlined">list_alt</span>
                         Alle Etappen
                     </a>
@@ -180,7 +180,7 @@
                             <h3>Schnellzugriff</h3>
                         </div>
                         <div class="quick-links">
-                            <a class="quick-link" href="etappen.html">
+                            <a class="quick-link" href="#etappen">
                                 <span class="material-symbols-outlined quick-link__icon">list_alt</span>
                                 <div>
                                     <p class="quick-link__title">
@@ -229,31 +229,17 @@
                 </div>
             </div>
         </section>
-        <!-- TOURPLAN -->
-        <section class="section">
+        <!-- ETAPPENLISTE -->
+        <section class="section" id="etappen">
             <div class="container--narrow">
                 <div class="section__header">
-                    <h2 class="section__title">Tourplan</h2>
+                    <h2 class="section__title">Alle Etappen</h2>
                     <p class="section__lead" id="tourplan-lead">
                         -
                     </p>
                 </div>
-                <div class="info-table__wrapper">
-                    <table class="info-table">
-                        <thead>
-                            <tr>
-                                <th>Tag</th>
-                                <th>Datum</th>
-                                <th>Strecke</th>
-                                <th>km</th>
-                                <th>hm</th>
-                                <th>Gehzeit</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tourplan-body">
-                            <!-- JS populated -->
-                        </tbody>
-                    </table>
+                <div class="stage-grid" id="stage-grid-container">
+                    <!-- JS populated -->
                 </div>
             </div>
         </section>
@@ -272,7 +258,7 @@
                         <ul class="feature-list" style="margin-bottom: var(--space-6)" id="overview-features">
                             <!-- JS populated -->
                         </ul>
-                        <a href="etappen.html" class="btn btn--primary">
+                        <a href="#etappen" class="btn btn--primary">
                             <span class="material-symbols-outlined">route</span>
                             Alle Etappen ansehen
                         </a>

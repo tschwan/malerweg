@@ -1,6 +1,6 @@
 /**
  * map.js - Leaflet Overview Map (all 6 stages)
- * Used on index.html and etappen.html
+ * Used on index.html and index.html#etappen
  */
 (function () {
     "use strict";

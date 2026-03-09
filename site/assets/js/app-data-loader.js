@@ -108,25 +108,36 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         }
 
-        // 5. Tour Plan (Table)
+        // 5. Etappen Liste (Grid)
         const tourPlan = dataProvider.getTourPlan();
         if (tourPlan) {
             Helpers.setText("tourplan-lead", tourPlan.lead);
 
-            const tbody = document.getElementById("tourplan-body");
-            if (tbody && tourPlan.stages) {
-                tbody.innerHTML = "";
+            const stageGrid = document.getElementById("stage-grid-container");
+            if (stageGrid && tourPlan.stages) {
+                stageGrid.innerHTML = "";
                 tourPlan.stages.forEach((stage) => {
-                    const tr = document.createElement("tr");
-                    tr.innerHTML = `
-                        <td>${stage.day}</td>
-                        <td>${stage.date}</td>
-                        <td><a href="${stage.link}">${stage.route}</a></td>
-                        <td>${stage.distance}</td>
-                        <td>${stage.elevation}</td>
-                        <td>${stage.duration}</td>
+                    const a = document.createElement("a");
+                    a.className = "stage-card";
+                    a.href = stage.link;
+
+                    const colorStyle = stage.color
+                        ? ` style="background:${stage.color};"`
+                        : "";
+
+                    a.innerHTML = `
+                        <div class="stage-card__number"${colorStyle}>${stage.id}</div>
+                        <div class="stage-card__body">
+                            <p class="stage-card__title">${stage.route}</p>
+                            <div class="stage-card__meta">
+                                <span class="stage-card__stat"><span class="material-symbols-outlined">route</span>${stage.distance}</span>
+                                <span class="stage-card__stat"><span class="material-symbols-outlined">landscape</span>${stage.elevation}</span>
+                                <span class="stage-card__stat"><span class="material-symbols-outlined">schedule</span>${stage.duration} h</span>
+                            </div>
+                        </div>
+                        <span class="material-symbols-outlined stage-card__arrow">chevron_right</span>
                     `;
-                    tbody.appendChild(tr);
+                    stageGrid.appendChild(a);
                 });
             }
         }

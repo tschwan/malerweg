@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         } else if (stageId === 6) {
             // Special case for stage 6 -> Next is Overview
             const navNext = document.getElementById("nav-next");
-            navNext.href = `etappen.html`;
+            navNext.href = `index.html#etappen`;
             navNext.style.display = "flex";
             navNext.style.visibility = "visible";
             document.getElementById("nav-next-meta").textContent = "Übersicht";
