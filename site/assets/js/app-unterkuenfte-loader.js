@@ -22,79 +22,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (listContainer && accomData.list) {
                 listContainer.innerHTML = "";
                 accomData.list.forEach((item) => {
-                    const card = document.createElement("div");
-                    card.className = "accom-card";
-
-                    let warningHtml = "";
-                    if (item.warning) {
-                        warningHtml = `
-                            <div class="info-box info-box--warning mt-4">
-                                <span class="material-symbols-outlined">warning</span>
-                                <span>${item.warning}</span>
-                            </div>
-                        `;
-                    }
-
-                    // Status Badge Mapping
-                    const badgeClasses = {
-                        paid: "badge--paid",
-                        pending: "badge--pending",
-                        open: "badge--pending",
-                    };
-                    const badgeClass =
-                        item.statusClass === "paid"
-                            ? "badge--paid"
-                            : item.statusClass === "pending"
-                              ? "badge--pending"
-                              : "badge--white";
-                    const badgeHtml =
-                        item.statusClass === "open"
-                            ? `<span class="badge badge--pending">${item.status}</span>`
-                            : `<span class="badge ${badgeClass || "badge--white"}">${item.status}</span>`;
-
-                    card.innerHTML = `
-                        <div class="accom-card__header">
-                            <div>
-                                <p class="accom-card__date">${item.date}</p>
-                                <p class="accom-card__name">${item.name}</p>
-                            </div>
-                            ${badgeHtml}
-                        </div>
-                        <div class="accom-card__body">
-                            <div class="accom-card__details">
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Typ</span>
-                                    <span class="accom-card__detail-value">${item.details.type}</span>
-                                </div>
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Ort</span>
-                                    <span class="accom-card__detail-value">${item.details.location}</span>
-                                </div>
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Webseite</span>
-                                    <span class="accom-card__detail-value"><a href="${item.details.website.url}" target="_blank" rel="noopener">${item.details.website.label}</a></span>
-                                </div>
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Preis</span>
-                                    <span class="accom-card__detail-value">${item.details.price}</span>
-                                </div>
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Frühstück</span>
-                                    <span class="accom-card__detail-value">${item.details.breakfast}</span>
-                                </div>
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Check-in</span>
-                                    <span class="accom-card__detail-value">${item.details.checkIn}</span>
-                                </div>
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Storno</span>
-                                    <span class="accom-card__detail-value">${item.details.cancellation}</span>
-                                </div>
-                            </div>
-                            ${warningHtml}
-                        </div>
-                    `;
-                    listContainer.appendChild(card);
+                    const container = document.createElement("div");
+                    container.innerHTML = AccommodationCard.render(item);
+                    listContainer.appendChild(container.firstElementChild);
                 });
             }
 

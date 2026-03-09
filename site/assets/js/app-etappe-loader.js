@@ -91,67 +91,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (accommodation) {
                 const isEndOfTour = accommodation.id === "acc-pirna";
 
-                // Status Badge Mapping
-                const badgeClass =
-                    accommodation.statusClass === "paid"
-                        ? "badge--paid"
-                        : accommodation.statusClass === "pending"
-                          ? "badge--pending"
-                          : "badge--white";
-
-                const badgeHtml =
-                    accommodation.statusClass === "open"
-                        ? `<span class="badge badge--pending">${accommodation.status}</span>`
-                        : `<span class="badge ${badgeClass}">${accommodation.status}</span>`;
-
-                let warningHtml = "";
-                if (accommodation.warning) {
-                    warningHtml = `
-                    <div class="info-box info-box--warning" style="margin-top:var(--space-4);">
-                        <span class="material-symbols-outlined">warning</span>
-                        <span style="font-size:var(--font-size-sm);">${accommodation.warning}</span>
-                    </div>
-                `;
-                }
-
                 accomContainer.innerHTML = `
                 <div class="card">
                     <div class="section-icon-header" style="margin-bottom:var(--space-4);">
                         <span class="material-symbols-outlined">${accommodation.customIcon || "bed"}</span>
                         <h3 style="font-size:var(--font-size-xl);">${isEndOfTour ? "Tourende" : "Unterkunft heute"}</h3>
                     </div>
-                    
-                    <div class="accom-card" style="box-shadow:none; border:none; padding:0; background:transparent;">
-                        <div class="accom-card__header" style="padding:0; margin-bottom:var(--space-4);">
-                            <div>
-                                <p class="accom-card__date">${accommodation.date}</p>
-                                <p class="accom-card__name">${accommodation.name}</p>
-                            </div>
-                            ${badgeHtml}
-                        </div>
-                        <div class="accom-card__body" style="padding:0;">
-                            <div class="accom-card__details">
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Typ</span>
-                                    <span class="accom-card__detail-value">${accommodation.details.type}</span>
-                                </div>
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Ort</span>
-                                    <span class="accom-card__detail-value">${accommodation.details.location}</span>
-                                </div>
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Webseite</span>
-                                    <span class="accom-card__detail-value"><a href="${accommodation.details.website.url}" target="_blank" rel="noopener">${accommodation.details.website.label}</a></span>
-                                </div>
-                                <div class="accom-card__detail-item">
-                                    <span class="accom-card__detail-label">Check-in</span>
-                                    <span class="accom-card__detail-value">${accommodation.details.checkIn}</span>
-                                </div>
-                            </div>
-                            ${warningHtml}
-                        </div>
-                    </div>
-                    <a href="unterkuenfte.html" class="btn btn--outline btn--sm" style="margin-top:var(--space-6); width:100%;">Alle Unterkünfte & Kosten</a>
+                    ${AccommodationCard.render(accommodation)}
                 </div>
             `;
             }
