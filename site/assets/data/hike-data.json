@@ -96,12 +96,7 @@
                         "text": "Altstadt von Stadt Wehlen"
                     }
                 ],
-                "accommodation": {
-                    "name": "Kutscherhaus - Haus Felsenpost",
-                    "subtext": "Stadt Wehlen",
-                    "link": "unterkuenfte.html",
-                    "url": "https://www.felsenpost.de"
-                }
+                "accommodationId": "acc-wehlen"
             },
             {
                 "id": 2,
@@ -141,12 +136,7 @@
                         "text": "Brand-Aussicht"
                     }
                 ],
-                "accommodation": {
-                    "name": "Brand-Baude - Blockhaus",
-                    "subtext": "Frühstück inklusive · Check-in bis 17:00 Uhr",
-                    "link": "unterkuenfte.html",
-                    "url": "https://www.brand-baude.de"
-                }
+                "accommodationId": "acc-brand"
             },
             {
                 "id": 3,
@@ -186,12 +176,7 @@
                         "text": "Historische Kirnitzschtalbahn"
                     }
                 ],
-                "accommodation": {
-                    "name": "Apparthotel Bad Schandau",
-                    "subtext": "Check-in: 14:00-17:30 Uhr · Frühstück inklusive",
-                    "link": "unterkuenfte.html",
-                    "url": "https://www.steiger-hotels.com/hotels/apparthotel-bad-schandau"
-                }
+                "accommodationId": "acc-schandau"
             },
             {
                 "id": 4,
@@ -237,12 +222,7 @@
                         "text": "Panoramaaussichten"
                     }
                 ],
-                "accommodation": {
-                    "name": "Königstein Hostel",
-                    "subtext": "Check-in ab 15:00 · 1. Nacht",
-                    "link": "unterkuenfte.html",
-                    "url": "https://www.koenigstein-hostel.de"
-                }
+                "accommodationId": "acc-koenigstein"
             },
             {
                 "id": 5,
@@ -275,12 +255,7 @@
                         "text": "Festung Königstein"
                     }
                 ],
-                "accommodation": {
-                    "name": "Königstein Hostel",
-                    "subtext": "2. Nacht · Check-in ab 15:00",
-                    "link": "unterkuenfte.html",
-                    "url": "https://www.koenigstein-hostel.de"
-                }
+                "accommodationId": "acc-koenigstein"
             },
             {
                 "id": 6,
@@ -320,12 +295,7 @@
                         "text": "Altstadt Pirna"
                     }
                 ],
-                "accommodation": {
-                    "name": "Tourende",
-                    "subtext": "Ankunft in Pirna · Optionale Übernachtung · Abreise auf eigene Faust",
-                    "link": "anreise.html",
-                    "customIcon": "flag"
-                }
+                "accommodationId": "acc-pirna"
             }
         ]
     },
@@ -339,11 +309,12 @@
         "gpxBaseUrl": "assets/gpx/"
     },
     "accommodations": {
-        "lead": "Alle 4 Unterkünfte unserer Wanderung - Buchungsstatus, Check-in Zeiten und wichtige Infos auf einen Blick.",
+        "lead": "Alle 4 Unterkünfte unserer Wanderung - Buchungsstatus, Check-in Zeiten und wichtige Infos auf einen Blick und direkt an den Etappen.",
         "list": [
             {
+                "id": "acc-wehlen",
                 "date": "Mo, 04. Mai 2026",
-                "name": "Kutscherhaus",
+                "name": "Kutscherhaus - Felsenpost",
                 "status": "Bezahlt",
                 "statusClass": "paid",
                 "details": {
@@ -361,6 +332,7 @@
                 "warning": null
             },
             {
+                "id": "acc-brand",
                 "date": "Di, 05. Mai 2026",
                 "name": "Brand-Baude",
                 "status": "Vor Ort",
@@ -380,6 +352,7 @@
                 "warning": "Hüttenschlafsack erforderlich"
             },
             {
+                "id": "acc-schandau",
                 "date": "Mi, 06. Mai 2026",
                 "name": "Apparthotel Bad Schandau",
                 "status": "Bezahlt",
@@ -399,6 +372,7 @@
                 "warning": null
             },
             {
+                "id": "acc-koenigstein",
                 "date": "Do - Fr, 07. - 08. Mai 2026",
                 "name": "Königstein Hostel",
                 "status": "Angezahlt",
@@ -418,6 +392,7 @@
                 "warning": null
             },
             {
+                "id": "acc-pirna",
                 "date": "Sa, 09. Mai 2026",
                 "name": "Mal schauen",
                 "status": "Offen",
@@ -434,6 +409,7 @@
                     "checkIn": "Rechtzeitig",
                     "cancellation": "Nicht möglich"
                 },
+                "customIcon": "flag",
                 "warning": null
             }
         ],
