@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <span class="stage-card__date">${stage.day}, ${stage.date}.</span>
                             <p class="stage-card__title">${stage.route}</p>
                             <div class="stage-card__meta">
-                                <span class="stage-card__stat"><span class="material-symbols-outlined">route</span>${stage.distance}</span>
+                                <span class="stage-card__stat"><span class="material-symbols-outlined">arrow_range</span>${stage.distance}</span>
                                 <span class="stage-card__stat"><span class="material-symbols-outlined">landscape</span>${stage.elevation}</span>
                                 <span class="stage-card__stat"><span class="material-symbols-outlined">schedule</span>${stage.duration} h</span>
                             </div>
