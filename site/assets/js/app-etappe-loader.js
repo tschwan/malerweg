@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         document.getElementById("stage-hero").className =
             `stage-hero stage-hero--${stageId}`;
-        document.getElementById("breadcrumb-current").textContent =
-            `Etappe ${stage.id}`;
+
         document.getElementById("stage-title").textContent = stage.title;
         document.getElementById("stage-date").textContent = stage.dateSubtitle;
 

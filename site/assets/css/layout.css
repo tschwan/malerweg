@@ -598,34 +598,6 @@
     }
 }
 
-/* --- Page Breadcrumb --- */
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-    padding-block: var(--space-4);
-}
-
-.breadcrumb a {
-    color: var(--color-text-muted);
-    transition: color var(--transition-fast);
-}
-
-.breadcrumb a:hover {
-    color: var(--color-brand-primary);
-}
-
-.breadcrumb__sep {
-    color: var(--color-text-muted);
-    opacity: 0.5;
-}
-
-.breadcrumb__current {
-    color: var(--color-text-secondary);
-}
-
 /* --- Stage Navigation (prev / next) --- */
 .stage-nav {
     display: grid;
