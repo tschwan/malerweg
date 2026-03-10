@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 tourPlan.stages.forEach((stage) => {
                     const item = document.createElement("div");
                     item.className = "download-item";
+                    const trackColor = dataProvider.getStageColor(stage.id);
                     item.innerHTML = `
-                        <span class="material-symbols-outlined download-item__icon">route</span>
+                        <span class="material-symbols-outlined download-item__icon" style="color:${trackColor};">route</span>
                         <div class="download-item__body">
                             <p class="download-item__name">Etappe ${stage.id}: ${stage.route}</p>
                             <p class="download-item__meta">GPX · ${stage.distance} · ${stage.elevation}</p>

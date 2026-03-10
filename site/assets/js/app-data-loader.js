@@ -101,9 +101,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                     const a = document.createElement("a");
                     a.className = "stage-card";
                     a.href = stage.link;
-                    const colorStyle = stage.color
-                        ? ` style="background:${stage.color};"`
-                        : "";
+                    const trackColor = dataProvider.getStageColor(stage.id);
+                    const colorStyle = ` style="background:${trackColor};"`;
                     a.innerHTML = `
                         <div class="stage-card__number"${colorStyle}>${stage.id}</div>
                         <div class="stage-card__body">

@@ -78,7 +78,6 @@
                 "elevation": "200 hm",
                 "duration": "3:00",
                 "difficulty": "Leicht",
-                "color": null,
                 "gpx": "etappe-1.gpx",
                 "description": "Die erste Etappe führt durch das romantische Liebethaler Tal entlang der Wesenitz. Der Weg ist relativ kurz und eignet sich gut zum Einlaufen. Eine ideale Einstimmung auf die kommenden Tage.",
                 "infoBoxes": [],
@@ -115,7 +114,6 @@
                 "elevation": "760 hm",
                 "duration": "5:00",
                 "difficulty": "Mittel",
-                "color": "#3b6ea0",
                 "gpx": "etappe-2.gpx",
                 "description": "Die zweite Etappe ist das Highlight der Tour: Sie führt über die weltberühmte Basteibrücke, entlang des Amselsees und durch das idyllische Amseltal bis hinauf zur Brand-Baude.",
                 "infoBoxes": [
@@ -155,7 +153,6 @@
                 "elevation": "850 hm",
                 "duration": "6:30",
                 "difficulty": "Anspruchsvoll",
-                "color": "#c0392b",
                 "gpx": "etappe-3.gpx",
                 "description": "Eine lange Etappe durch das wildromantische Kirnitzschtal. Nach der Wanderung wartet ein besonderes Highlight: die historische Kirnitzschtalbahn bringt uns von Lichtenhain nach Bad Schandau.",
                 "infoBoxes": [
@@ -195,7 +192,6 @@
                 "elevation": "1200 hm",
                 "duration": "7:30",
                 "difficulty": "Anspruchsvoll",
-                "color": "#8e44ad",
                 "gpx": "etappe-4.gpx",
                 "description": "Die härteste Etappe mit 1200 hm durch die Schrammsteine. Nach der Wanderung Busfahrt zur Unterkunft.",
                 "infoBoxes": [
@@ -241,7 +237,6 @@
                 "elevation": "740 hm",
                 "duration": "5:30",
                 "difficulty": "Mittel",
-                "color": "#e67e22",
                 "gpx": "etappe-5.gpx",
                 "description": "Diese Etappe führt durch die charakteristischen Tafelberge der Sächsischen Schweiz. Ziel ist das malerische Königstein direkt an der Elbe, wo wir auch übernachten.",
                 "infoBoxes": [],
@@ -274,7 +269,6 @@
                 "elevation": "600 hm",
                 "duration": "5:30",
                 "difficulty": "Mittel",
-                "color": "#16a085",
                 "gpx": "etappe-6.gpx",
                 "description": "Die letzte Etappe führt von Königstein zurück nach Pirna und schließt damit unsere 6-tägige Wanderung auf dem Malerweg ab. Ein würdiger Abschluss durch die eindrucksvolle Landschaft der Sächsischen Schweiz.",
                 "infoBoxes": [

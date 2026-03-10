@@ -47,85 +47,67 @@
 
     L.control.layers(baseMaps).addTo(map);
 
-    // Color per stage
-    const stageColors = [
-        "#2d7d46",
-        "#3b6ea0",
-        "#c0392b",
-        "#8e44ad",
-        "#e67e22",
-        "#16a085",
-    ];
-    const stageNames = [
-        "Etappe 1: Liebethal → Stadt Wehlen",
-        "Etappe 2: Stadt Wehlen → Brand-Baude",
-        "Etappe 3: Brand-Baude → Lichtenhain",
-        "Etappe 4: Lichtenhain → Reinhardtsdorf",
-        "Etappe 5: Reinhardtsdorf → Königstein",
-        "Etappe 6: Königstein → Pirna",
-    ];
-    const stageLinks = [
-        "etappe.html?id=1",
-        "etappe.html?id=2",
-        "etappe.html?id=3",
-        "etappe.html?id=4",
-        "etappe.html?id=5",
-        "etappe.html?id=6",
-    ];
+    // Load data and render tracks
+    dataProvider.init().then(() => {
+        const tourPlan = dataProvider.getTourPlan();
+        if (!tourPlan || !tourPlan.stages) return;
 
-    const gpxBase = container.dataset.gpxBase || "assets/gpx/";
-    const bounds = [];
-    let loadedCount = 0;
+        const stages = tourPlan.stages;
+        const gpxBase = container.dataset.gpxBase || "assets/gpx/";
+        const bounds = [];
+        let loadedCount = 0;
 
-    for (let i = 0; i < 6; i++) {
-        const gpxUrl = `${gpxBase}etappe-${i + 1}.gpx`;
-        new L.GPX(gpxUrl, {
-            async: true,
-            polyline_options: {
-                color: stageColors[i],
-                weight: 4,
-                opacity: 0.9,
-                lineJoin: "round",
-                className: "gpx-track", // For Method 2 (Shadow)
-            },
-            marker_options: {
-                startIconUrl: null,
-                endIconUrl: null,
-                shadowUrl: null,
-                wptIconUrls: { "": null },
-            },
-        })
-            .on("addline", function (e) {
-                // Method 1: Create White Halo (Outline)
-                const halo = L.polyline(e.line.getLatLngs(), {
-                    color: "#ffffff",
-                    weight: 8,
-                    opacity: 0.8,
+        stages.forEach((stage, i) => {
+            const trackColor = dataProvider.getStageColor(stage.id);
+            const gpxUrl = `${gpxBase}${stage.gpx}`;
+
+            new L.GPX(gpxUrl, {
+                async: true,
+                polyline_options: {
+                    color: trackColor,
+                    weight: 4,
+                    opacity: 0.9,
                     lineJoin: "round",
-                    interactive: false,
-                }).addTo(map);
-                halo.bringToBack();
+                    className: "gpx-track",
+                },
+                marker_options: {
+                    startIconUrl: null,
+                    endIconUrl: null,
+                    shadowUrl: null,
+                    wptIconUrls: { "": null },
+                },
             })
-            .on("loaded", function (e) {
-                const b = e.target.getBounds();
-                bounds.push(b);
-                loadedCount++;
-                if (loadedCount === 6) {
-                    const combined = bounds.reduce(
-                        (acc, cur) => acc.extend(cur),
-                        bounds[0],
-                    );
-                    map.fitBounds(combined, { padding: [24, 24] });
-                }
-            })
-            .on("click", function () {
-                window.location.href = stageLinks[i];
-            })
-            .bindPopup(
-                `<strong>${stageNames[i]}</strong><br><a href="${stageLinks[i]}">Details →</a>`,
-            )
-            .addTo(map);
-    }
+                .on("addline", function (e) {
+                    const halo = L.polyline(e.line.getLatLngs(), {
+                        color: "#ffffff",
+                        weight: 8,
+                        opacity: 0.8,
+                        lineJoin: "round",
+                        interactive: false,
+                    }).addTo(map);
+                    halo.bringToBack();
+                })
+                .on("loaded", function (e) {
+                    const b = e.target.getBounds();
+                    bounds.push(b);
+                    loadedCount++;
+                    if (loadedCount === stages.length) {
+                        const combined = bounds.reduce(
+                            (acc, cur) => acc.extend(cur),
+                            bounds[0],
+                        );
+                        map.fitBounds(combined, { padding: [24, 24] });
+                    }
+                })
+                .on("click", function () {
+                    window.location.href = stage.link;
+                })
+                .bindPopup(
+                    `<strong>${stage.title}</strong><br><a href="${stage.link}">Details →</a>`,
+                )
+                .addTo(map);
+        });
+    });
 
     map.setView([50.955, 14.28], 11);
 })();

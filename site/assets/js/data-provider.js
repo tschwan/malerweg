@@ -103,6 +103,27 @@ class HikeDataProvider {
         this._ensureDataLoaded();
         return this.data.navigation;
     }
+
+    /**
+     * Gets a single stage by its ID.
+     */
+    getStageById(id) {
+        const tourPlan = this.getTourPlan();
+        if (!tourPlan || !tourPlan.stages) return null;
+        return tourPlan.stages.find((s) => s.id === id);
+    }
+
+    /**
+     * Returns the track color for a specific stage ID.
+     * Uses modulo 8 logic based on CSS variables.
+     */
+    getStageColor(stageId) {
+        const index = ((stageId - 1) % 8) + 1;
+        const color = getComputedStyle(document.documentElement)
+            .getPropertyValue(`--color-track-${index}`)
+            .trim();
+        return color || "#2d4c3b";
+    }
 }
 
 // Global instance (can also be instantiated per page if needed)

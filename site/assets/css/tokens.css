@@ -113,4 +113,14 @@
     --map-height-tablet: 420px;
     --map-height-desktop: 520px;
     --map-height-hero: 380px;
+
+    /* --- Track Colors (8 Stages) --- */
+    --color-track-1: #2d4c3b;
+    --color-track-2: #3b6ea0;
+    --color-track-3: #c0392b;
+    --color-track-4: #8e44ad;
+    --color-track-5: #e67e22;
+    --color-track-6: #16a085;
+    --color-track-7: #d35400;
+    --color-track-8: #2980b9;
 }

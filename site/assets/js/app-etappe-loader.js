@@ -157,7 +157,8 @@ function initStageMap(stage) {
 
     // Set dataset properties first so the exact previous logic works flawlessly
     container.dataset.gpx = `assets/gpx/${stage.gpx}`;
-    container.dataset.color = stage.color || "#2d4c3b";
+    const trackColor = dataProvider.getStageColor(stage.id);
+    container.dataset.color = trackColor;
 
     const gpxUrl = container.dataset.gpx;
     if (!gpxUrl) return;
@@ -194,7 +195,6 @@ function initStageMap(stage) {
         Satellit: satellite,
     };
     L.control.layers(baseMaps).addTo(map);
-    const trackColor = container.dataset.color || "#2d4c3b";
     // Load GPX track for visual display
     new L.GPX(gpxUrl, {
         async: true,
