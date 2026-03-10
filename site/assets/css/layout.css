@@ -575,3 +575,40 @@
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-primary);
 }
+
+/* --- Theme Switcher --- */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.theme-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    padding: 0;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+.theme-btn.is-active {
+    box-shadow: 0 0 0 2px var(--color-surface-card), 0 0 0 4px var(--color-brand-primary);
+}
+
+.theme-btn--forest {
+    background-color: #2d4c3b;
+}
+
+.theme-btn--ocean {
+    background-color: #0369a1;
+}
+
+.theme-btn--autumn {
+    background-color: #c2410c;
+}

@@ -124,3 +124,31 @@
     --color-track-7: #d35400;
     --color-track-8: #2980b9;
 }
+
+/* --- Themes --- */
+
+/* Theme: Ocean */
+:root.theme-ocean {
+    --color-brand-primary: #0369a1;
+    --color-brand-hover: #0284c7;
+    --color-brand-dark: #0c4a6e;
+    --color-brand-light: #e0f2fe;
+    --color-surface-page: #f0f9ff;
+    --color-surface-section: #e0f2fe;
+    --color-border-subtle: rgba(3, 105, 161, 0.12);
+    --color-border-hover: #0369a1;
+    --color-text-brand: #0369a1;
+}
+
+/* Theme: Autumn */
+:root.theme-autumn {
+    --color-brand-primary: #c2410c;
+    --color-brand-hover: #ea580c;
+    --color-brand-dark: #7c2d12;
+    --color-brand-light: #ffedd5;
+    --color-surface-page: #fff7ed;
+    --color-surface-section: #ffedd5;
+    --color-border-subtle: rgba(194, 65, 12, 0.12);
+    --color-border-hover: #c2410c;
+    --color-text-brand: #c2410c;
+}

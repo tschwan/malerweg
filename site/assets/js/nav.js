@@ -21,9 +21,16 @@
                 <a class="site-nav__link" href="links.html">Links</a>
                 <a class="site-nav__link" href="downloads.html">Downloads</a>
             </nav>
-            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
+            <div style="display: flex; align-items: center; gap: var(--space-4);">
+                <div class="theme-switcher">
+                    <button class="theme-btn theme-btn--forest is-active" data-theme="" aria-label="Wald Theme" title="Wald"></button>
+                    <button class="theme-btn theme-btn--ocean" data-theme="theme-ocean" aria-label="Ozean Theme" title="Ozean"></button>
+                    <button class="theme-btn theme-btn--autumn" data-theme="theme-autumn" aria-label="Herbst Theme" title="Herbst"></button>
+                </div>
+                <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
         </div>
         <nav class="site-nav-mobile" id="nav-mobile" aria-label="Mobile Navigation">
             <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
@@ -53,6 +60,38 @@
                 const icon = toggle.querySelector(".material-symbols-outlined");
                 if (icon) icon.textContent = "menu";
             }
+        });
+    }
+
+    // --- Theme Switcher ---
+    const themeBtns = document.querySelectorAll(".theme-btn");
+    if (themeBtns.length > 0) {
+        const currentTheme = localStorage.getItem("malerweg-theme") || "";
+        themeBtns.forEach((btn) => {
+            if (btn.dataset.theme === currentTheme) {
+                btn.classList.add("is-active");
+            } else {
+                btn.classList.remove("is-active");
+            }
+
+            btn.addEventListener("click", () => {
+                const newTheme = btn.dataset.theme;
+
+                document.documentElement.classList.remove(
+                    "theme-ocean",
+                    "theme-autumn",
+                );
+                if (newTheme) {
+                    document.documentElement.classList.add(newTheme);
+                }
+
+                try {
+                    localStorage.setItem("malerweg-theme", newTheme);
+                } catch (e) {}
+
+                themeBtns.forEach((b) => b.classList.remove("is-active"));
+                btn.classList.add("is-active");
+            });
         });
     }
 
