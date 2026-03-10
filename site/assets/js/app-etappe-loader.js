@@ -78,6 +78,29 @@ document.addEventListener("DOMContentLoaded", async () => {
             highlightsList.innerHTML = hHtml;
         }
 
+        // --- 4b. Refreshments ---
+        const refreshmentsCard = document.getElementById("refreshments-card");
+        const refreshmentsList = document.getElementById("refreshments-list");
+        if (
+            refreshmentsCard &&
+            refreshmentsList &&
+            stage.refreshments &&
+            stage.refreshments.length > 0
+        ) {
+            const rHtml = stage.refreshments
+                .map(
+                    (r) => `
+                <li class="feature-item">
+                    <span class="material-symbols-outlined">${r.icon}</span>
+                    <span class="feature-item__text">${r.text}</span>
+                </li>
+            `,
+                )
+                .join("");
+            refreshmentsList.innerHTML = rHtml;
+            refreshmentsCard.style.display = "block";
+        }
+
         // --- 5. Accommodation ---
         const accomContainer = document.getElementById(
             "accommodation-container",

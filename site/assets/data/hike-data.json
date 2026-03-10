@@ -99,6 +99,12 @@
                         "text": "Altstadt von Stadt Wehlen"
                     }
                 ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Gasthof Waldidylle (9.4 km)"
+                    }
+                ],
                 "accommodationId": "acc-wehlen"
             },
             {
@@ -138,6 +144,28 @@
                         "text": "Brand-Aussicht"
                     }
                 ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Bastei (3.2 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Amselsee Kiosk (4.4 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Lindengarten, Rathewalde (7.0 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Hocksteinschänke (8.4 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Gasthaus Polenztal (10.0 km)"
+                    }
+                ],
                 "accommodationId": "acc-brand"
             },
             {
@@ -175,6 +203,20 @@
                     {
                         "icon": "tram",
                         "text": "Historische Kirnitzschtalbahn"
+                    }
+                ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Waitzdorf Schänke (1,3 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Gasthof Heiterer Blick (8,8 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Imbiss Ostrauer Mühle (10,5 km)"
                     }
                 ],
                 "accommodationId": "acc-schandau"
@@ -222,6 +264,32 @@
                         "text": "Panoramaaussichten"
                     }
                 ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Kuhstall (1,6 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Neumannmühle (4,1 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Buschmühle (4,5 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Biergarten Altes Zeughaus (11,4 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Wanderrast Großer Winterberg (15,2 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Schmilka (17,6 km)"
+                    }
+                ],
                 "accommodationId": "acc-koenigstein"
             },
             {
@@ -252,6 +320,20 @@
                     {
                         "icon": "castle",
                         "text": "Festung Königstein"
+                    }
+                ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Waldgaststätte Liethemühle (5,3 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Berggaststätte Pappstein (8,0 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Berggaststätte Pfaffenstein (13,2 km)"
                     }
                 ],
                 "accommodationId": "acc-koenigstein"
@@ -291,6 +373,20 @@
                     {
                         "icon": "location_city",
                         "text": "Altstadt Pirna"
+                    }
+                ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Cafe am Schloss (3,8 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Berggaststätte Rauenstein (7,7 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Pötzscha (9,9 km)"
                     }
                 ],
                 "accommodationId": "acc-pirna"
