@@ -104,9 +104,9 @@
     --transition-slow: 350ms ease;
 
     /* --- Z-Index --- */
-    --z-header: 100;
+    --z-header: 1100;
     --z-overlay: 50;
-    --z-modal: 200;
+    --z-modal: 2000;
 
     /* --- Map Heights --- */
     --map-height-mobile: 280px;
