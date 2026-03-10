@@ -82,7 +82,6 @@
                     "theme-ocean",
                     "theme-autumn",
                     "theme-dark",
-                    "theme-cyberpunk",
                 );
                 if (newTheme) {
                     document.documentElement.classList.add(newTheme);
