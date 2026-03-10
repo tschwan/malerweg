@@ -13,20 +13,33 @@
                 <span class="material-symbols-outlined site-header__brand-icon">terrain</span>
                 <span class="site-header__brand-name">Malerweg 2026</span>
             </a>
-            <nav class="site-nav" aria-label="Hauptnavigation">
-                <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
-                <a class="site-nav__link" href="organisation.html">Organisation</a>
-                <a class="site-nav__link" href="navigation.html">Navigation</a>
-                <a class="site-nav__link" href="anreise.html">Anreise</a>
-                <a class="site-nav__link" href="links.html">Links</a>
-                <a class="site-nav__link" href="downloads.html">Downloads</a>
-            </nav>
-            <div style="display: flex; align-items: center; gap: var(--space-4);">
-                <div class="theme-switcher">
-                    <button class="theme-btn theme-btn--forest is-active" data-theme="" aria-label="Wald Theme" title="Wald"></button>
-                    <button class="theme-btn theme-btn--ocean" data-theme="theme-ocean" aria-label="Ozean Theme" title="Ozean"></button>
-                    <button class="theme-btn theme-btn--autumn" data-theme="theme-autumn" aria-label="Herbst Theme" title="Herbst"></button>
-                    <button class="theme-btn theme-btn--dark" data-theme="theme-dark" aria-label="Dark Theme" title="Dark"></button>
+            <div class="site-header__actions">
+                <nav class="site-nav" aria-label="Hauptnavigation">
+                    <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+                    <a class="site-nav__link" href="organisation.html">Organisation</a>
+                    <a class="site-nav__link" href="navigation.html">Navigation</a>
+                    <a class="site-nav__link" href="anreise.html">Anreise</a>
+                    <a class="site-nav__link" href="links.html">Links</a>
+                    <a class="site-nav__link" href="downloads.html">Downloads</a>
+                </nav>
+                <div class="theme-menu" id="theme-menu">
+                    <button class="theme-trigger" id="theme-trigger" title="Theme wechseln" aria-label="Theme wechseln">
+                        <span class="material-symbols-outlined">palette</span>
+                    </button>
+                    <div class="theme-dropdown" id="theme-dropdown">
+                        <button class="theme-menu-item" data-theme="">
+                            <span class="theme-dot" style="background-color: #2d4c3b;"></span> Wald
+                        </button>
+                        <button class="theme-menu-item" data-theme="theme-ocean">
+                            <span class="theme-dot" style="background-color: #0369a1;"></span> Ozean
+                        </button>
+                        <button class="theme-menu-item" data-theme="theme-autumn">
+                            <span class="theme-dot" style="background-color: #854d0e;"></span> Herbst
+                        </button>
+                        <button class="theme-menu-item" data-theme="theme-dark">
+                            <span class="theme-dot" style="background-color: #1a2e24; border: 1px solid #7da98d;"></span> Dunkel
+                        </button>
+                    </div>
                 </div>
                 <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
                     <span class="material-symbols-outlined">menu</span>
@@ -65,19 +78,33 @@
     }
 
     // --- Theme Switcher ---
-    const themeBtns = document.querySelectorAll(".theme-btn");
-    if (themeBtns.length > 0) {
+    const themeTrigger = document.getElementById("theme-trigger");
+    const themeDropdown = document.getElementById("theme-dropdown");
+    const themeMenuItems = document.querySelectorAll(".theme-menu-item");
+
+    if (themeTrigger && themeDropdown) {
+        themeTrigger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            themeDropdown.classList.toggle("is-open");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (
+                !themeDropdown.contains(e.target) &&
+                !themeTrigger.contains(e.target)
+            ) {
+                themeDropdown.classList.remove("is-open");
+            }
+        });
+
         const currentTheme = localStorage.getItem("malerweg-theme") || "";
-        themeBtns.forEach((btn) => {
-            if (btn.dataset.theme === currentTheme) {
-                btn.classList.add("is-active");
-            } else {
-                btn.classList.remove("is-active");
+        themeMenuItems.forEach((item) => {
+            if (item.dataset.theme === currentTheme) {
+                item.classList.add("is-active");
             }
 
-            btn.addEventListener("click", () => {
-                const newTheme = btn.dataset.theme;
-
+            item.addEventListener("click", () => {
+                const newTheme = item.dataset.theme;
                 document.documentElement.classList.remove(
                     "theme-ocean",
                     "theme-autumn",
@@ -86,13 +113,13 @@
                 if (newTheme) {
                     document.documentElement.classList.add(newTheme);
                 }
-
                 try {
                     localStorage.setItem("malerweg-theme", newTheme);
                 } catch (e) {}
 
-                themeBtns.forEach((b) => b.classList.remove("is-active"));
-                btn.classList.add("is-active");
+                themeMenuItems.forEach((b) => b.classList.remove("is-active"));
+                item.classList.add("is-active");
+                themeDropdown.classList.remove("is-open");
             });
         });
     }

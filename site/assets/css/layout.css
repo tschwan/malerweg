@@ -76,7 +76,14 @@
     align-items: center;
     justify-content: space-between;
     padding-block: var(--space-3);
-    gap: var(--space-4);
+    gap: var(--space-8);
+}
+
+.site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    margin-left: auto;
 }
 
 .site-header__brand {
@@ -577,44 +584,79 @@
     color: var(--color-text-primary);
 }
 
-/* --- Theme Switcher --- */
-.theme-switcher {
+/* --- Theme Utility Menu --- */
+.theme-menu {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: var(--space-2);
 }
 
-.theme-btn {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 2px solid transparent;
+.theme-trigger {
+    background: none;
+    border: none;
     cursor: pointer;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-    padding: 0;
+    color: var(--color-brand-primary);
+    padding: var(--space-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+    border-radius: var(--radius-full);
 }
 
-.theme-btn:hover {
+.theme-trigger:hover {
+    background-color: var(--color-surface-section);
     transform: scale(1.1);
 }
 
-.theme-btn.is-active {
-    box-shadow: 0 0 0 2px var(--color-surface-card), 0 0 0 4px var(--color-brand-primary);
+.theme-dropdown {
+    position: absolute;
+    top: calc(100% + var(--space-2));
+    right: 0;
+    background-color: var(--color-surface-card);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-2);
+    min-width: 160px;
+    display: none;
+    z-index: 1001;
 }
 
-.theme-btn--forest {
-    background-color: #2d4c3b;
+.theme-dropdown.is-open {
+    display: block;
 }
 
-.theme-btn--ocean {
-    background-color: #0369a1;
+.theme-menu-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) var(--space-4);
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast);
+    text-align: left;
 }
 
-.theme-btn--autumn {
-    background-color: #854d0e;
+.theme-menu-item:hover {
+    background-color: var(--color-surface-section);
 }
 
-.theme-btn--dark {
-    background-color: #1a2e24;
-    border: 1px solid #7da98d;
+.theme-menu-item.is-active {
+    background-color: var(--color-brand-light);
+    color: var(--color-brand-primary);
+}
+
+.theme-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }

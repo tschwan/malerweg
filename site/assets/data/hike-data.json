@@ -602,7 +602,7 @@
             {
                 "icon": "local_parking",
                 "title": "Parken",
-                "desc": "<strong>Wanderparkplatz Liebethaler Grund:</strong> kostenfrei (sehr begrenzte Anzahl an Parkplätzen). Empfehlung: Auto erst nach der Tour mit dem ÖPNV (Bahn von Pirna) abholen.<br><br><strong>Parken Pirna Copitz P7:</strong> kostenfrei, Fahrzeit mit Bus ca. 25 min. Details unter <a href=\"https://www.pirna.de/leben-in-pirna/mobilitaet-verkehr/parken/\" target=\"_blank\" rel=\"noopener noreferrer\">pirna.de</a>."
+                "desc": "<strong>Parken Pirna Copitz P7:</strong> kostenfrei, Fahrzeit mit Bus ca. 25 min. Details unter <a href=\"https://www.pirna.de/leben-in-pirna/mobilitaet-verkehr/parken/\" target=\"_blank\" rel=\"noopener noreferrer\">pirna.de</a>. <br><strong>Wanderparkplatz Liebethaler Grund:</strong> kostenfrei (sehr begrenzte Anzahl an Parkplätzen)."
             }
         ],
         "departure": [
