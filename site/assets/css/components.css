@@ -579,6 +579,7 @@
 /* --- Info Table --- */
 .info-table {
     width: 100%;
+    min-width: 600px;
     border-collapse: collapse;
 }
 
@@ -620,7 +621,8 @@
 .info-table__wrapper {
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-lg);
-    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* --- Section Icon Header --- */
