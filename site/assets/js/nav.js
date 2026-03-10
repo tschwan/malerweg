@@ -26,6 +26,7 @@
                     <button class="theme-btn theme-btn--forest is-active" data-theme="" aria-label="Wald Theme" title="Wald"></button>
                     <button class="theme-btn theme-btn--ocean" data-theme="theme-ocean" aria-label="Ozean Theme" title="Ozean"></button>
                     <button class="theme-btn theme-btn--autumn" data-theme="theme-autumn" aria-label="Herbst Theme" title="Herbst"></button>
+                    <button class="theme-btn theme-btn--dark" data-theme="theme-dark" aria-label="Dark Theme" title="Dark"></button>
                 </div>
                 <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
                     <span class="material-symbols-outlined">menu</span>
@@ -80,6 +81,8 @@
                 document.documentElement.classList.remove(
                     "theme-ocean",
                     "theme-autumn",
+                    "theme-dark",
+                    "theme-cyberpunk",
                 );
                 if (newTheme) {
                     document.documentElement.classList.add(newTheme);

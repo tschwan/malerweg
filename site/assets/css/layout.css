@@ -450,6 +450,7 @@
 }
 
 .site-footer__brand-name {
+    color: var(--color-brand-hover);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
 }
@@ -611,4 +612,15 @@
 
 .theme-btn--autumn {
     background-color: #c2410c;
+}
+
+.theme-btn--dark {
+    background-color: #1a2e24;
+    border: 1px solid #7da98d;
+}
+
+.theme-btn--cyberpunk {
+    background-color: #0d0221;
+    border: 1px solid #ff00ff;
+    box-shadow: inset 0 0 5px #00ffff;
 }

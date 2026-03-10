@@ -152,3 +152,24 @@
     --color-border-hover: #c2410c;
     --color-text-brand: #c2410c;
 }
+
+/* Theme: Dark */
+:root.theme-dark {
+    --color-brand-primary: #a3e635;
+    --color-brand-hover: #bef264;
+    --color-brand-dark: #1e2520;
+    --color-brand-light: #2d4c3b;
+    --color-surface-page: #0f1a14;
+    --color-surface-card: #1a2e24;
+    --color-surface-section: #121412;
+    --color-surface-dark: #000000;
+    --color-surface-dark-card: #0f1a14;
+    --color-text-primary: #f2f7f4;
+    --color-text-secondary: #7da98d;
+    --color-text-muted: #577865;
+    --color-text-inverse: #0f1a14;
+    --color-text-brand: #a3e635;
+    --color-border-subtle: rgba(163, 230, 53, 0.15);
+    --color-border-hover: #a3e635;
+    --color-blur-bg: rgba(15, 26, 20, 0.88);
+}
