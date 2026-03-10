@@ -604,7 +604,7 @@
 }
 
 .info-table tbody tr:hover {
-    background-color: var(--color-forest-50);
+    background-color: var(--color-surface-hover);
 }
 
 .info-table a {
@@ -652,20 +652,26 @@
 }
 
 .info-box--warning {
-    background-color: rgba(217, 119, 6, 0.08);
+    background-color: rgba(217, 119, 6, 0.12);
     border-color: var(--color-status-pending);
-    color: #92400e;
+    color: var(--color-status-pending);
 }
 
 .info-box--info {
-    background-color: rgba(45, 76, 59, 0.07);
+    background-color: var(--color-surface-card);
     border-color: var(--color-brand-primary);
-    color: var(--color-brand-dark);
+    color: var(--color-text-primary);
 }
 
 .info-box .material-symbols-outlined {
     flex-shrink: 0;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+.info-box div p {
+    color: inherit !important;
+    opacity: 0.9;
 }
 
 /* --- Schedule Table --- */

@@ -52,6 +52,9 @@
                         <button class="theme-menu-item" data-theme="theme-dark">
                             <span class="theme-dot" style="background-color: #1a2e24; border: 1px solid #7da98d;"></span> Dunkel
                         </button>
+                        <button class="theme-menu-item" data-theme="theme-dark-brown">
+                            <span class="theme-dot" style="background-color: #26211d; border: 1px solid #a88a6d;"></span> Dunkelbraun
+                        </button>
                     </div>
                 </div>
                 <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menü öffnen">
@@ -140,6 +143,7 @@
                     "theme-ocean",
                     "theme-autumn",
                     "theme-dark",
+                    "theme-dark-brown",
                 );
                 if (newTheme) {
                     document.documentElement.classList.add(newTheme);
