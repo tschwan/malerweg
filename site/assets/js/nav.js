@@ -18,7 +18,6 @@
                     <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
                     <a class="site-nav__link" href="organisation.html">Organisation</a>
                     <a class="site-nav__link" href="navigation.html">Navigation</a>
-                    <a class="site-nav__link" href="anreise.html">Anreise</a>
                     <a class="site-nav__link" href="links.html">Links</a>
                     <a class="site-nav__link" href="downloads.html">Downloads</a>
                 </nav>
@@ -50,7 +49,6 @@
             <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
             <a class="site-nav__link" href="organisation.html">Organisation</a>
             <a class="site-nav__link" href="navigation.html">Navigation</a>
-            <a class="site-nav__link" href="anreise.html">Anreise</a>
             <a class="site-nav__link" href="links.html">Links</a>
             <a class="site-nav__link" href="downloads.html">Downloads</a>
         </nav>`;
@@ -175,9 +173,8 @@
                 <div class="site-footer__col">
                     <h5>Informationen</h5>
                     <ul>
-                        <li><a href="organisation.html">Tagesablauf</a></li>
+                        <li><a href="organisation.html">Organisation &amp; Anreise</a></li>
                         <li><a href="navigation.html">Empfohlene Apps</a></li>
-                        <li><a href="anreise.html">Anreise &amp; Parken</a></li>
                         <li><a href="links.html">Nützliche Links</a></li>
                     </ul>
                 </div>

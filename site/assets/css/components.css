@@ -821,7 +821,7 @@
 .timeline::before {
     content: '';
     position: absolute;
-    left: 7px;
+    left: 4px;
     top: var(--space-2);
     bottom: var(--space-2);
     width: 2px;
@@ -830,7 +830,7 @@
 
 .timeline__item {
     position: relative;
-    padding-bottom: var(--space-8);
+    padding-bottom: var(--space-6);
 }
 
 .timeline__item:last-child {
@@ -839,18 +839,33 @@
 
 .timeline__marker {
     position: absolute;
-    left: calc(-1 * var(--space-8) + 1px);
-    top: 6px;
+    left: calc(-1 * var(--space-8) - 2px);
+    top: 14px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
     background-color: var(--color-brand-primary);
-    border: 3px solid var(--color-surface);
+    border: 3px solid var(--color-surface-card);
     transition: transform var(--transition-fast);
 }
 
 .timeline__item:hover .timeline__marker {
     transform: scale(1.2);
+}
+
+.timeline__content {
+    background-color: var(--color-surface-section);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4) var(--space-5);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.timeline__item:hover .timeline__content {
+    border-color: var(--color-brand-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateX(2px);
 }
 
 .timeline__day {

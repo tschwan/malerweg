@@ -12,9 +12,9 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="meta-title">Organisation - Malerweg 2026</title>
+    <title id="meta-title">Organisation & Anreise - Malerweg 2026</title>
     <meta id="meta-description" name="description"
-        content="Tagesplan, Teilnehmer und Treffpunkte für die Malerweg-Wanderung 2026." />
+        content="Wichtige Informationen zur Organisation, Anreise und dem Ablauf der Malerweg-Wanderung 2026." />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -32,24 +32,41 @@
         <div class="page-header">
             <div class="container">
                 <p class="page-header__eyebrow">Malerweg 2026</p>
-                <h1 class="page-header__title">Organisation</h1>
-                <p class="page-header__desc">Tagesplan, Teilnehmerliste und wichtige Treffpunkte im Überblick.</p>
+                <h1 class="page-header__title">Organisation &amp; Anreise</h1>
+                <p class="page-header__desc">Alle wichtigen Informationen rund um Deine Wanderung an einem Ort.</p>
             </div>
         </div>
         <section class="section">
             <div class="container">
                 <div class="two-col">
-                    <!-- TAGEPLAN -->
+                    <!-- LINKS: TAGEPLAN & ANREISE -->
                     <div>
                         <div class="section-icon-header">
                             <span class="material-symbols-outlined">calendar_today</span>
                             <h2>Tagesplan</h2>
                         </div>
-                        <div class="timeline" id="schedule-timeline">
-                            <!-- JS populated timeline -->
+                        <div class="card"
+                            style="margin-bottom:var(--space-12); padding-top: var(--space-8); padding-bottom: var(--space-4);">
+                            <div class="timeline" id="schedule-timeline">
+                                <!-- JS populated timeline -->
+                            </div>
+                        </div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">location_on</span>
+                            <h2>Anreise nach Liebethal</h2>
+                        </div>
+                        <div class="card" style="margin-bottom:var(--space-6);" id="arrival-list-container">
+                            <!-- JS populated arrival list -->
+                        </div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">exit_to_app</span>
+                            <h2>Abreise von Pirna</h2>
+                        </div>
+                        <div class="card" id="departure-list-container">
+                            <!-- JS populated departure list -->
                         </div>
                     </div>
-                    <!-- TEILNEHMER -->
+                    <!-- RECHTS: TEILNEHMER, TREFFPUNKTE & ÖPNV -->
                     <div>
                         <div class="section-icon-header">
                             <span class="material-symbols-outlined">groups</span>
@@ -60,15 +77,21 @@
                                 <!-- JS populated participants -->
                             </ul>
                         </div>
-                        <!-- TREFFPUNKTE -->
                         <div class="section-icon-header">
-                            <span class="material-symbols-outlined">location_on</span>
+                            <span class="material-symbols-outlined">map</span>
                             <h2>Treffpunkte</h2>
                         </div>
-                        <div class="card">
+                        <div class="card" style="margin-bottom:var(--space-6);">
                             <ul class="feature-list" id="meeting-points-list-container">
                                 <!-- JS populated meeting points -->
                             </ul>
+                        </div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">tram</span>
+                            <h2>ÖPNV auf der Route</h2>
+                        </div>
+                        <div class="card" id="local-transport-list-container">
+                            <!-- JS populated local transport list -->
                         </div>
                     </div>
                 </div>
