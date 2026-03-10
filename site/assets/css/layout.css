@@ -421,7 +421,7 @@
 @media (min-width: 1024px) {
     .two-col {
         grid-template-columns: 1fr 1fr;
-        align-items: center;
+        align-items: start;
     }
 
     .two-col--wide-right {

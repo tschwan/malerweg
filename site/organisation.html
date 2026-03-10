@@ -19,11 +19,11 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/tokens.css?v=202603091648" />
-    <link rel="stylesheet" href="assets/css/base.css?v=202603091648" />
-    <link rel="stylesheet" href="assets/css/layout.css?v=202603091648" />
-    <link rel="stylesheet" href="assets/css/components.css?v=202603091648" />
-    <link rel="stylesheet" href="assets/css/pages.css?v=202603091648" />
+    <link rel="stylesheet" href="assets/css/tokens.css?v=202603101030" />
+    <link rel="stylesheet" href="assets/css/base.css?v=202603101030" />
+    <link rel="stylesheet" href="assets/css/layout.css?v=202603101030" />
+    <link rel="stylesheet" href="assets/css/components.css?v=202603101030" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=202603101030" />
 </head>
 
 <body>
@@ -38,54 +38,44 @@
         </div>
         <section class="section">
             <div class="container">
-                <div class="two-col">
-                    <!-- LINKS: TAGEPLAN & ANREISE -->
-                    <div>
-                        <div class="section-icon-header">
-                            <span class="material-symbols-outlined">calendar_today</span>
-                            <h2>Tagesplan</h2>
-                        </div>
-                        <div class="card"
-                            style="margin-bottom:var(--space-12); padding-top: var(--space-8); padding-bottom: var(--space-4);">
-                            <div class="timeline" id="schedule-timeline">
-                                <!-- JS populated timeline -->
-                            </div>
-                        </div>
-                        <div class="section-icon-header">
-                            <span class="material-symbols-outlined">location_on</span>
-                            <h2>Anreise nach Liebethal</h2>
-                        </div>
-                        <div class="card" style="margin-bottom:var(--space-6);" id="arrival-list-container">
-                            <!-- JS populated arrival list -->
-                        </div>
-                        <div class="section-icon-header">
-                            <span class="material-symbols-outlined">exit_to_app</span>
-                            <h2>Abreise von Pirna</h2>
-                        </div>
-                        <div class="card" id="departure-list-container">
-                            <!-- JS populated departure list -->
-                        </div>
-                    </div>
-                    <!-- RECHTS: TEILNEHMER, TREFFPUNKTE & ÖPNV -->
+                <!-- Flat structure handles mobile order (1..6) and desktop layout (Row by Row) -->
+                <div class="two-col" style="row-gap: var(--space-12);">
+                    <!-- 1. Teilnehmer -->
                     <div>
                         <div class="section-icon-header">
                             <span class="material-symbols-outlined">groups</span>
                             <h2>Teilnehmer</h2>
                         </div>
-                        <div class="card" style="margin-bottom:var(--space-6);">
+                        <div class="card">
                             <ul class="participant-list" id="participants-list-container">
                                 <!-- JS populated participants -->
                             </ul>
                         </div>
+                    </div>
+                    <!-- 2. Anreise -->
+                    <div>
                         <div class="section-icon-header">
-                            <span class="material-symbols-outlined">map</span>
-                            <h2>Treffpunkte</h2>
+                            <span class="material-symbols-outlined">location_on</span>
+                            <h2>Anreise nach Liebethal</h2>
                         </div>
-                        <div class="card" style="margin-bottom:var(--space-6);">
-                            <ul class="feature-list" id="meeting-points-list-container">
-                                <!-- JS populated meeting points -->
-                            </ul>
+                        <div class="card" id="arrival-list-container">
+                            <!-- JS populated arrival list -->
                         </div>
+                    </div>
+                    <!-- 3. Tagesplan -->
+                    <div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">calendar_today</span>
+                            <h2>Tagesplan</h2>
+                        </div>
+                        <div class="card" style="padding-top: var(--space-8); padding-bottom: var(--space-4);">
+                            <div class="timeline" id="schedule-timeline">
+                                <!-- JS populated timeline -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4. ÖPNV -->
+                    <div>
                         <div class="section-icon-header">
                             <span class="material-symbols-outlined">tram</span>
                             <h2>ÖPNV auf der Route</h2>
@@ -94,14 +84,36 @@
                             <!-- JS populated local transport list -->
                         </div>
                     </div>
+                    <!-- 5. Treffpunkte -->
+                    <div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">map</span>
+                            <h2>Treffpunkte</h2>
+                        </div>
+                        <div class="card">
+                            <ul class="feature-list" id="meeting-points-list-container">
+                                <!-- JS populated meeting points -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 6. Abreise -->
+                    <div>
+                        <div class="section-icon-header">
+                            <span class="material-symbols-outlined">exit_to_app</span>
+                            <h2>Abreise von Pirna</h2>
+                        </div>
+                        <div class="card" id="departure-list-container">
+                            <!-- JS populated departure list -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="site-footer" id="main-footer"></footer>
-    <script src="assets/js/data-provider.js?v=202603091648"></script>
-    <script src="assets/js/nav.js?v=202603091648"></script>
-    <script src="assets/js/app-organisation-loader.js?v=202603091648"></script>
+    <script src="assets/js/data-provider.js?v=202603101030"></script>
+    <script src="assets/js/nav.js?v=202603101030"></script>
+    <script src="assets/js/app-organisation-loader.js?v=202603101030"></script>
 </body>
 
 </html>
