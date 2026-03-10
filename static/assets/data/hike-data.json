@@ -1,0 +1,676 @@
+{
+    "meta": {
+        "title": "Malerweg 2026 - Sächsische Schweiz",
+        "description": "Informationsseite für unsere Malerweg-Wanderung 2026 in der Sächsischen Schweiz. 6 Etappen, 110 km, 4300 Höhenmeter.",
+        "emergency": {
+            "rescue": "112",
+            "police": "110"
+        }
+    },
+    "hero": {
+        "backgroundImage": "assets/images/hero.jpg",
+        "title": "Malerweg",
+        "subtitle": "04. - 09. Mai 2026 · Sächsische Schweiz",
+        "stats": {
+            "distance": "110 km",
+            "stages": 6,
+            "elevation": "4300 m",
+            "duration": "6 Tage"
+        }
+    },
+    "intro": {
+        "title": "Unterwegs auf dem Malerweg",
+        "content": "Zwei Typen, sechs Tage, ein Plan: einmal quer durch die Sächsische Schweiz.<br>Der Malerweg führt durch die Felsenlandschaft und tiefen Täler des Nationalparks Sächsische Schweiz. Eine Gegend, die schon Caspar David Friedrich und viele andere Maler inspiriert hat. Wir wandern vom 4. bis 9. Mai 2026 von Liebethal bis nach Pirna (ohne Pinsel)."
+    },
+    "weather": {
+        "location": "Bad Schandau",
+        "latitude": 50.9224,
+        "longitude": 14.153
+    },
+    "organization": {
+        "dateRange": "04. - 09. Mai 2026",
+        "participants": [
+            {
+                "initials": "WZ",
+                "name": "Wolfgang Zimmermann"
+            },
+            {
+                "initials": "TS",
+                "name": "Thomas Schwan"
+            }
+        ],
+        "meetingPoints": [
+            {
+                "icon": "flag",
+                "title": "Startpunkt",
+                "desc": "Liebethal - Parkplatz Liebthaler Grund, 04.05. um 13:00"
+            },
+            {
+                "icon": "tram",
+                "title": "Kirnitzschtalbahn",
+                "desc": "Lichtenhain nach Bad Schandau, 06.05. um 15:36, stündlich bis 18:36"
+            },
+            {
+                "icon": "directions_bus",
+                "title": "Bus Königstein",
+                "desc": "Reinhardtsdorf → Königstein, 07.05. um 15:27, halbstündlich bis 17:57"
+            },
+            {
+                "icon": "sports_score",
+                "title": "Ziel",
+                "desc": "Pirna - Marktplatz, 09.05."
+            }
+        ]
+    },
+    "tourPlan": {
+        "lead": "Übersicht aller 6 Etappen mit Distanz, Höhenmetern und voraussichtlicher Gehzeit.",
+        "stages": [
+            {
+                "id": 1,
+                "day": "Mo",
+                "date": "04.05",
+                "route": "Liebethal → Stadt Wehlen",
+                "title": "Etappe 1: Liebethal → Stadt Wehlen",
+                "dateSubtitle": "Montag, 04. Mai 2026 · Einlauf-Etappe durch das Liebethaler Tal",
+                "link": "etappe.html?id=1",
+                "startTime": "13:00",
+                "distance": "12 km",
+                "elevation": "200 hm",
+                "duration": "3:00",
+                "difficulty": "Leicht",
+                "gpx": "etappe-1.gpx",
+                "description": "Die erste Etappe führt durch das romantische Liebethaler Tal entlang der Wesenitz. Der Weg ist relativ kurz und eignet sich gut zum Einlaufen. Eine ideale Einstimmung auf die kommenden Tage.",
+                "infoBoxes": [],
+                "highlights": [
+                    {
+                        "icon": "landscape",
+                        "text": "Richard-Wagner-Denkmal"
+                    },
+                    {
+                        "icon": "landscape",
+                        "text": "Uttewalder Grund"
+                    },
+                    {
+                        "icon": "landscape",
+                        "text": "Felsentor im Uttewalder Grund"
+                    },
+                    {
+                        "icon": "location_city",
+                        "text": "Altstadt von Stadt Wehlen"
+                    }
+                ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Gasthof Waldidylle (9.4 km)"
+                    }
+                ],
+                "accommodationId": "acc-wehlen"
+            },
+            {
+                "id": 2,
+                "day": "Di",
+                "date": "05.05",
+                "route": "Stadt Wehlen → Brand-Baude",
+                "title": "Etappe 2: Stadt Wehlen → Brand-Baude",
+                "dateSubtitle": "Dienstag, 05. Mai 2026 · Zur Bastei und weiter auf die Brand-Höhe",
+                "link": "etappe.html?id=2",
+                "startTime": "08:00",
+                "distance": "16 km",
+                "elevation": "760 hm",
+                "duration": "5:00",
+                "difficulty": "Mittel",
+                "gpx": "etappe-2.gpx",
+                "description": "Die zweite Etappe ist das Highlight der Tour: Sie führt über die weltberühmte Basteibrücke, entlang des Amselsees und durch das idyllische Amseltal bis hinauf zur Brand-Baude.",
+                "infoBoxes": [
+                    {
+                        "type": "info",
+                        "icon": "restaurant",
+                        "title": "Mittagspause: Gasthaus Polenztal",
+                        "text": "Nach ca. 10 km · Öffnung ab 11:00 Uhr"
+                    }
+                ],
+                "highlights": [
+                    {
+                        "icon": "landscape",
+                        "text": "Basteibrücke (Felsformation, 194 m)"
+                    },
+                    {
+                        "icon": "water",
+                        "text": "Amselsee & Amselfall"
+                    },
+                    {
+                        "icon": "landscape",
+                        "text": "Brand-Aussicht"
+                    }
+                ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Bastei (3.2 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Amselsee Kiosk (4.4 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Lindengarten, Rathewalde (7.0 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Hocksteinschänke (8.4 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Gasthaus Polenztal (10.0 km)"
+                    }
+                ],
+                "accommodationId": "acc-brand"
+            },
+            {
+                "id": 3,
+                "day": "Mi",
+                "date": "06.05",
+                "route": "Brand-Baude → Lichtenhain",
+                "title": "Etappe 3: Brand-Baude → Lichtenhain",
+                "dateSubtitle": "Mittwoch, 06. Mai 2026 · Kirnitzschtal + Fahrt mit der Kirnitzschtalbahn",
+                "link": "etappe.html?id=3",
+                "startTime": "07:30",
+                "distance": "22 km",
+                "elevation": "850 hm",
+                "duration": "6:30",
+                "difficulty": "Anspruchsvoll",
+                "gpx": "etappe-3.gpx",
+                "description": "Eine lange Etappe durch das wildromantische Kirnitzschtal. Nach der Wanderung wartet ein besonderes Highlight: die historische Kirnitzschtalbahn bringt uns von Lichtenhain nach Bad Schandau.",
+                "infoBoxes": [
+                    {
+                        "type": "info",
+                        "icon": "tram",
+                        "title": "Kirnitzschtalbahn nach Bad Schandau",
+                        "text": "Fahrt ab Lichtenhain · Fahrzeit ca. 15 Minuten"
+                    }
+                ],
+                "highlights": [
+                    {
+                        "icon": "forest",
+                        "text": "Kirnitzschtal (Nationalpark)"
+                    },
+                    {
+                        "icon": "landscape",
+                        "text": "Kuhstall - Felsentor"
+                    },
+                    {
+                        "icon": "tram",
+                        "text": "Historische Kirnitzschtalbahn"
+                    }
+                ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Waitzdorf Schänke (1,3 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Gasthof Heiterer Blick (8,8 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Imbiss Ostrauer Mühle (10,5 km)"
+                    }
+                ],
+                "accommodationId": "acc-schandau"
+            },
+            {
+                "id": 4,
+                "day": "Do",
+                "date": "07.05",
+                "route": "Lichtenhain → Reinhardtsdorf",
+                "title": "Etappe 4: Lichtenhain → Reinhardtsdorf",
+                "dateSubtitle": "Donnerstag, 07. Mai 2026 · Die längste und anspruchsvollste Etappe",
+                "link": "etappe.html?id=4",
+                "startTime": "07:00",
+                "distance": "24 km",
+                "elevation": "1200 hm",
+                "duration": "7:30",
+                "difficulty": "Anspruchsvoll",
+                "gpx": "etappe-4.gpx",
+                "description": "Die härteste Etappe mit 1200 hm durch die Schrammsteine. Nach der Wanderung Busfahrt zur Unterkunft.",
+                "infoBoxes": [
+                    {
+                        "type": "warning",
+                        "icon": "warning",
+                        "title": "Frühzeitig starten!",
+                        "text": "7:30 h Gehzeit - früh aufbrechen."
+                    },
+                    {
+                        "type": "info",
+                        "icon": "directions_bus",
+                        "title": "Bus nach Königstein",
+                        "text": "ab Reinhardtsdorf · ca. 15 Minuten"
+                    }
+                ],
+                "highlights": [
+                    {
+                        "icon": "landscape",
+                        "text": "Schrammsteine"
+                    },
+                    {
+                        "icon": "landscape",
+                        "text": "Zeughaus (Felsformation)"
+                    },
+                    {
+                        "icon": "visibility",
+                        "text": "Panoramaaussichten"
+                    }
+                ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Kuhstall (1,6 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Neumannmühle (4,1 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Buschmühle (4,5 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Biergarten Altes Zeughaus (11,4 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Wanderrast Großer Winterberg (15,2 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Schmilka (17,6 km)"
+                    }
+                ],
+                "accommodationId": "acc-koenigstein"
+            },
+            {
+                "id": 5,
+                "day": "Fr",
+                "date": "08.05",
+                "route": "Reinhardtsdorf → Königstein",
+                "title": "Etappe 5: Reinhardtsdorf → Königstein",
+                "dateSubtitle": "Freitag, 08. Mai 2026 · Durch die Tafelberge zur Festung Königstein",
+                "link": "etappe.html?id=5",
+                "startTime": "08:00",
+                "distance": "18 km",
+                "elevation": "740 hm",
+                "duration": "5:30",
+                "difficulty": "Mittel",
+                "gpx": "etappe-5.gpx",
+                "description": "Diese Etappe führt durch die charakteristischen Tafelberge der Sächsischen Schweiz. Ziel ist das malerische Königstein direkt an der Elbe, wo wir auch übernachten.",
+                "infoBoxes": [],
+                "highlights": [
+                    {
+                        "icon": "landscape",
+                        "text": "Tafelberge der Sächsischen Schweiz"
+                    },
+                    {
+                        "icon": "visibility",
+                        "text": "Mehrere Aussichtspunkte"
+                    },
+                    {
+                        "icon": "castle",
+                        "text": "Festung Königstein"
+                    }
+                ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Waldgaststätte Liethemühle (5,3 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Berggaststätte Pappstein (8,0 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Berggaststätte Pfaffenstein (13,2 km)"
+                    }
+                ],
+                "accommodationId": "acc-koenigstein"
+            },
+            {
+                "id": 6,
+                "day": "Sa",
+                "date": "09.05",
+                "route": "Königstein → Pirna",
+                "title": "Etappe 6: Königstein → Pirna",
+                "dateSubtitle": "Samstag, 09. Mai 2026 · Die Abschlussetappe - zurück nach Pirna",
+                "link": "etappe.html?id=6",
+                "startTime": "08:30",
+                "distance": "19 km",
+                "elevation": "600 hm",
+                "duration": "5:30",
+                "difficulty": "Mittel",
+                "gpx": "etappe-6.gpx",
+                "description": "Die letzte Etappe führt von Königstein zurück nach Pirna und schließt damit unsere 6-tägige Wanderung auf dem Malerweg ab. Ein würdiger Abschluss durch die eindrucksvolle Landschaft der Sächsischen Schweiz.",
+                "infoBoxes": [
+                    {
+                        "type": "info",
+                        "icon": "celebration",
+                        "title": "Abschluss der Tour!",
+                        "text": "Nach 6 Tagen und 110 km: Ankunft in Pirna und Abschlussfeier."
+                    }
+                ],
+                "highlights": [
+                    {
+                        "icon": "castle",
+                        "text": "Festung Königstein"
+                    },
+                    {
+                        "icon": "landscape",
+                        "text": "Blick auf das Elbtal"
+                    },
+                    {
+                        "icon": "location_city",
+                        "text": "Altstadt Pirna"
+                    }
+                ],
+                "refreshments": [
+                    {
+                        "icon": "restaurant",
+                        "text": "Cafe am Schloss (3,8 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Berggaststätte Rauenstein (7,7 km)"
+                    },
+                    {
+                        "icon": "restaurant",
+                        "text": "Pötzscha (9,9 km)"
+                    }
+                ],
+                "accommodationId": "acc-pirna"
+            }
+        ]
+    },
+    "overviewMap": {
+        "description": "Der Weg beginnt in Liebethal und führt über 6 Etappen durch den Nationalpark Sächsische Schweiz. Highlights: Bastei, Schrammsteine, Kirnitzschtal, Kuhstall.",
+        "gpxBaseUrl": "assets/gpx/"
+    },
+    "accommodations": {
+        "lead": "Alle 4 Unterkünfte unserer Wanderung - Buchungsstatus, Check-in Zeiten und wichtige Infos auf einen Blick und direkt an den Etappen.",
+        "list": [
+            {
+                "id": "acc-wehlen",
+                "date": "Mo, 04. Mai 2026",
+                "name": "Kutscherhaus - Felsenpost",
+                "status": "Bezahlt",
+                "statusClass": "paid",
+                "details": {
+                    "type": "Ferienwohnung",
+                    "location": "Stadt Wehlen",
+                    "website": {
+                        "url": "https://www.felsenpost.de",
+                        "label": "felsenpost.de"
+                    },
+                    "price": "153 €",
+                    "breakfast": "Nein",
+                    "checkIn": "Ab 14:00 Uhr",
+                    "cancellation": "Bis 4 Wochen vorher",
+                    "address": "Pirnaer Straße 101, 01829 Stadt Wehlen",
+                    "phone": "+49 351 31207707"
+                },
+                "warning": null
+            },
+            {
+                "id": "acc-brand",
+                "date": "Di, 05. Mai 2026",
+                "name": "Brand-Baude",
+                "status": "Vor Ort",
+                "statusClass": "pending",
+                "details": {
+                    "type": "Blockhaus",
+                    "location": "Brand (Hinterhermsdorf)",
+                    "website": {
+                        "url": "https://www.brand-baude.de",
+                        "label": "brand-baude.de"
+                    },
+                    "price": "84 €",
+                    "breakfast": "Inklusive",
+                    "checkIn": "Bis 17:00 Uhr",
+                    "cancellation": "Bis 14 Tage vorher",
+                    "address": "Brandstraße 27, 01848 Hohnstein",
+                    "phone": "+49 35975 84425"
+                },
+                "warning": "Hüttenschlafsack erforderlich"
+            },
+            {
+                "id": "acc-schandau",
+                "date": "Mi, 06. Mai 2026",
+                "name": "Apparthotel Bad Schandau",
+                "status": "Bezahlt",
+                "statusClass": "paid",
+                "details": {
+                    "type": "Maisonette mit 2 SZ",
+                    "location": "Bad Schandau",
+                    "website": {
+                        "url": "https://www.steiger-hotels.com/hotels/apparthotel-bad-schandau",
+                        "label": "steiger-hotels.com"
+                    },
+                    "price": "145 €",
+                    "breakfast": "Inklusive",
+                    "checkIn": "14:00-17:30 Uhr",
+                    "cancellation": "Nicht möglich",
+                    "address": "Elbstraße 6, 01814 Bad Schandau",
+                    "phone": "+49 35971 9010"
+                },
+                "warning": null
+            },
+            {
+                "id": "acc-koenigstein",
+                "date": "Do - Fr, 07. - 08. Mai 2026",
+                "name": "Königstein Hostel",
+                "status": "Angezahlt",
+                "statusClass": "pending",
+                "details": {
+                    "type": "Doppelzimmer",
+                    "location": "Königstein",
+                    "website": {
+                        "url": "https://www.koenigstein-hostel.de",
+                        "label": "koenigstein-hostel.de"
+                    },
+                    "price": "180 € (2 Nächte)",
+                    "breakfast": "Nein",
+                    "checkIn": "Ab 15:00 Uhr",
+                    "cancellation": "Bis 14 Tage vorher",
+                    "address": "Pirnaer Straße 19, 01824 Königstein",
+                    "phone": "+49 151 65110515"
+                },
+                "warning": null
+            },
+            {
+                "id": "acc-pirna",
+                "date": "Sa, 09. Mai 2026",
+                "name": "Mal schauen",
+                "status": "Offen",
+                "statusClass": "pending",
+                "details": {
+                    "type": "Suite",
+                    "location": "Pirna oder Umgebung",
+                    "website": {
+                        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                        "label": "Never gonna"
+                    },
+                    "price": "Günstig",
+                    "breakfast": "Wäre cool",
+                    "checkIn": "Rechtzeitig",
+                    "cancellation": "Nicht möglich",
+                    "address": "Marktplatz, 01796 Pirna (TBD)",
+                    "phone": "+49 3501 555-MAHLZEIT"
+                },
+                "customIcon": "flag",
+                "warning": null
+            }
+        ],
+        "costs": {
+            "total": "562 €",
+            "paid": "316 €"
+        }
+    },
+    "links": [
+        {
+            "category": "Malerweg allgemein",
+            "icon": "info",
+            "items": [
+                {
+                    "icon": "public",
+                    "label": "Offizielle Webseite",
+                    "url": "https://www.saechsische-schweiz.de/malerweg/"
+                },
+                {
+                    "icon": "info",
+                    "label": "Aktuelle Meldungen",
+                    "url": "https://www.saechsische-schweiz.de/gut-zu-wissen/aktuelles"
+                },
+                {
+                    "icon": "card_membership",
+                    "label": "Gästekarte Sächsische Schweiz & Mobil",
+                    "url": "https://www.saechsische-schweiz.de/gut-zu-wissen/gaestekarte"
+                }
+            ]
+        },
+        {
+            "category": "Verhalten",
+            "icon": "rule",
+            "items": [
+                {
+                    "icon": "rule",
+                    "label": "Verhaltensregeln im Nationalpark Sächsische Schweiz",
+                    "url": "https://nationalpark-saechsische-schweiz.de/verhalten"
+                },
+                {
+                    "icon": "camping",
+                    "label": "Freiübernachten & Boofen im Nationalpark",
+                    "url": "https://nationalpark-saechsische-schweiz.de/freiuebernachten-boofen"
+                },
+                {
+                    "icon": "terrain",
+                    "label": "Neue Boofen-Regelung (DAV Sachsen)",
+                    "url": "https://www.alpenverein-sachsen.de/artikel/Neue-Regelung-furs-Boofen-/139306"
+                }
+            ]
+        },
+        {
+            "category": "Verkehr",
+            "icon": "directions_bus",
+            "items": [
+                {
+                    "icon": "directions_bus",
+                    "label": "Verkehrsverbund Oberelbe (VVO)",
+                    "url": "https://www.vvo-online.de/de"
+                },
+                {
+                    "icon": "directions_boat",
+                    "label": "Übersicht Elbfähren im VVO",
+                    "url": "https://www.dvb.de/de-de/entdecken/elbfaehren/"
+                },
+                {
+                    "icon": "local_parking",
+                    "label": "Überblick Wanderparkplätze Sächsische Schweiz",
+                    "url": "https://www.abenteuer-familienwanderung-saechsische-schweiz.de/paken"
+                },
+                {
+                    "icon": "local_parking",
+                    "label": "Parkplatzübersicht im Kirnitzschtal",
+                    "url": "https://www.wanderpfade.de/Wanderziel-2098.html"
+                }
+            ]
+        }
+    ],
+    "transport": {
+        "arrival": [
+            {
+                "icon": "train",
+                "title": "Mit der Bahn",
+                "desc": "Zug nach Pirna (S1 oder Regionalzug), dann Bus oder Taxi zum Startpunkt Liebethal (Richtung Liebethaler Grund). Verbindungen auf bahn.de"
+            },
+            {
+                "icon": "directions_car",
+                "title": "Mit dem Auto",
+                "desc": "Liebethal liegt ca. 30 km südöstlich von Dresden. Parken am Wanderparkplatz im Liebethaler Grund (sehr begrenzte Anzahl an Parkplätzen) oder in Pirna (siehe unten)."
+            },
+            {
+                "icon": "local_parking",
+                "title": "Parken",
+                "desc": "<strong>Parken Pirna Copitz P7:</strong> kostenfrei, Fahrzeit mit Bus ca. 25 min. Details unter <a href=\"https://www.pirna.de/leben-in-pirna/mobilitaet-verkehr/parken/\" target=\"_blank\" rel=\"noopener noreferrer\">pirna.de</a>. <br><strong>Wanderparkplatz Liebethaler Grund:</strong> kostenfrei (sehr begrenzte Anzahl an Parkplätzen)."
+            }
+        ],
+        "departure": [
+            {
+                "icon": "train",
+                "title": "Bahn ab Pirna",
+                "desc": "S1 Richtung Dresden-Hauptbahnhof - alle 30 Minuten. Fahrzeit ca. 35 Minuten bis Dresden Hbf."
+            },
+            {
+                "icon": "directions_car",
+                "title": "Mit dem Auto",
+                "desc": "Pirna liegt direkt an der A17 Dresden-Prag. Ca. 30 Minuten bis Dresden-Zentrum."
+            }
+        ],
+        "localTransport": [
+            {
+                "icon": "tram",
+                "title": "Kirnitzschtalbahn",
+                "desc": "Historische Trambahn · Lichtenhain ↔ Bad Schandau · Fahrzeit: ca. 15 Min · Etappe 3"
+            },
+            {
+                "icon": "directions_bus",
+                "title": "Bus nach Königstein",
+                "desc": "Reinhardtsdorf → Königstein · Linienbus · Fahrzeit: ca. 15 Min · Etappe 4"
+            }
+        ]
+    },
+    "downloads": {
+        "lead": "Zentrale Sammlung aller Dateien: GPX-Tracks für alle 6 Etappen und weitere Dokumente."
+    },
+    "navigation": {
+        "apps": [
+            {
+                "icon": "assets/images/komoot-icon.png",
+                "name": "Komoot",
+                "desc": "App für Wanderrouten, GPX-Import, Offline-Karten für Sächsische Schweiz",
+                "links": {
+                    "apple": "https://apps.apple.com/app/komoot-bike-hike-maps/id447374873",
+                    "google": "https://play.google.com/store/apps/details?id=de.komoot.android"
+                }
+            },
+            {
+                "icon": "assets/images/outdooractive-icon.png",
+                "name": "Outdooractive",
+                "desc": "Detaillierte Wanderkarten, GPX-Import und Routenplanung",
+                "links": {
+                    "apple": "https://apps.apple.com/app/outdooractive-hike-ride/id530144002",
+                    "google": "https://play.google.com/store/apps/details?id=com.outdooractive.Outdooractive"
+                }
+            }
+        ],
+        "tips": [
+            {
+                "icon": "download_for_offline",
+                "text": "GPX-Tracks <strong>vor der Tour</strong> offline speichern - kein Mobilfunk in den Tälern!"
+            },
+            {
+                "icon": "offline_bolt",
+                "text": "Offlinekarten für Sächsische Schweiz in der App herunterladen"
+            },
+            {
+                "icon": "battery_charging_full",
+                "text": "Powerbank mitnehmen - GPS-Nutzung entleert den Akku schnell"
+            },
+            {
+                "icon": "screen_lock_portrait",
+                "text": "Display-Helligkeit reduzieren und Hintergrundapps schließen"
+            }
+        ]
+    }
+}

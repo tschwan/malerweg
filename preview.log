@@ -1,0 +1,14 @@
+
+> app@0.0.1 preview
+> vite preview
+
+  ➜  Local:   http://localhost:4173/
+  ➜  Network: use --host to expose
+
+[1;31m[404] GET /assets/images/pin-icon-start.png[0m
+
+[1;31m[404] GET /assets/images/pin-icon-end.png[0m
+
+[1;31m[404] GET /assets/images/pin-icon-start.png[0m
+
+[1;31m[404] GET /assets/images/pin-icon-end.png[0m
