@@ -33,6 +33,7 @@
     --color-text-secondary: #475569;
     --color-text-muted: #94a3b8;
     --color-text-inverse: var(--color-white);
+    --color-text-on-dark: var(--color-white);
     --color-text-brand: var(--color-brand-primary);
     --color-border-subtle: rgba(45, 76, 59, 0.12);
     --color-border-hover: var(--color-brand-primary);
@@ -82,6 +83,21 @@
     --tracking-tight: -0.025em;
     --tracking-wide: 0.05em;
     --tracking-widest: 0.1em;
+
+    /* --- Element Specific Styles --- */
+    --hero-text-color: var(--color-text-on-dark);
+    --hero-font-size: var(--font-size-hero);
+    --hero-font-weight: var(--font-weight-black);
+    --hero-line-height: var(--line-height-tight);
+
+    --footer-text-color: var(--color-text-on-dark);
+    --footer-font-size: var(--font-size-3xl);
+    --footer-font-weight: var(--font-weight-black);
+    --footer-letter-spacing: var(--tracking-tight);
+
+    --stats-bar-text-color: var(--color-text-on-dark);
+    --stats-bar-font-size: var(--font-size-2xl);
+    --stats-bar-font-weight: var(--font-weight-black);
 
     /* --- Border Radius --- */
     --radius-sm: 0.25rem;
