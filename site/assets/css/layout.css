@@ -146,6 +146,76 @@
     transform: scaleX(1);
 }
 
+.site-nav__arrow {
+    font-size: 1.125rem !important;
+    vertical-align: middle;
+    transition: transform var(--transition-fast);
+}
+
+/* Submenu Dropdown */
+.site-nav__item {
+    position: relative;
+}
+
+.site-nav__submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--color-surface-card);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-2);
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+    z-index: 1000;
+}
+
+.has-dropdown:hover .site-nav__arrow,
+.has-dropdown.is-open .site-nav__arrow {
+    transform: rotate(180deg);
+}
+
+/* We use the is-open class triggered by JS for the click behavior */
+.site-nav__submenu.is-open,
+.is-open>.site-nav__submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Keep hover support as well for a seamless experience */
+.has-dropdown:hover .site-nav__submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.site-nav__submenu-link {
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    white-space: nowrap;
+}
+
+.site-nav__submenu-link:hover {
+    background-color: var(--color-brand-light);
+    color: var(--color-brand-primary);
+}
+
+.site-nav__submenu-link.is-active {
+    color: var(--color-brand-primary);
+    background-color: var(--color-brand-light);
+}
+
 /* Hamburger */
 .nav-toggle {
     display: flex;
@@ -191,6 +261,25 @@
 
 .site-nav-mobile .site-nav__link::after {
     display: none;
+}
+
+.site-nav-mobile__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-4);
+}
+
+.site-nav-mobile__group:last-child {
+    margin-bottom: 0;
+}
+
+.site-nav-mobile__label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-text-muted);
+    padding: var(--space-2) var(--space-4);
 }
 
 @media (min-width: 832px) {

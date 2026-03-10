@@ -15,6 +15,20 @@
             </a>
             <div class="site-header__actions">
                 <nav class="site-nav" aria-label="Hauptnavigation">
+                    <div class="site-nav__item has-dropdown" id="etappen-dropdown">
+                        <a class="site-nav__link" href="index.html#etappen">
+                            Etappen <span class="material-symbols-outlined site-nav__arrow">expand_more</span>
+                        </a>
+                        <div class="site-nav__submenu">
+                            <a class="site-nav__submenu-link" href="index.html#etappen">Alle Etappen</a>
+                            <a class="site-nav__submenu-link" href="etappe.html?id=1">Etappe 1</a>
+                            <a class="site-nav__submenu-link" href="etappe.html?id=2">Etappe 2</a>
+                            <a class="site-nav__submenu-link" href="etappe.html?id=3">Etappe 3</a>
+                            <a class="site-nav__submenu-link" href="etappe.html?id=4">Etappe 4</a>
+                            <a class="site-nav__submenu-link" href="etappe.html?id=5">Etappe 5</a>
+                            <a class="site-nav__submenu-link" href="etappe.html?id=6">Etappe 6</a>
+                        </div>
+                    </div>
                     <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
                     <a class="site-nav__link" href="organisation.html">Organisation</a>
                     <a class="site-nav__link" href="navigation.html">Navigation</a>
@@ -46,11 +60,24 @@
             </div>
         </div>
         <nav class="site-nav-mobile" id="nav-mobile" aria-label="Mobile Navigation">
-            <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
-            <a class="site-nav__link" href="organisation.html">Organisation</a>
-            <a class="site-nav__link" href="navigation.html">Navigation</a>
-            <a class="site-nav__link" href="links.html">Links</a>
-            <a class="site-nav__link" href="downloads.html">Downloads</a>
+            <div class="site-nav-mobile__group">
+                <span class="site-nav-mobile__label">Etappen</span>
+                <a class="site-nav__link" href="index.html#etappen">Alle Etappen</a>
+                <a class="site-nav__link" href="etappe.html?id=1">Etappe 1</a>
+                <a class="site-nav__link" href="etappe.html?id=2">Etappe 2</a>
+                <a class="site-nav__link" href="etappe.html?id=3">Etappe 3</a>
+                <a class="site-nav__link" href="etappe.html?id=4">Etappe 4</a>
+                <a class="site-nav__link" href="etappe.html?id=5">Etappe 5</a>
+                <a class="site-nav__link" href="etappe.html?id=6">Etappe 6</a>
+            </div>
+            <div class="site-nav-mobile__group">
+                <span class="site-nav-mobile__label">Menü</span>
+                <a class="site-nav__link" href="unterkuenfte.html">Unterkünfte</a>
+                <a class="site-nav__link" href="organisation.html">Organisation</a>
+                <a class="site-nav__link" href="navigation.html">Navigation</a>
+                <a class="site-nav__link" href="links.html">Links</a>
+                <a class="site-nav__link" href="downloads.html">Downloads</a>
+            </div>
         </nav>`;
     }
 
@@ -80,10 +107,16 @@
     const themeDropdown = document.getElementById("theme-dropdown");
     const themeMenuItems = document.querySelectorAll(".theme-menu-item");
 
+    // --- Etappen Dropdown Elements ---
+    const etappenDropdown = document.getElementById("etappen-dropdown");
+    const etappenTrigger = etappenDropdown?.querySelector(".site-nav__link");
+
     if (themeTrigger && themeDropdown) {
         themeTrigger.addEventListener("click", (e) => {
             e.stopPropagation();
             themeDropdown.classList.toggle("is-open");
+            // Close other dropdowns
+            if (etappenDropdown) etappenDropdown.classList.remove("is-open");
         });
 
         document.addEventListener("click", (e) => {
@@ -122,18 +155,59 @@
         });
     }
 
+    // --- Etappen Dropdown ---
+    if (etappenDropdown && etappenTrigger) {
+        etappenTrigger.addEventListener("click", (e) => {
+            // Only prevent default and toggle if on desktop (where it's a dropdown)
+            // or if we want it to always be a toggle.
+            // On mobile, the submenu is currently displayed as a list (flat).
+            if (window.innerWidth >= 832) {
+                e.preventDefault();
+                e.stopPropagation();
+                etappenDropdown.classList.toggle("is-open");
+                // Close other dropdowns
+                if (themeDropdown) themeDropdown.classList.remove("is-open");
+            }
+        });
+
+        // Close on outside click
+        document.addEventListener("click", (e) => {
+            if (!etappenDropdown.contains(e.target)) {
+                etappenDropdown.classList.remove("is-open");
+            }
+        });
+    }
+
     // --- Active link highlighting ---
     const currentPath =
         window.location.pathname.split("/").pop() || "index.html";
+    const currentUrl = window.location.search
+        ? currentPath + window.location.search
+        : currentPath;
+
     document
-        .querySelectorAll(".site-nav__link, .site-nav-mobile .site-nav__link")
+        .querySelectorAll(
+            ".site-nav__link, .site-nav-mobile .site-nav__link, .site-nav__submenu-link",
+        )
         .forEach((link) => {
-            const linkFile = link.getAttribute("href")?.split("/").pop() || "";
+            const href = link.getAttribute("href");
+            if (!href) return;
+
+            const linkPath = href.split("/").pop();
+
             if (
-                linkFile === currentPath ||
-                (currentPath === "" && linkFile === "index.html")
+                linkPath === currentUrl ||
+                (currentPath === "index.html" &&
+                    linkPath === "index.html#etappen")
             ) {
                 link.classList.add("is-active");
+                // For desktop dropdown: highlight parent trigger if child is active
+                const submenu = link.closest(".site-nav__submenu");
+                if (submenu) {
+                    const trigger =
+                        submenu.parentElement.querySelector(".site-nav__link");
+                    if (trigger) trigger.classList.add("is-active");
+                }
             }
         });
 
