@@ -1,0 +1,88 @@
+/* ============================================================
+   countdown.module.css - Styles for the Hero Countdown Component
+   ============================================================ */
+.hero-countdown {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-8);
+    justify-content: center;
+    animation: fadeIn var(--transition-slow);
+}
+
+.hero-countdown__item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    min-width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.hero-countdown__item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-countdown__value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-black);
+    color: var(--color-white);
+    line-height: 1;
+    margin-bottom: var(--space-1);
+    font-variant-numeric: tabular-nums;
+}
+
+.hero-countdown__label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+}
+
+.hero-countdown__started {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .hero-countdown {
+        gap: var(--space-2);
+        margin-top: var(--space-8);
+    }
+
+    .hero-countdown__item {
+        padding: var(--space-3);
+        min-width: 70px;
+    }
+
+    .hero-countdown__value {
+        font-size: var(--font-size-xl);
+    }
+
+    .hero-countdown__label {
+        font-size: 10px;
+    }
+}

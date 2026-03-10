@@ -1,0 +1,217 @@
+/* ============================================================
+   tokens.css - Design Tokens (CSS Custom Properties)
+   Tier 1: Raw palette values
+   Tier 2: Semantic mappings
+   ============================================================ */
+:root {
+    /* --- Tier 1: Color Palette --- */
+    --color-forest-950: #0f1a14;
+    --color-forest-900: #1a2e24;
+    --color-forest-700: #2d4c3b;
+    --color-forest-500: #3e624d;
+    --color-forest-300: #7da98d;
+    --color-forest-100: #e8f0eb;
+    --color-forest-50: #f2f7f4;
+    --color-sand-50: #fcfaf7;
+    --color-sand-100: #f5f0e8;
+    --color-slate-900: #121412;
+    --color-slate-800: #1e2520;
+    --color-white: #ffffff;
+    --color-red-600: #dc2626;
+
+    /* --- Tier 2: Semantic Colors --- */
+    --color-brand-primary: var(--color-forest-700);
+    --color-brand-hover: var(--color-forest-500);
+    --color-brand-dark: var(--color-forest-900);
+    --color-brand-light: var(--color-forest-100);
+    --color-surface-page: var(--color-sand-50);
+    --color-surface-card: var(--color-white);
+    --color-surface-section: var(--color-forest-50);
+    --color-surface-dark: var(--color-slate-900);
+    --color-surface-dark-card: var(--color-slate-800);
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #475569;
+    --color-text-muted: #94a3b8;
+    --color-text-inverse: var(--color-white);
+    --color-text-on-dark: var(--color-white);
+    --color-text-brand: var(--color-brand-primary);
+    --color-border-subtle: rgba(45, 76, 59, 0.12);
+    --color-border-hover: var(--color-brand-primary);
+    --color-status-paid: #16a34a;
+    --color-status-pending: #d97706;
+    --color-status-cancelled: var(--color-red-600);
+    --color-emergency: var(--color-red-600);
+    --color-overlay-dark: rgba(0, 0, 0, 0.55);
+    --color-overlay-light: rgba(255, 255, 255, 0.10);
+    --color-surface-hover: rgba(0, 0, 0, 0.04);
+    --color-blur-bg: rgba(252, 250, 247, 0.88);
+
+    /* --- Spacing Scale --- */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* --- Typography --- */
+    --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-hero: clamp(2.5rem, 8vw, 5rem);
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.8;
+    --tracking-tight: -0.025em;
+    --tracking-wide: 0.05em;
+    --tracking-widest: 0.1em;
+
+    /* --- Element Specific Styles --- */
+    --hero-text-color: var(--color-text-on-dark);
+    --hero-font-size: var(--font-size-hero);
+    --hero-font-weight: var(--font-weight-black);
+    --hero-line-height: var(--line-height-tight);
+
+    --footer-text-color: var(--color-text-on-dark);
+    --footer-font-size: var(--font-size-3xl);
+    --footer-font-weight: var(--font-weight-black);
+    --footer-letter-spacing: var(--tracking-tight);
+
+    --stats-bar-text-color: var(--color-text-on-dark);
+    --stats-bar-font-size: var(--font-size-2xl);
+    --stats-bar-font-weight: var(--font-weight-black);
+
+    /* --- Border Radius --- */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-full: 9999px;
+
+    /* --- Shadows --- */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.06);
+    --shadow-card: var(--shadow-sm);
+    --shadow-map: 0 4px 20px rgba(0, 0, 0, 0.12);
+
+    /* --- Transitions --- */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 350ms ease;
+
+    /* --- Z-Index --- */
+    --z-header: 1100;
+    --z-overlay: 50;
+    --z-modal: 2000;
+
+    /* --- Map Heights --- */
+    --map-height-mobile: 280px;
+    --map-height-tablet: 420px;
+    --map-height-desktop: 520px;
+    --map-height-hero: 380px;
+
+    /* --- Track Colors (8 Stages) --- */
+    --color-track-1: #2d4c3b;
+    --color-track-2: #3b6ea0;
+    --color-track-3: #c0392b;
+    --color-track-4: #8e44ad;
+    --color-track-5: #e67e22;
+    --color-track-6: #16a085;
+    --color-track-7: #d35400;
+    --color-track-8: #2980b9;
+}
+
+/* --- Themes --- */
+
+/* Theme: Ocean */
+:root.theme-ocean {
+    --color-brand-primary: #0369a1;
+    --color-brand-hover: #0284c7;
+    --color-brand-dark: #0c4a6e;
+    --color-brand-light: #e0f2fe;
+    --color-surface-page: #f0f9ff;
+    --color-surface-section: #e0f2fe;
+    --color-border-subtle: rgba(3, 105, 161, 0.12);
+    --color-border-hover: #0369a1;
+    --color-surface-hover: rgba(0, 0, 0, 0.04);
+    --color-text-brand: #0369a1;
+}
+
+/* Theme: Autumn */
+:root.theme-autumn {
+    --color-brand-primary: #854d0e;
+    --color-brand-hover: #a16207;
+    --color-brand-dark: #451a03;
+    --color-brand-light: #fef3c7;
+    --color-surface-page: #fffbeb;
+    --color-surface-section: #fef3c7;
+    --color-border-subtle: rgba(133, 77, 14, 0.12);
+    --color-border-hover: #854d0e;
+    --color-surface-hover: rgba(0, 0, 0, 0.04);
+    --color-text-brand: #854d0e;
+}
+
+/* Theme: Dark */
+:root.theme-dark {
+    --color-brand-primary: #6cad80;
+    --color-brand-hover: #8fc7a0;
+    --color-brand-dark: #1e2520;
+    --color-brand-light: #2d4c3b;
+    --color-surface-page: #0f1a14;
+    --color-surface-card: #1a2e24;
+    --color-surface-section: #121412;
+    --color-surface-dark: #000000;
+    --color-surface-dark-card: #0f1a14;
+    --color-text-primary: #f2f7f4;
+    --color-text-secondary: #7da98d;
+    --color-text-muted: #577865;
+    --color-text-inverse: #f2f7f4;
+    --color-text-brand: #6cad80;
+    --color-border-subtle: rgba(108, 173, 128, 0.15);
+    --color-border-hover: #6cad80;
+    --color-surface-hover: rgba(255, 255, 255, 0.08);
+    --color-blur-bg: rgba(15, 26, 20, 0.88);
+}
+
+/* Theme: Dark Brown */
+:root.theme-dark-brown {
+    --color-brand-primary: #a88a6d9c;
+    --color-brand-hover: #c5a98da9;
+    --color-brand-dark: #1a1614;
+    --color-brand-light: #3d342d;
+    --color-surface-page: #1a1614;
+    --color-surface-card: #26211d;
+    --color-surface-section: #2a2521;
+    --color-surface-dark: #000000;
+    --color-surface-dark-card: #1a1614;
+    --color-text-primary: #f5f2f0;
+    --color-text-secondary: #b09e8b;
+    --color-text-muted: #7d6e61;
+    --color-text-inverse: #f5f2f0a1;
+    --color-text-brand: #a88a6d;
+    --color-border-subtle: rgba(168, 138, 109, 0.15);
+    --color-border-hover: #a88a6d;
+    --color-surface-hover: rgba(255, 255, 255, 0.08);
+    --color-blur-bg: rgba(26, 22, 20, 0.88);
+}
